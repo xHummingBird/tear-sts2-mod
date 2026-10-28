@@ -64,6 +64,7 @@
         <Folder Include="Tear\images\card_portraits\big\"/>
         <Folder Include="Tear\images\powers\big\"/>
         <Folder Include="Tear\images\relics\big\"/>
+        <Folder Include="Tear\images\scenes\" />
     </ItemGroup>
 
     <Target Name="CheckDependencyPaths">
