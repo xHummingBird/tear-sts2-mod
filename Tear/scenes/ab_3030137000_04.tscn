@@ -1,6 +1,5 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=5 format=3]
 
-[ext_resource type="Script" path="res://Tear/scenes/scripts/gbf_cjs_rig.gd" id="1_mljhs"]
 [ext_resource type="Texture2D" path="res://Tear/images/spritesheets/ab_3030137000_04.png" id="2_cosqd"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_kkuar"]
@@ -1064,32 +1063,6 @@ tracks/87/keys = {
 "update": 1,
 "values": [4, 3]
 }
-tracks/88/type = "method"
-tracks/88/imported = false
-tracks/88/enabled = true
-tracks/88/path = NodePath(".")
-tracks/88/interp = 1
-tracks/88/loop_wrap = true
-tracks/88/keys = {
-"times": PackedFloat32Array(0, 0.033333335, 0.2, 0.6333333, 0.8333333),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"values": [{
-"args": ["lib/sound", "play", ["voice/3030137000_ability_us15.mp3"]],
-"method": &"_gbf_event"
-}, {
-"args": ["lib/sound", "play", ["se/ab_3030137000_04_se_1.mp3"]],
-"method": &"_gbf_event"
-}, {
-"args": ["lib/sound", "play", ["se/ab_3030137000_04_se_1_2.mp3"]],
-"method": &"_gbf_event"
-}, {
-"args": ["lib/sound", "play", ["se/ab_3030137000_04_se_1_3.mp3"]],
-"method": &"_gbf_event"
-}, {
-"args": ["lib/sound", "play", ["se/ab_3030137000_04_se_1_4.mp3"]],
-"method": &"_gbf_event"
-}]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_62arr"]
 _data = {
@@ -1097,8 +1070,6 @@ _data = {
 }
 
 [node name="ab_3030137000_04" type="Node2D"]
-script = ExtResource("1_mljhs")
-sound_dir = "res://Tear/sounds"
 
 [node name="Parts" type="Node2D" parent="."]
 

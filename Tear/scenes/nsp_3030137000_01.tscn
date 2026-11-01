@@ -1,6 +1,5 @@
-[gd_scene load_steps=6 format=3]
+[gd_scene load_steps=5 format=3]
 
-[ext_resource type="Script" path="res://Tear/scenes/scripts/gbf_cjs_rig.gd" id="1_wg6oi"]
 [ext_resource type="Texture2D" path="res://Tear/images/spritesheets/nsp_3030137000_01.png" id="2_oshxl"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_xv4rc"]
@@ -2216,74 +2215,6 @@ tracks/183/keys = {
 "update": 1,
 "values": [6, 5]
 }
-tracks/184/type = "method"
-tracks/184/imported = false
-tracks/184/enabled = true
-tracks/184/path = NodePath(".")
-tracks/184/interp = 1
-tracks/184/loop_wrap = true
-tracks/184/keys = {
-"times": PackedFloat32Array(0, 1.6666666, 1.7, 1.8, 1.9, 2, 2.1, 2.5, 3.3, 3.3333333, 3.4333334, 3.5333333, 3.6333334, 3.7333333, 3.8333333, 3.9333334, 4.0333333, 4.133333, 4.233333),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
-"values": [{
-"args": ["lib/raid/extension", "mChangeMotion", ["mortal_A"]],
-"method": &"_gbf_event"
-}, {
-"args": ["lib/sound", "play", ["se/npc_3030137000_01_se_4_4.mp3"]],
-"method": &"_gbf_event"
-}, {
-"args": ["lib/raid/extension", "mAnimShake", ["shake-regular", "0.18s", "2"]],
-"method": &"_gbf_event"
-}, {
-"args": ["lib/raid/extension", "mAnimShake", ["shake-regular", "0.18s", "2"]],
-"method": &"_gbf_event"
-}, {
-"args": ["lib/raid/extension", "mAnimShake", ["shake-regular", "0.18s", "2"]],
-"method": &"_gbf_event"
-}, {
-"args": ["lib/raid/extension", "mAnimShake", ["shake-regular", "0.18s", "2"]],
-"method": &"_gbf_event"
-}, {
-"args": ["lib/raid/extension", "mAnimShake", ["shake-regular", "0.18s", "2"]],
-"method": &"_gbf_event"
-}, {
-"args": ["lib/sound", "play", ["se/npc_3030137000_01_se_4_5.mp3"]],
-"method": &"_gbf_event"
-}, {
-"args": ["lib/sound", "play", ["se/npc_3030137000_01_se_4_6.mp3"]],
-"method": &"_gbf_event"
-}, {
-"args": ["lib/raid/extension", "mAnimShake", ["shake-regular", "0.18s", "2"]],
-"method": &"_gbf_event"
-}, {
-"args": ["lib/raid/extension", "mAnimShake", ["shake-regular", "0.18s", "2"]],
-"method": &"_gbf_event"
-}, {
-"args": ["lib/raid/extension", "mAnimShake", ["shake-regular", "0.18s", "2"]],
-"method": &"_gbf_event"
-}, {
-"args": ["lib/raid/extension", "mAnimShake", ["shake-regular", "0.18s", "2"]],
-"method": &"_gbf_event"
-}, {
-"args": ["lib/raid/extension", "mAnimShake", ["shake-regular", "0.18s", "2"]],
-"method": &"_gbf_event"
-}, {
-"args": ["lib/raid/extension", "mAnimShake", ["shake-regular", "0.18s", "2"]],
-"method": &"_gbf_event"
-}, {
-"args": ["lib/raid/extension", "mAnimShake", ["shake-regular", "0.18s", "2"]],
-"method": &"_gbf_event"
-}, {
-"args": ["lib/raid/extension", "mAnimShake", ["shake-regular", "0.18s", "2"]],
-"method": &"_gbf_event"
-}, {
-"args": ["lib/raid/extension", "mAnimShake", ["shake-regular", "0.18s", "2"]],
-"method": &"_gbf_event"
-}, {
-"args": ["lib/raid/extension", "mAnimShake", ["shake-regular", "0.18s", "2"]],
-"method": &"_gbf_event"
-}]
-}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_k0080"]
 _data = {
@@ -2291,8 +2222,6 @@ _data = {
 }
 
 [node name="nsp_3030137000_01" type="Node2D"]
-script = ExtResource("1_wg6oi")
-sound_dir = "res://Tear/sounds"
 
 [node name="Parts" type="Node2D" parent="."]
 
