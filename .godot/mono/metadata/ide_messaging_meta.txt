@@ -1,2 +1,2 @@
-﻿49440
-C:/Program Files/Godot/godot.exe
+﻿62323
+C:/megadot/MegaDot_v4.5.1-stable_mono_win64.exe

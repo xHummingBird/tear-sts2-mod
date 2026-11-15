@@ -1,6 +1,10 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=9 format=3 uid="uid://bedohqyegxyo4"]
 
-[ext_resource type="Texture2D" path="res://Tear/images/spritesheets/ab_all_3030137000_04.png" id="2_v6v35"]
+[ext_resource type="AudioStream" uid="uid://cwvpu5i2141tk" path="res://Tear/sounds/se/ab_3030137000_04_se_1.mp3" id="2_4w5o8"]
+[ext_resource type="Texture2D" uid="uid://bssos62emsde2" path="res://Tear/images/spritesheets/ab_all_3030137000_04.png" id="2_v6v35"]
+[ext_resource type="AudioStream" uid="uid://b05oqkxpe54i8" path="res://Tear/sounds/se/ab_3030137000_04_se_1_2.mp3" id="3_wayuf"]
+[ext_resource type="AudioStream" uid="uid://xyroq8vcw2ri" path="res://Tear/sounds/se/ab_3030137000_04_se_1_3.mp3" id="4_1fe01"]
+[ext_resource type="AudioStream" uid="uid://bs8bxiqh021uh" path="res://Tear/sounds/se/ab_3030137000_04_se_1_4.mp3" id="5_tsn0x"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_aqf0i"]
 blend_mode = 1
@@ -1063,6 +1067,66 @@ tracks/87/keys = {
 "update": 1,
 "values": [4, 3]
 }
+tracks/88/type = "audio"
+tracks/88/imported = false
+tracks/88/enabled = true
+tracks/88/path = NodePath("AudioStreamPlayer2D")
+tracks/88/interp = 1
+tracks/88/loop_wrap = true
+tracks/88/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("2_4w5o8")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/88/use_blend = true
+tracks/89/type = "audio"
+tracks/89/imported = false
+tracks/89/enabled = true
+tracks/89/path = NodePath("AudioStreamPlayer2D")
+tracks/89/interp = 1
+tracks/89/loop_wrap = true
+tracks/89/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.02037611,
+"stream": ExtResource("3_wayuf")
+}],
+"times": PackedFloat32Array(0.02037611)
+}
+tracks/89/use_blend = true
+tracks/90/type = "audio"
+tracks/90/imported = false
+tracks/90/enabled = true
+tracks/90/path = NodePath("AudioStreamPlayer2D")
+tracks/90/interp = 1
+tracks/90/loop_wrap = true
+tracks/90/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_1fe01")
+}],
+"times": PackedFloat32Array(0.5)
+}
+tracks/90/use_blend = true
+tracks/91/type = "audio"
+tracks/91/imported = false
+tracks/91/enabled = true
+tracks/91/path = NodePath("AudioStreamPlayer2D")
+tracks/91/interp = 1
+tracks/91/loop_wrap = true
+tracks/91/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.03463939,
+"stream": ExtResource("5_tsn0x")
+}],
+"times": PackedFloat32Array(0.76666665)
+}
+tracks/91/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_wayuf"]
 _data = {
@@ -1072,18 +1136,24 @@ _data = {
 [node name="ab_all_3030137000_04" type="Node2D"]
 
 [node name="Parts" type="Node2D" parent="."]
+position = Vector2(-180, -470)
 
 [node name="000_ab_all_3030137000_04_flare" type="Sprite2D" parent="Parts"]
-visible = false
+self_modulate = Color(1, 1, 1, 0.0753)
 material = SubResource("CanvasItemMaterial_aqf0i")
+position = Vector2(-126.75, 299.252)
+scale = Vector2(1.7375, 1.106)
 texture = ExtResource("2_v6v35")
 centered = false
 region_enabled = true
 region_rect = Rect2(457, 1047, 360, 300)
 
 [node name="001_ab_all_3030137000_04_cr" type="Sprite2D" parent="Parts"]
-visible = false
+self_modulate = Color(1, 1, 1, 0.25)
+z_index = 1
 material = SubResource("CanvasItemMaterial_aqf0i")
+position = Vector2(-67, 335)
+scale = Vector2(1.963, 0.893)
 texture = ExtResource("2_v6v35")
 centered = false
 region_enabled = true
@@ -1091,7 +1161,12 @@ region_rect = Rect2(12, 1420, 262, 300)
 
 [node name="002_ab_all_3030137000_04_Lance" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.5)
 material = SubResource("CanvasItemMaterial_aqf0i")
+position = Vector2(364.8006, 354.1263)
+rotation = 2.7680907
+scale = Vector2(0.2598127, 0.5863105)
+skew = 5.8412552e-05
 texture = ExtResource("2_v6v35")
 centered = false
 region_enabled = true
@@ -1100,6 +1175,10 @@ region_rect = Rect2(12, 12, 406, 776)
 [node name="003_ab_all_3030137000_04_ef008_d" type="Sprite2D" parent="Parts"]
 visible = false
 material = SubResource("CanvasItemMaterial_aqf0i")
+position = Vector2(153.9331, 14.8327)
+rotation = -0.35935283
+scale = Vector2(0.20104161, 1.6570456)
+skew = -0.00017368793
 texture = ExtResource("2_v6v35")
 centered = false
 region_enabled = true
@@ -1107,7 +1186,12 @@ region_rect = Rect2(12, 796, 240, 240)
 
 [node name="004_ab_all_3030137000_04_ef008_d_1" type="Sprite2D" parent="Parts"]
 visible = false
+z_index = 1
 material = SubResource("CanvasItemMaterial_aqf0i")
+position = Vector2(153.9331, 14.8327)
+rotation = -0.35935283
+scale = Vector2(0.20104161, 1.6570456)
+skew = -0.00017368793
 texture = ExtResource("2_v6v35")
 centered = false
 region_enabled = true
@@ -1115,7 +1199,12 @@ region_rect = Rect2(12, 796, 240, 240)
 
 [node name="005_ab_all_3030137000_04_Lance_1" type="Sprite2D" parent="Parts"]
 visible = false
+z_index = 3
 material = SubResource("CanvasItemMaterial_aqf0i")
+position = Vector2(409.8006, 468.1263)
+rotation = 2.7680907
+scale = Vector2(0.2598127, 0.5863105)
+skew = 5.8412552e-05
 texture = ExtResource("2_v6v35")
 centered = false
 region_enabled = true
@@ -1124,6 +1213,10 @@ region_rect = Rect2(12, 12, 406, 776)
 [node name="006_ab_all_3030137000_04_ef003_a" type="Sprite2D" parent="Parts"]
 visible = false
 material = SubResource("CanvasItemMaterial_aqf0i")
+position = Vector2(137.8108, 432.1402)
+rotation = -2.493821
+scale = Vector2(0.27162248, 0.63818103)
+skew = 0.5449041
 texture = ExtResource("2_v6v35")
 centered = false
 region_enabled = true
@@ -1131,7 +1224,12 @@ region_rect = Rect2(12, 1728, 256, 256)
 
 [node name="007_ab_all_3030137000_04_ef204" type="Sprite2D" parent="Parts"]
 visible = false
+z_index = 1
 material = SubResource("CanvasItemMaterial_aqf0i")
+position = Vector2(144.66, 248.3073)
+rotation = -0.34929314
+scale = Vector2(0.45816645, 0.5762975)
+skew = -0.063892365
 texture = ExtResource("2_v6v35")
 centered = false
 region_enabled = true
@@ -1139,7 +1237,13 @@ region_rect = Rect2(426, 12, 500, 547)
 
 [node name="008_ab_all_3030137000_04_ef008_d_2" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.5)
+z_index = 4
 material = SubResource("CanvasItemMaterial_aqf0i")
+position = Vector2(184.3779, 105.6351)
+rotation = -0.35930306
+scale = Vector2(0.21983841, 1.368504)
+skew = -0.0002373457
 texture = ExtResource("2_v6v35")
 centered = false
 region_enabled = true
@@ -1147,7 +1251,13 @@ region_rect = Rect2(12, 796, 240, 240)
 
 [node name="009_ab_all_3030137000_04_ef008_d_3" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.5)
+z_index = 5
 material = SubResource("CanvasItemMaterial_aqf0i")
+position = Vector2(184.3779, 105.6351)
+rotation = -0.35930306
+scale = Vector2(0.21983841, 1.368504)
+skew = -0.0002373457
 texture = ExtResource("2_v6v35")
 centered = false
 region_enabled = true
@@ -1155,7 +1265,13 @@ region_rect = Rect2(12, 796, 240, 240)
 
 [node name="010_ab_all_3030137000_04_ef003_a_1" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.7778)
+z_index = 1
 material = SubResource("CanvasItemMaterial_aqf0i")
+position = Vector2(45.7996, 509.3885)
+rotation = -2.493873
+scale = Vector2(0.56416506, 1.6706682)
+skew = 0.544871
 texture = ExtResource("2_v6v35")
 centered = false
 region_enabled = true
@@ -1163,7 +1279,12 @@ region_rect = Rect2(12, 1728, 256, 256)
 
 [node name="011_ab_all_3030137000_04_ef204_1" type="Sprite2D" parent="Parts"]
 visible = false
+z_index = 3
 material = SubResource("CanvasItemMaterial_aqf0i")
+position = Vector2(134.8987, 243.9589)
+rotation = -0.35109168
+scale = Vector2(0.47859538, 0.60535103)
+skew = -0.060893178
 texture = ExtResource("2_v6v35")
 centered = false
 region_enabled = true
@@ -1171,7 +1292,13 @@ region_rect = Rect2(426, 12, 500, 547)
 
 [node name="012_ab_all_3030137000_04_ef003_a_2" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.5556)
+z_index = 2
 material = SubResource("CanvasItemMaterial_aqf0i")
+position = Vector2(-44.2117, 571.6367)
+rotation = -2.493912
+scale = Vector2(0.85656744, 2.7031186)
+skew = 0.5449244
 texture = ExtResource("2_v6v35")
 centered = false
 region_enabled = true
@@ -1179,7 +1306,12 @@ region_rect = Rect2(12, 1728, 256, 256)
 
 [node name="013_ab_all_3030137000_04_ef204_2" type="Sprite2D" parent="Parts"]
 visible = false
+z_index = 5
 material = SubResource("CanvasItemMaterial_aqf0i")
+position = Vector2(137.8987, 234.9589)
+rotation = -0.35109168
+scale = Vector2(0.47859538, 0.60535103)
+skew = -0.060893178
 texture = ExtResource("2_v6v35")
 centered = false
 region_enabled = true
@@ -1187,7 +1319,12 @@ region_rect = Rect2(426, 12, 500, 547)
 
 [node name="014_ab_all_3030137000_04_ef204_3" type="Sprite2D" parent="Parts"]
 visible = false
+z_index = 6
 material = SubResource("CanvasItemMaterial_aqf0i")
+position = Vector2(140.8987, 239.9589)
+rotation = -0.35109168
+scale = Vector2(0.47859538, 0.60535103)
+skew = -0.060893178
 texture = ExtResource("2_v6v35")
 centered = false
 region_enabled = true
@@ -1195,7 +1332,12 @@ region_rect = Rect2(426, 12, 500, 547)
 
 [node name="015_ab_all_3030137000_04_ef204_4" type="Sprite2D" parent="Parts"]
 visible = false
+z_index = 7
 material = SubResource("CanvasItemMaterial_aqf0i")
+position = Vector2(133.8987, 238.9589)
+rotation = -0.35109168
+scale = Vector2(0.47859538, 0.60535103)
+skew = -0.060893178
 texture = ExtResource("2_v6v35")
 centered = false
 region_enabled = true
@@ -1204,6 +1346,8 @@ region_rect = Rect2(426, 12, 500, 547)
 [node name="016_ab_all_3030137000_04_ef008_b" type="Sprite2D" parent="Parts"]
 visible = false
 material = SubResource("CanvasItemMaterial_aqf0i")
+position = Vector2(-511.592, 111.28)
+scale = Vector2(5.489, 2.74)
 texture = ExtResource("2_v6v35")
 centered = false
 region_enabled = true
@@ -1212,6 +1356,8 @@ region_rect = Rect2(276, 1728, 256, 256)
 [node name="017_ab_all_3030137000_04_effect02" type="Sprite2D" parent="Parts"]
 visible = false
 material = SubResource("CanvasItemMaterial_aqf0i")
+position = Vector2(19.087, 242.052)
+scale = Vector2(0.593, 0.593)
 texture = ExtResource("2_v6v35")
 centered = false
 region_enabled = true
@@ -1219,7 +1365,10 @@ region_rect = Rect2(426, 567, 481, 472)
 
 [node name="018_ab_all_3030137000_04_effect10" type="Sprite2D" parent="Parts"]
 visible = false
+z_index = 1
 material = SubResource("CanvasItemMaterial_aqf0i")
+position = Vector2(69.54, 298.888)
+scale = Vector2(0.638, 0.638)
 texture = ExtResource("2_v6v35")
 centered = false
 region_enabled = true
@@ -1227,7 +1376,10 @@ region_rect = Rect2(457, 1355, 339, 248)
 
 [node name="019_ab_all_3030137000_04_shougeki" type="Sprite2D" parent="Parts"]
 visible = false
+z_index = 2
 material = SubResource("CanvasItemMaterial_aqf0i")
+position = Vector2(37.7776, 380.7734)
+scale = Vector2(1.1971, 0.6268)
 texture = ExtResource("2_v6v35")
 centered = false
 region_enabled = true
@@ -1236,6 +1388,8 @@ region_rect = Rect2(540, 1611, 256, 256)
 [node name="020_ab_all_3030137000_04_effect09" type="Sprite2D" parent="Parts"]
 visible = false
 material = SubResource("CanvasItemMaterial_aqf0i")
+position = Vector2(14.109, 236.148)
+scale = Vector2(0.686, 0.686)
 texture = ExtResource("2_v6v35")
 centered = false
 region_enabled = true
@@ -1243,7 +1397,10 @@ region_rect = Rect2(12, 1047, 437, 365)
 
 [node name="021_ab_all_3030137000_04_housya" type="Sprite2D" parent="Parts"]
 visible = false
+z_index = 4
 material = SubResource("CanvasItemMaterial_aqf0i")
+position = Vector2(-13.434, 388)
+scale = Vector2(2.034, 1)
 texture = ExtResource("2_v6v35")
 centered = false
 region_enabled = true
@@ -1253,3 +1410,6 @@ region_rect = Rect2(540, 1875, 189, 110)
 libraries = {
 &"": SubResource("AnimationLibrary_wayuf")
 }
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-180, -470)

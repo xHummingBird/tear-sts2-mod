@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bmh78pm4s4t5g"
+path="res://.godot/imported/1-06 Victory!.mp3-a33269b74bb5010bcf85dfaba22a1a3b.mp3str"
+
+[deps]
+
+source_file="res://Tear/music/1-06 Victory!.mp3"
+dest_files=["res://.godot/imported/1-06 Victory!.mp3-a33269b74bb5010bcf85dfaba22a1a3b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

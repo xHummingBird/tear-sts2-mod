@@ -1,3 +1,12 @@
 {
+  "TEAR_OVERLIMIT.title": "Over Limit",
+  "TEAR_OVERLIMIT.description": "Gain 3 whenever you play a card, or 6 instead when you play an [gold]Arte[/gold] or [gold]Fonic Hymn[/gold].\nGain 5 at the start of your turn.\n\nAt 100, gain [gold]Over Limit[/gold] for 2 turns. During this time, Artes always apply their [gold]Fonon Enhancement[/gold] and you can play any number of Fonic Hymns each turn.",
+
+  "TEAR_ARTE.title": "Arte",
+  "TEAR_ARTE.description": "Gain 6 Over Limit when played. Some Artes gain additional effects when you have the matching [gold]Elemental Fonon[/gold]. ",
+
+  "TEAR_FONIC_HYMN.title": "Fonic Hymn",
+  "TEAR_FONIC_HYMN.description": "Gain 6 Over Limit when played. Only 1 Fonic Hymn can be played each turn.",
+  
   
 }

@@ -2,10 +2,26 @@
 using BaseLib.Utils.NodeFactories;
 using Tear.TearCode.Extensions;
 using Godot;
+using HarmonyLib;
+using MegaCrit.Sts2.Core.Combat;
+using MegaCrit.Sts2.Core.Context;
 using MegaCrit.Sts2.Core.Entities.Characters;
+using MegaCrit.Sts2.Core.Entities.Creatures;
+using MegaCrit.Sts2.Core.Hooks;
 using MegaCrit.Sts2.Core.Models;
 using MegaCrit.Sts2.Core.Models.Cards;
 using MegaCrit.Sts2.Core.Models.Relics;
+using MegaCrit.Sts2.Core.Nodes;
+using MegaCrit.Sts2.Core.Nodes.Audio;
+using MegaCrit.Sts2.Core.Nodes.Combat;
+using MegaCrit.Sts2.Core.Nodes.Rooms;
+using MegaCrit.Sts2.Core.Nodes.Vfx.Utilities;
+using MegaCrit.Sts2.Core.Runs;
+using MegaCrit.Sts2.Core.ValueProps;
+using Tear.TearCode.Cards.Basic;
+using Tear.TearCode.Powers;
+using Tear.TearCode.Relics;
+using Nightmare = Tear.TearCode.Cards.Basic.Nightmare;
 
 namespace Tear.TearCode.Character;
 
@@ -14,28 +30,31 @@ public class Tear : PlaceholderCharacterModel
     public const string CharacterId = "Tear";
 
     public static readonly Color Color = new("ffffff");
+    
+    private Vector2? _originalPosition;
 
     public override Color NameColor => Color;
-    public override CharacterGender Gender => CharacterGender.Neutral;
-    public override int StartingHp => 70;
+    public override CharacterGender Gender => CharacterGender.Feminine;
+    public override int StartingHp => 68;
 
     public override IEnumerable<CardModel> StartingDeck =>
     [
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<StrikeIronclad>(),
-        ModelDb.Card<DefendIronclad>(),
-        ModelDb.Card<DefendIronclad>(),
-        ModelDb.Card<DefendIronclad>(),
-        ModelDb.Card<DefendIronclad>(),
-        ModelDb.Card<DefendIronclad>()
+        ModelDb.Card<StrikeTear>(),
+        ModelDb.Card<StrikeTear>(),
+        ModelDb.Card<StrikeTear>(),
+        ModelDb.Card<StrikeTear>(),
+        ModelDb.Card<Nightmare>(),
+        ModelDb.Card<NocturnalLight>(),
+        ModelDb.Card<DefendTear>(),
+        ModelDb.Card<DefendTear>(),
+        ModelDb.Card<DefendTear>(),
+        ModelDb.Card<DefendTear>(),
+        ModelDb.Card<DefendTear>(),
     ];
 
     public override IReadOnlyList<RelicModel> StartingRelics =>
     [
-        ModelDb.Relic<BurningBlood>()
+        ModelDb.Relic<Rod>()
     ];
 
     public override CardPoolModel CardPool => ModelDb.CardPool<TearCardPool>();
@@ -55,9 +74,510 @@ public class Tear : PlaceholderCharacterModel
             return icon;
         }
     }
+    
+    public override CustomEnergyCounter? CustomEnergyCounter =>
+        new(
+            EnergyCounterPaths,
+            new Color(0.2f, 0.2f, 0.2f),
+            new Color(1f, 1f, 1f));
+    
+    private string EnergyCounterPaths(int i)
+    {
+        return i switch
+        {
+            1 => "charui/big_energy.png".ImagePath(),
+            _ => "charui/blank.png".ImagePath()
+        };
+    }
 
-    public override string CustomIconTexturePath => "character_icon_char_name.png".CharacterUiPath();
-    public override string CustomCharacterSelectIconPath => "char_select_char_name.png".CharacterUiPath();
-    public override string CustomCharacterSelectLockedIconPath => "char_select_char_name_locked.png".CharacterUiPath();
-    public override string CustomMapMarkerPath => "map_marker_char_name.png".CharacterUiPath();
+    public override string CustomIconTexturePath =>
+        "character_icon_tear.png".CharacterUiPath();
+
+    public override string CustomCharacterSelectIconPath =>
+        "char_select_tear.png".CharacterUiPath();
+
+    public override string CustomCharacterSelectLockedIconPath =>
+        "char_select_char_name_locked.png".CharacterUiPath();
+
+    public override string CustomMapMarkerPath =>
+        "map_marker_tear.png".CharacterUiPath();
+
+    private const string CustomVisualScenePath =
+        "res://Tear/scenes/tear.tscn";
+
+    public override string CustomRestSiteAnimPath =>
+        "res://Tear/scenes/tear_rest_site.tscn";
+
+    public override string CustomCharacterSelectBg =>
+        "res://Tear/images/charui/char_selection_bg_tear.tscn";
+
+    public override string CustomMerchantAnimPath =>
+        "res://Tear/scenes/tear_merchant.tscn";
+
+    public override string CharacterSelectSfx =>
+        "res://Tear/sounds/victory (5).wav";
+
+    public override NCreatureVisuals? CreateCustomVisuals()
+    {
+        TearAssets.EnsurePreloaded();
+
+        return NodeFactory<NCreatureVisuals>.CreateFromScene(
+            CustomVisualScenePath);
+    }
+    
+    public (
+        float total,
+        float[] impacts
+    ) PlayAnimation(
+        Creature creature,
+        string trigger,
+        bool normalSpeed = false)
+    {
+        if (creature == null ||
+            string.IsNullOrEmpty(trigger))
+        {
+            return (
+                0f,
+                Array.Empty<float>());
+        }
+
+        var node =
+            NCombatRoom.Instance?
+                .GetCreatureNode(creature);
+
+        if (node?.Visuals == null)
+        {
+            return (
+                0f,
+                Array.Empty<float>());
+        }
+
+        var animPlayer =
+            node.Visuals.GetNodeOrNull<AnimationPlayer>(
+                "AnimationPlayer");
+
+        if (animPlayer == null)
+        {
+            return (
+                0f,
+                Array.Empty<float>());
+        }
+        
+        string godotTrigger =
+            trigger.ToLowerInvariant() switch
+            {
+                "hit" => "hurt",
+                "idle" or "idle_loop" => "idle_tear",
+                "attack" => "attack_tear",
+                "dead" => "die",
+                "die" => "die",
+                "cast" => "cast_tear",
+                _ => trigger
+            };
+
+        if (!animPlayer.HasAnimation(godotTrigger))
+        {
+            return (
+                0f,
+                Array.Empty<float>());
+        }
+
+        var animation =
+            animPlayer.GetAnimation(godotTrigger);
+
+        float speed = 1.0f;
+
+        animPlayer.SpeedScale = speed;
+        animPlayer.Play(godotTrigger);
+
+        if (godotTrigger is not ("die" or "dead"))
+        {
+            animPlayer.Queue("idle_tear");
+        }
+
+        float effectiveLength =
+            (float)animation.Length / speed;
+
+        return (
+            effectiveLength,
+            Array.Empty<float>());
+    }
+
+    // =========================================================================
+    // DASH TO
+    // =========================================================================
+
+    public async Task DashTo(
+        Creature player,
+        Creature target,
+        float durationSeconds = 0.3f,
+        float distance = 200f,
+        bool dashBehind = false,
+        string? overrideAnim = null)
+    {
+        var node = NCombatRoom.Instance?.GetCreatureNode(player);
+        var targetNode = NCombatRoom.Instance?.GetCreatureNode(target);
+        if (node == null || targetNode == null) return;
+
+        if (!_originalPosition.HasValue)
+            _originalPosition = node.GlobalPosition;
+        
+        PlayAnimation(player, overrideAnim ??"dash");
+		
+        bool playerIsLeftOfTarget = node.GlobalPosition.X < targetNode.GlobalPosition.X;
+		
+        Vector2 offsetDir = playerIsLeftOfTarget ? Vector2.Left : Vector2.Right;
+		
+        if (dashBehind)
+            offsetDir = -offsetDir;
+
+        Vector2 targetPos = targetNode.GlobalPosition + offsetDir * distance;
+
+        var tween = node.CreateTween();
+        tween.TweenProperty(node, "global_position", targetPos, durationSeconds)
+            .SetTrans(Tween.TransitionType.Quad)
+            .SetEase(Tween.EaseType.Out);
+
+        await node.ToSignal(tween, Tween.SignalName.Finished);
+    }
+
+    public async Task Retreat(
+        Creature player,
+        string? animation = "retreat",
+        bool goIdle = true,
+        float duration = 0.3f)
+    {
+        var node = NCombatRoom.Instance?.GetCreatureNode(player);
+        if (node == null || !_originalPosition.HasValue) return;
+
+        if (!string.IsNullOrEmpty(animation))
+            PlayAnimation(player, animation);
+
+        var tween = node.CreateTween();
+        tween.TweenProperty(node, "global_position", _originalPosition.Value, duration)
+            .SetTrans(Tween.TransitionType.Quad)
+            .SetEase(Tween.EaseType.InOut);
+
+        await node.ToSignal(tween, Tween.SignalName.Finished);
+
+        _originalPosition = null;
+
+        var visuals = node.Visuals.GetNodeOrNull<Node2D>("Visuals");
+        if (visuals != null)
+            visuals.Position = Vector2.Zero;
+
+        if (goIdle)
+            PlayAnimation(player, "idle");
+    }
+
+    // =========================================================================
+    // SCREEN SHAKE
+    // =========================================================================
+
+    public void DoScreenShake(
+        ShakeStrength strength =
+            ShakeStrength.Medium,
+        ShakeDuration duration =
+            ShakeDuration.Short)
+    {
+        NGame.Instance?.ScreenShake(
+            strength,
+            duration);
+    }
+
+    // =========================================================================
+    // VFX
+    // =========================================================================
+
+    public Node2D PlayVfxOnTarget(
+        Creature target,
+        string path,
+        string animName)
+    {
+        var targetNode = NCombatRoom.Instance?.GetCreatureNode(target);
+
+        if (targetNode?.Visuals == null)
+            return null;
+
+        var scene = GD.Load<PackedScene>(path);
+        var vfx = scene.Instantiate<Node2D>();
+
+        targetNode.Visuals.AddChild(vfx);
+        vfx.Position = Vector2.Zero;
+
+        var animPlayer =
+            vfx.GetNode<AnimationPlayer>("AnimationPlayer");
+
+        if (animPlayer.HasAnimation(animName))
+            animPlayer.Play(animName);
+
+        return vfx;
+    }
+    
+    public Node2D PlayVfxBehindTarget(
+        Creature target,
+        string path,
+        string animName)
+    {
+        var targetNode = NCombatRoom.Instance?.GetCreatureNode(target);
+
+        if (targetNode?.Visuals == null)
+            return null;
+
+        var scene = GD.Load<PackedScene>(path);
+        var vfx = scene.Instantiate<Node2D>();
+
+        targetNode.Visuals.AddChild(vfx);
+        vfx.Position = Vector2.Zero;
+
+        // Render behind the target's other visuals
+        targetNode.Visuals.MoveChild(vfx, 0);
+
+        var animPlayer =
+            vfx.GetNode<AnimationPlayer>("AnimationPlayer");
+
+        if (animPlayer.HasAnimation(animName))
+            animPlayer.Play(animName);
+
+        return vfx;
+    }
+
+    /// <summary>
+    /// Use this overload when the owner creature is already available.
+    /// This avoids searching the combat creature list.
+    /// </summary>
+
+    // =========================================================================
+    // AUTOMATIC ANIMATION TRIGGERS
+    // =========================================================================
+
+    [HarmonyPatch(
+        typeof(NCreature),
+        nameof(NCreature.SetAnimationTrigger))]
+    public static class NCreatureSetTriggerPatch
+    {
+        [HarmonyPrefix]
+        public static bool Prefix(
+            NCreature __instance,
+            string trigger)
+        {
+            if (__instance.Entity?
+                    .Player?
+                    .Character
+                is Tear character)
+            {
+                character.PlayAnimation(
+                    __instance.Entity,
+                    trigger);
+
+                return false;
+            }
+
+            return true;
+        }
+    }
+
+    // =========================================================================
+    // DEATH ANIMATION
+    // =========================================================================
+
+    [HarmonyPatch(
+        typeof(NCreature),
+        nameof(NCreature.StartDeathAnim))]
+    public static class TearStartDeathAnimPatch
+    {
+        [HarmonyPostfix]
+        public static void Postfix(
+            NCreature __instance,
+            ref float __result)
+        {
+            if (__instance.Entity?
+                    .Player?
+                    .Character
+                is not Tear character)
+            {
+                return;
+            }
+
+            AudioHelper.PlayRandomGameover();
+            BattleTheme.Stop();
+            
+            var animation =
+                character.PlayAnimation(
+                    __instance.Entity,
+                    "die");
+
+            __result =
+                animation.total > 0f
+                    ? animation.total
+                    : 1.5f;
+        }
+    }
+    
+    [HarmonyPatch(
+        typeof(NAudioManager),
+        nameof(NAudioManager.PlayMusic))]
+    public static class TearGameOverMusicPatch
+    {
+        [HarmonyPrefix]
+        public static bool Prefix(string music)
+        {
+            // Only intercept the vanilla game over music.
+            if (music != "event:/temp/sfx/game_over")
+                return true;
+
+            if (RunManager.Instance == null)
+                return true;
+
+            var runState = RunManager.Instance.DebugOnlyGetState();
+
+            if (runState == null)
+                return true;
+
+            var localPlayer = LocalContext.GetMe(runState);
+
+            if (localPlayer?.Character is not Tear)
+                return true;
+
+            BattleTheme.PlayGameOverTheme();
+
+            // Skip vanilla game over music.
+            return false;
+        }
+    }
+    
+    [HarmonyPatch(
+        typeof(Hook),
+        nameof(Hook.AfterCombatVictory))]
+    public static class TearVictoryAnimationPatch
+    {
+        [HarmonyPostfix]
+        public static void Postfix(
+            IRunState runState,
+            CombatState? combatState)
+        {
+            var creatures =
+                combatState?
+                    .Creatures?
+                    .Where(creature =>
+                        creature.IsPlayer);
+    
+            if (creatures == null)
+                return;
+    
+            foreach (var creature in creatures)
+            {
+                if (creature.Player?.Character
+                    is not Tear character)
+                {
+                    continue;
+                }
+    
+                var node =
+                    NCombatRoom.Instance?
+                        .GetCreatureNode(creature);
+    
+                var animPlayer =
+                    node?
+                        .Visuals?
+                        .GetNodeOrNull<AnimationPlayer>(
+                            "AnimationPlayer");
+    
+                if (animPlayer == null)
+                    continue;
+    
+                AudioHelper.PlayRandomVictory();
+
+                float speed = 1.0f;
+    
+                animPlayer.SpeedScale = speed;
+    
+                if (animPlayer.HasAnimation(
+                    "victory"))
+                {
+                    animPlayer.Play(
+                        "victory");
+                }
+            }
+        }
+    }
+
+    // =========================================================================
+    // DAMAGE ANIMATION
+    // =========================================================================
+
+    [HarmonyPatch(
+        typeof(Hook),
+        nameof(Hook.AfterDamageReceived))]
+    public static class TearDamageAnimationPatch
+    {
+        [HarmonyPostfix]
+        public static void Postfix(
+            Creature target,
+            DamageResult result,
+            ValueProp props,
+            Creature? dealer)
+        {
+            if (target.Player?.Character
+                is not Tear character)
+            {
+                return;
+            }
+
+            if (dealer == null ||
+                dealer.Side != CombatSide.Enemy)
+            {
+                return;
+            }
+
+            if (props.HasFlag(
+                    ValueProp.SkipHurtAnim) ||
+                props.HasFlag(
+                    ValueProp.Unpowered))
+            {
+                return;
+            }
+
+            if (result.WasFullyBlocked &&
+                result.BlockedDamage > 0)
+            {
+                character.PlayAnimation(
+                    target,
+                    "block", true);
+
+                return;
+            }
+
+            if (result.UnblockedDamage <= 0 ||
+                target.IsDead)
+            {
+                return;
+            }
+
+            character.PlayAnimation(
+                target,
+                "hurt", true);
+
+            if (target.CurrentHp < 20)
+            {
+                AudioHelper
+                    .PlayRandomDamagedCritical();
+            }
+            else if (result.UnblockedDamage < 10)
+            {
+                AudioHelper
+                    .PlayRandomDamaged();
+            }
+            else
+            {
+                AudioHelper
+                    .PlayRandomDamagedHigh();
+            }
+        }
+    }
+
+    // =========================================================================
+    // CHOOSE-A-CARD PATCH
+    // =========================================================================
+    
 }

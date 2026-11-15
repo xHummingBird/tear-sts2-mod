@@ -1,3 +1,90 @@
 {
+  "TEAR-STRIKE_TEAR.description": "Deal {Damage:diff()} damage.",
+  "TEAR-STRIKE_TEAR.title": "Strike",
+
+  "TEAR-NOCTURNAL_LIGHT.description": "Deal {Damage:diff()} damage.",
+  "TEAR-NOCTURNAL_LIGHT.title": "Nocturnal Light",
+
+  "TEAR-DEFEND_TEAR.description": "Gain {Block:diff()} [gold]Block[/gold].",
+  "TEAR-DEFEND_TEAR.title": "Defend",
   
+  "TEAR-NIGHTMARE.description": "Deal {Damage:diff()} damage. \nApply {WeakPower:diff()} [gold]Weak[/gold].",
+  "TEAR-NIGHTMARE.title": "Nightmare",
+
+  "TEAR-HIDDEN_KNIFE.title": "Hidden Knife",
+  "TEAR-HIDDEN_KNIFE.description": "Deal {Damage:diff()} damage. \nDraw {Cards:diff()} {Cards:plural:card|cards}.",
+
+  "TEAR-MAGIC_ATTACK.title": "Magic Attack",
+  "TEAR-MAGIC_ATTACK.description": "Deal {Damage:diff()} damage. \nGain {Overlimit:diff()} [gold]Overlimit[/gold].",
+
+  "TEAR-HEAVY_SWING.title": "Heavy Swing",
+  "TEAR-HEAVY_SWING.description": "Deal {Damage:diff()} damage. \nGain {WindFonon}. \nThe next Attack you play costs 0 {Energy:energyIcons()}.",
+
+  "TEAR-DAGGER_THROW.title": "Dagger Throw",
+  "TEAR-DAGGER_THROW.description": "Deal {Damage:diff()} damage to ALL enemies. \nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold] to ALL enemies.",
+
+  "TEAR-FINALE.description": "Deal {Damage:diff()} damage.\nCosts 0 {energyPrefix:energyIcons(1)} if you played a [gold]Fonic Hymn[/gold] card this turn.",
+  "TEAR-FINALE.title": "Finale",
+
+  "TEAR-TRAINED_ASSASSIN.title": "Trained Assassin",
+  "TEAR-TRAINED_ASSASSIN.description": "Deal {Damage:diff()} damage. \nIf this is the first card you play this turn, play a random Attack from your hand.",
+  
+  "TEAR-INVOKE_FIRE.title": "Invoke Fire",
+  "TEAR-INVOKE_FIRE.description": "Gain {VigorPower:diff()} [gold]Vigor[/gold]. \nGain {FireFonon}.",
+
+  "TEAR-INVOKE_WATER.title": "Invoke Water",
+  "TEAR-INVOKE_WATER.description": "Gain {Block:diff()} [gold]Block[/gold]. \nGain {WaterFonon}.",
+
+  "TEAR-INVOKE_EARTH.title": "Invoke Earth",
+  "TEAR-INVOKE_EARTH.description": "Next turn, gain {Energy:energyIcons()}. \nGain {EarthFonon}.",
+
+  "TEAR-INVOKE_WIND.title": "Invoke Wind",
+  "TEAR-INVOKE_WIND.description": "Draw {Cards:diff()} {Cards:plural:card|cards}. \nGain {WindFonon}.",
+
+  "TEAR-INVOKE_DARK.title": "Invoke Dark",
+  "TEAR-INVOKE_DARK.description": "Apply {VulnerablePower:diff()} [gold]Vulnerable[/gold] to ALL enemies. \nGain {DarkFonon}.",
+
+  "TEAR-INVOKE_LIGHT.title": "Invoke Light",
+  "TEAR-INVOKE_LIGHT.description": "Apply {WeakPower:diff()} [gold]Weak[/gold] to ALL enemies. \nGain {LightFonon}.",
+
+  "TEAR-DOUBT.title": "Doubt",
+  "TEAR-DOUBT.description": "Gain {Block:diff()} [gold]Block[/gold]. \nDraw {Cards:diff()} {Cards:plural:card|cards}.",
+
+  "TEAR-ELEGANCE.title": "Elegance",
+  "TEAR-ELEGANCE.description": "Gain {Block:diff()} [gold]Block[/gold]. \nNext turn, gain {Energy:energyIcons()}.",
+
+  "TEAR-ENHANCE_CAST.title": "Enhance Cast",
+  "TEAR-ENHANCE_CAST.description": "The next Attack you play costs 0 {energyPrefix:energyIcons(1)}. \n{WindFonon}: The next Skill you play costs 0 {energyPrefix:energyIcons(1)}.",
+
+  "TEAR-CHARGE.title": "Charge",
+  "TEAR-CHARGE.description": "Gain {Energy:energyIcons()}. \n{EarthFonon}: Gain {Energy:energyIcons()}.",
+
+  "TEAR-FORCE_FIELD.title": "Force Field",
+  "TEAR-FORCE_FIELD.description": "Gain {BufferPower:diff()} [gold]Buffer[/gold]. \nGain {EarthFonon}.",
+
+  "TEAR-FIRST_AID.title": "First Aid",
+  "TEAR-FIRST_AID.description": "Heal {Heal:diff()} HP. \n{WaterFonon}: Double the healing. \nCannot heal above the HP you had at the start of combat.",
+
+  "TEAR-HEALING_CIRCLE.title": "Healing Circle",
+  "TEAR-HEALING_CIRCLE.description": "Exhaust up to {Cards:diff()} cards. \nRecover {Heal:diff()} HP for each card Exhausted. \nYou can only heal up to your starting combat HP. \n{WindFonon}: Double the healing.",
+  "TEAR-HEALING_CIRCLE.selectionScreenPrompt": "Choose up to 3 cards to Exhaust.",
+
+  "TEAR-RESURRECTION.title": "Resurrection",
+  "TEAR-RESURRECTION.description": "Recover {Heal:diff()} HP. \nGain [gold]Resurrection[/gold]. \nGain {LightFonon}. \n{WaterFonon}: Costs 0 {energyPrefix:energyIcons(1)} and applies [gold]Resurrection[/gold] to ALL allies.",
+
+  "TEAR-ENCORE.title": "Encore",
+  "TEAR-ENCORE.description": "Play a random [gold]Fonic Hymn[/gold] from your discard pile and [gold]Exhaust[/gold] it.",
+
+  "TEAR-RECOMPOSE.title": "Recompose",
+  "TEAR-RECOMPOSE.description": "Exhaust 1 card in your hand. \nAdd a random [gold]Fonic Hymn[/gold] to your hand. It gains [gold]Retain[/gold].",
+  "TEAR-RECOMPOSE.selectionScreenPrompt": "Choose a card to Exhaust.",
+
+  "TEAR-REVITALISE.title": "Revitalise",
+  "TEAR-REVITALISE.description": "Recover {Heal:diff()}% of your missing HP relative to your starting combat HP. \nGain {WaterFonon}.",
+
+  "TEAR-CAST_ARTE.title": "Cast Arte",
+  "TEAR-CAST_ARTE.description": "Add a random [gold]Arte[/gold] to your hand. \nIt is free to play this turn.",
+
+  "TEAR-HOLY_SONG.title": "Holy Song",
+  "TEAR-HOLY_SONG.description": "This turn, gain {StrengthPower:diff()} [gold]Strength[/gold] and {DexterityPower:diff()} [gold]Dexterity[/gold]. \nGain {WindFonon}."
 }

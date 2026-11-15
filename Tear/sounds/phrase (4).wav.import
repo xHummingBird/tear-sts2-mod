@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bghg08ex5lwc0"
+path="res://.godot/imported/phrase (4).wav-4f4b320f1ab96401200fd8dfb97792f1.sample"
+
+[deps]
+
+source_file="res://Tear/sounds/phrase (4).wav"
+dest_files=["res://.godot/imported/phrase (4).wav-4f4b320f1ab96401200fd8dfb97792f1.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

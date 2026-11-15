@@ -1,3 +1,16 @@
 {
-  
+  "TEAR-TEAR.aromaPrinciple": "A calm and soothing floral fragrance.",
+  "TEAR-TEAR.banter.alive.endTurnPing": "Are you ready?",
+  "TEAR-TEAR.banter.dead.endTurnPing": "...",
+  "TEAR-TEAR.cardsModifierDescription": "Tear cards will now appear in rewards and shops.",
+  "TEAR-TEAR.cardsModifierTitle": "Tear Cards",
+  "TEAR-TEAR.description": "Manipulate elemental Fonons to unleash powerful FOF Changed Artes. Perform Fonic Hymns and build Overlimit to overwhelm enemies with powerful Artes and Mystic Artes.",
+  "TEAR-TEAR.eventDeathPrevention": "I'm not letting you fall here!",
+  "TEAR-TEAR.goldMonologue": "This should prove useful.",
+  "TEAR-TEAR.possessiveAdjective": "her",
+  "TEAR-TEAR.pronounObject": "her",
+  "TEAR-TEAR.pronounPossessive": "hers",
+  "TEAR-TEAR.pronounSubject": "she",
+  "TEAR-TEAR.title": "Seventh Fonist Tear",
+  "TEAR-TEAR.titleObject": "Seventh Fonist Tear"
 }

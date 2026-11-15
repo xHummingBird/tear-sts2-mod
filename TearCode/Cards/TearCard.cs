@@ -1,9 +1,13 @@
 ﻿using BaseLib.Abstracts;
 using BaseLib.Extensions;
 using BaseLib.Utils;
+using MegaCrit.Sts2.Core.Combat;
 using Tear.TearCode.Character;
 using Tear.TearCode.Extensions;
 using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Models;
+using Tear.TearCode.Mechanics;
+using Tear.TearCode.Powers;
 
 namespace Tear.TearCode.Cards;
 
@@ -23,4 +27,22 @@ public abstract class TearCard(int cost, CardType type, CardRarity rarity, Targe
     //Uses card_portraits/card_name.png as image path. These should be smaller images.
     public override string PortraitPath => $"{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
     public override string BetaPortraitPath => $"beta/{Id.Entry.RemovePrefix().ToLowerInvariant()}.png".CardImagePath();
+    
+    protected override bool IsPlayable
+    {
+        get
+        {
+            if (this is not IFonicHymn)
+                return true;
+
+            if (Owner.Creature.HasPower<OverlimitPower>())
+                return true;
+
+            return !CombatManager.Instance.History.CardPlaysFinished.Any(
+                entry =>
+                    entry.HappenedThisTurn(CombatState) &&
+                    entry.CardPlay.Card.Owner == Owner &&
+                    entry.CardPlay.Card is IFonicHymn);
+        }
+    }
 }

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bu4fe2qc5ginj"
+path="res://.godot/imported/2-22 The edge of a decision.mp3-b60464538891332289cde2cca28d56b8.mp3str"
+
+[deps]
+
+source_file="res://Tear/music/2-22 The edge of a decision.mp3"
+dest_files=["res://.godot/imported/2-22 The edge of a decision.mp3-b60464538891332289cde2cca28d56b8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
