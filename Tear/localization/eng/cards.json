@@ -86,5 +86,92 @@
   "TEAR-CAST_ARTE.description": "Add a random [gold]Arte[/gold] to your hand. \nIt is free to play this turn.",
 
   "TEAR-HOLY_SONG.title": "Holy Song",
-  "TEAR-HOLY_SONG.description": "This turn, gain {StrengthPower:diff()} [gold]Strength[/gold] and {DexterityPower:diff()} [gold]Dexterity[/gold]. \nGain {WindFonon}."
+  "TEAR-HOLY_SONG.description": "This turn, gain {StrengthPower:diff()} [gold]Strength[/gold] and {DexterityPower:diff()} [gold]Dexterity[/gold]. \nGain {WindFonon}.",
+
+  "TEAR-LUCKY_MAGIC.title": "Lucky Magic",
+  "TEAR-LUCKY_MAGIC.description": "Draw {Cards:diff()} card. \nIf the drawn card is an [gold]Arte[/gold], it is free to play this turn.",
+
+  "TEAR-FREE_RUN.title": "Free Run",
+  "TEAR-FREE_RUN.description": "Gain {Block:diff()} [gold]Block[/gold]. \nDraw cards until you draw an Attack.",
+
+  "TEAR-MAGIC_GUARD.title": "Magic Guard",
+  "TEAR-MAGIC_GUARD.description": "Discard 1 card. \nGain {Block:diff()} [gold]Block[/gold]. \nIf the discarded card is an [gold]Arte[/gold], gain [gold]Block[/gold] another time.",
+
+  "TEAR-POWER_CHARGE.title": "Power Charge",
+  "TEAR-POWER_CHARGE.description": "Gain {Block:diff()} [gold]Block[/gold]. \nUpgrade all [gold]Artes[/gold] in your hand.",
+
+  "TEAR-GUARD_PLUS.title": "Guard Plus",
+  "TEAR-GUARD_PLUS.description": "Gain {Block:diff()} [gold]Block[/gold]. \nGain {Overlimit:diff()} [gold]Over Limit[/gold].",
+
+  "TEAR-BACKSTEP.title": "Backstep",
+  "TEAR-BACKSTEP.description": "Gain {Block:diff()} [gold]Block[/gold]. \nApply {WeakPower:diff()} [gold]Weak[/gold].",
+
+  "TEAR-SPEED_CAST.title": "Speed Cast",
+  "TEAR-SPEED_CAST.description": "All cards in your hand are free to play this turn. \nYou cannot gain [gold]Block[/gold] this turn.",
+
+  "TEAR-DASH.title": "Dash",
+  "TEAR-DASH.description": "Draw {Cards:diff()} {Cards:plural:card|cards}. \nGain {Overlimit:diff()} [gold]Over Limit[/gold].",
+
+  "TEAR-NULLIFY.title": "Nullify",
+  "TEAR-NULLIFY.description": "Double your current [gold]Block[/gold].",
+
+  "TEAR-LONG_STEP.title": "Long Step",
+  "TEAR-LONG_STEP.description": "Gain {Block:diff()} [gold]Block[/gold]. \nCosts 0 {energyPrefix:energyIcons(1)} if you've played an [gold]Arte[/gold] this turn.",
+
+  "TEAR-RHYTHM.title": "Rhythm",
+  "TEAR-RHYTHM.description": "Play the top {Cards:diff()} cards of your draw pile.",
+
+  "TEAR-SPELL_SAVE.title": "Spell Save",
+  "TEAR-SPELL_SAVE.description": "Gain {Block:diff()} [gold]Block[/gold]. \nRetain your hand this turn.",
+
+  "TEAR-REPRISE.title": "Reprise",
+  "TEAR-REPRISE.description": "Your next [gold]Arte[/gold] or [gold]Fonic Hymn[/gold] is played twice.",
+
+  "TEAR-BACK_ACTION.title": "Back Action",
+  "TEAR-BACK_ACTION.description": "Gain {Block:diff()} [gold]Block[/gold]. \nIf this is the first card you play this turn, your next Attack costs 0 {Energy:energyIcons()}.",
+
+  "TEAR-FONIC_BARRIER.title": "Fonic Barrier",
+  "TEAR-FONIC_BARRIER.description": "Gain {Block:diff()} [gold]Block[/gold]. \nFor 1 turn, reflect all blocked damage to the attacker.",
+
+  "TEAR-CRESCENDO.title": "Crescendo",
+  "TEAR-CRESCENDO.description": "Gain {Energy:energyIcons()}. \nDraw {Cards:diff()} {Cards:plural:card|cards}. \nGain {Overlimit:diff()} [gold]Over Limit[/gold].",
+
+  "TEAR-CADENCE.title": "Cadence",
+  "TEAR-CADENCE.description": "This turn and next turn, you can play more than 1 [gold]Fonic Hymn[/gold] per turn.",
+  
+  "TEAR-SEVENTH_FONIST.title": "Seventh Fonist",
+  "TEAR-SEVENTH_FONIST.description": "At the start of your turn, add a random [gold]Arte[/gold] to your hand. It gains [gold]Ethereal[/gold].",
+
+  "TEAR-STRONG_OF_HEART.title": "Strong of Heart",
+  "TEAR-STRONG_OF_HEART.description": "The first time you play a [gold]Fonic Hymn[/gold] each turn, gain 1 Energy.",
+
+  "TEAR-YULIAS_BLESSING.title": "Yulia's Blessing",
+  "TEAR-YULIAS_BLESSING.description": "Whenever you gain an elemental [gold]Fonon[/gold], draw {Cards:diff()} {Cards:plural:card|cards}.",
+
+  "TEAR-RESOLUTE_MELODY.title": "Resolute Melody",
+  "TEAR-RESOLUTE_MELODY.description": "Whenever you gain an elemental [gold]Fonon[/gold], gain {VigorPower:diff()} [gold]Vigor[/gold].",
+
+  "TEAR-YULIAS_DESCENDANT.title": "Yulia's Descendant",
+  "TEAR-YULIAS_DESCENDANT.description": "[gold]Fonic Hymns[/gold] gain [gold]Retain[/gold]. \nAt the start of your turn, gain {Overlimit:diff()} [gold]Over Limit[/gold].",
+
+  "TEAR-LINGERING_MELODY.title": "Lingering Melody",
+  "TEAR-LINGERING_MELODY.description": "At the end of your turn, if you did not play a [gold]Fonic Hymn[/gold], play and Exhaust a random [gold]Fonic Hymn[/gold].",
+
+  "TEAR-FONON_ABSORPTION.title": "Fonon Absorption",
+  "TEAR-FONON_ABSORPTION.description": "At the start of your turn, if you do not have an elemental [gold]Fonon[/gold], gain either {LightFonon} or {DarkFonon}. \nWhenever you play an [gold]Arte[/gold], gain {Overlimit:diff()} additional [gold]Over Limit[/gold].",
+
+  "TEAR-SACRED_RESONANCE.title": "Sacred Resonance",
+  "TEAR-SACRED_RESONANCE.description": "[gold]Fonic Hymns[/gold] deal 50% more damage.",
+
+  "TEAR-FIFTH_HARMONY.title": "Fifth Harmony",
+  "TEAR-FIFTH_HARMONY.description": "Whenever you draw a [gold]Fonic Hymn[/gold], draw 1 card.",
+
+  "TEAR-PITCH_PERFECT.title": "Pitch Perfect",
+  "TEAR-PITCH_PERFECT.description": "The first {Amount:diff()} {Amount:plural:card|cards} you play each turn {Amount:plural:is|are} free.",
+
+  "TEAR-GRAND_MAESTRO.title": "Grand Maestro",
+  "TEAR-GRAND_MAESTRO.description": "Whenever you play a [gold]Fonic Hymn[/gold], deal {Damage:diff()} damage to ALL enemies.",
+
+  "TEAR-COMBAT_EXPERT.title": "Combat Expert",
+  "TEAR-COMBAT_EXPERT.description": "Whenever you play an [gold]Arte[/gold], gain 1 [gold]Strength[/gold]."
 }

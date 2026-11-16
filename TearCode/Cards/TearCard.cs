@@ -35,8 +35,11 @@ public abstract class TearCard(int cost, CardType type, CardRarity rarity, Targe
             if (this is not IFonicHymn)
                 return true;
 
-            if (Owner.Creature.HasPower<OverlimitPower>())
+            if (Owner.Creature.HasPower<OverlimitPower>() ||
+                Owner.Creature.HasPower<CadencePower>())
+            {
                 return true;
+            }
 
             return !CombatManager.Instance.History.CardPlaysFinished.Any(
                 entry =>

@@ -27,12 +27,71 @@
   "TEAR-DARK_FONON_POWER.smartDescription": "Boosts [gold]Artes[/gold] that require [gold]Earth Fonon[/gold] or [gold]Water Fonon[/gold], consuming the [gold]Fonon[/gold]. Applying another [gold]Fonon[/gold] replaces this one.",
   "TEAR-DARK_FONON_POWER.title": "Dark Fonon",
 
-  "TEAR-RESURRECTION_POWER.description": "Prevents death once, then recover 20% of Max HP.",
-  "TEAR-RESURRECTION_POWER.smartDescription": "Prevents death once, then recover 20% of Max HP.",
+  "TEAR-REPRISE_POWER.description": "Your next [gold]Arte[/gold] or [gold]Fonic Hymn[/gold] is played an extra time this turn.",
+  "TEAR-REPRISE_POWER.smartDescription": "Your next {Amount:plural:[gold]Arte[/gold] or [gold]Fonic Hymn[/gold] is|[blue]{}[/blue] [gold]Artes[/gold] or [gold]Fonic Hymns[/gold] are} played an extra time this turn.",
+  "TEAR-REPRISE_POWER.title": "Reprise",
+
+  "TEAR-FONIC_BARRIER_POWER.description": "Blocked damage is reflected to your attacker.",
+  "TEAR-FONIC_BARRIER_POWER.smartDescription": "Blocked damage is reflected to your attacker for [blue]{Amount}[/blue] {Amount:plural:turn|turns}.",
+  "TEAR-FONIC_BARRIER_POWER.title": "Fonic Barrier",
+
+  "TEAR-CADENCE_POWER.description": "You can play more than [blue]1[/blue] [gold]Fonic Hymn[/gold] per turn.",
+  "TEAR-CADENCE_POWER.smartDescription": "You can play more than [blue]1[/blue] [gold]Fonic Hymn[/gold] per turn for [blue]{Amount}[/blue] {Amount:plural:turn|turns}.",
+  "TEAR-CADENCE_POWER.title": "Cadence",
+
+  "TEAR-RESURRECTION_POWER.description": "When you would die, prevent death and recover [blue]20%[/blue] of your Max HP.",
+  "TEAR-RESURRECTION_POWER.smartDescription": "When you would die, prevent death and recover [blue]20%[/blue] of your Max HP.",
   "TEAR-RESURRECTION_POWER.title": "Resurrection",
 
-  "TEAR-RESURRECTED_POWER.description": "Already revived with [gold]Resurrection[/gold] this combat. You can no longer revive from [gold]Resurrection[/gold].",
-  "TEAR-RESURRECTED_POWER.smartDescription": "Already revived with [gold]Resurrection[/gold] this combat. You can no longer revive from [gold]Resurrection[/gold].",
-  "TEAR-RESURRECTED_POWER.title": "Resurrected"
+  "TEAR-RESURRECTED_POWER.description": "You have already been revived by [gold]Resurrection[/gold] this combat.",
+  "TEAR-RESURRECTED_POWER.smartDescription": "You have already been revived by [gold]Resurrection[/gold] this combat.",
+  "TEAR-RESURRECTED_POWER.title": "Resurrected",
+  
+  "TEAR-SEVENTH_FONIST_POWER.description": "At the start of your turn, add [blue]{Amount}[/blue] random [gold]Arte[/gold] to your hand. It gains [gold]Ethereal[/gold].",
+  "TEAR-SEVENTH_FONIST_POWER.smartDescription": "At the start of your turn, add [blue]{Amount}[/blue] random [gold]Arte[/gold] to your hand. It gains [gold]Ethereal[/gold].",
+  "TEAR-SEVENTH_FONIST_POWER.title": "Seventh Fonist",
 
+  "TEAR-STRONG_OF_HEART_POWER.description": "The first time you play a [gold]Fonic Hymn[/gold] each turn, gain [blue]{Amount}[/blue] Energy.",
+  "TEAR-STRONG_OF_HEART_POWER.smartDescription": "The first time you play a [gold]Fonic Hymn[/gold] each turn, gain [blue]{Amount}[/blue] Energy.",
+  "TEAR-STRONG_OF_HEART_POWER.title": "Strong of Heart",
+
+  "TEAR-YULIAS_BLESSING_POWER.description": "Whenever you gain an elemental [gold]Fonon[/gold], draw [blue]{Amount}[/blue] {Amount:plural:card|cards}.",
+  "TEAR-YULIAS_BLESSING_POWER.smartDescription": "Whenever you gain an elemental [gold]Fonon[/gold], draw [blue]{Amount}[/blue] {Amount:plural:card|cards}.",
+  "TEAR-YULIAS_BLESSING_POWER.title": "Yulia's Blessing",
+
+  "TEAR-RESOLUTE_MELODY_POWER.description": "Whenever you gain an elemental [gold]Fonon[/gold], gain [blue]{Amount}[/blue] [gold]Vigor[/gold].",
+  "TEAR-RESOLUTE_MELODY_POWER.smartDescription": "Whenever you gain an elemental [gold]Fonon[/gold], gain [blue]{Amount}[/blue] [gold]Vigor[/gold].",
+  "TEAR-RESOLUTE_MELODY_POWER.title": "Resolute Melody",
+
+  "TEAR-YULIAS_DESCENDANT_POWER.description": "[gold]Fonic Hymns[/gold] have [gold]Retain[/gold]. At the start of your turn, gain [blue]{Amount}[/blue] [gold]Over Limit[/gold].",
+  "TEAR-YULIAS_DESCENDANT_POWER.smartDescription": "[gold]Fonic Hymns[/gold] have [gold]Retain[/gold]. At the start of your turn, gain [blue]{Amount}[/blue] [gold]Over Limit[/gold].",
+  "TEAR-YULIAS_DESCENDANT_POWER.title": "Yulia's Descendant",
+
+  "TEAR-LINGERING_MELODY_POWER.description": "At the end of your turn, if you did not play a [gold]Fonic Hymn[/gold], play and Exhaust a random [gold]Fonic Hymn[/gold].",
+  "TEAR-LINGERING_MELODY_POWER.smartDescription": "At the end of your turn, if you did not play a [gold]Fonic Hymn[/gold], play and Exhaust a random [gold]Fonic Hymn[/gold].",
+  "TEAR-LINGERING_MELODY_POWER.title": "Lingering Melody",
+
+  "TEAR-FONON_ABSORPTION_POWER.description": "At the start of your turn, if you do not have an elemental [gold]Fonon[/gold], gain either [gold]Light Fonon[/gold] or [gold]Dark Fonon[/gold]. Whenever you play an [gold]Arte[/gold], gain [blue]{Amount}[/blue] additional [gold]Over Limit[/gold].",
+  "TEAR-FONON_ABSORPTION_POWER.smartDescription": "At the start of your turn, if you do not have an elemental [gold]Fonon[/gold], gain either [gold]Light Fonon[/gold] or [gold]Dark Fonon[/gold]. Whenever you play an [gold]Arte[/gold], gain [blue]{Amount}[/blue] additional [gold]Over Limit[/gold].",
+  "TEAR-FONON_ABSORPTION_POWER.title": "Fonon Absorption",
+
+  "TEAR-SACRED_RESONANCE_POWER.description": "[gold]Fonic Hymns[/gold] deal [blue]{Amount}%[/blue] more damage.",
+  "TEAR-SACRED_RESONANCE_POWER.smartDescription": "[gold]Fonic Hymns[/gold] deal [blue]{Amount}%[/blue] more damage.",
+  "TEAR-SACRED_RESONANCE_POWER.title": "Sacred Resonance",
+
+  "TEAR-FIFTH_HARMONY_POWER.description": "Whenever you draw a [gold]Fonic Hymn[/gold], draw [blue]{Amount}[/blue] {Amount:plural:card|cards}.",
+  "TEAR-FIFTH_HARMONY_POWER.smartDescription": "Whenever you draw a [gold]Fonic Hymn[/gold], draw [blue]{Amount}[/blue] {Amount:plural:card|cards}.",
+  "TEAR-FIFTH_HARMONY_POWER.title": "Fifth Harmony",
+
+  "TEAR-PITCH_PERFECT_POWER.description": "The first [blue]{Amount}[/blue] {Amount:plural:card|cards} you play each turn {Amount:plural:is|are} free.",
+  "TEAR-PITCH_PERFECT_POWER.smartDescription": "The first [blue]{Amount}[/blue] {Amount:plural:card|cards} you play each turn {Amount:plural:is|are} free.",
+  "TEAR-PITCH_PERFECT_POWER.title": "Pitch Perfect",
+
+  "TEAR-GRAND_MAESTRO_POWER.description": "Whenever you play a [gold]Fonic Hymn[/gold], deal [blue]{Amount}[/blue] damage to ALL enemies.",
+  "TEAR-GRAND_MAESTRO_POWER.smartDescription": "Whenever you play a [gold]Fonic Hymn[/gold], deal [blue]{Amount}[/blue] damage to ALL enemies.",
+  "TEAR-GRAND_MAESTRO_POWER.title": "Grand Maestro",
+
+  "TEAR-COMBAT_EXPERT_POWER.description": "Whenever you play an [gold]Arte[/gold], gain [blue]{Amount}[/blue] [gold]Strength[/gold].",
+  "TEAR-COMBAT_EXPERT_POWER.smartDescription": "Whenever you play an [gold]Arte[/gold], gain [blue]{Amount}[/blue] [gold]Strength[/gold].",
+  "TEAR-COMBAT_EXPERT_POWER.title": "Combat Expert"
 }
