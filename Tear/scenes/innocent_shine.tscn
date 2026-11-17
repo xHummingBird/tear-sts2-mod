@@ -1,6 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://blxk8mygufiev"]
+[gd_scene load_steps=9 format=3 uid="uid://blxk8mygufiev"]
 
 [ext_resource type="Texture2D" uid="uid://c6w1aco2gmxkj" path="res://Tear/images/spritesheets/nsp_3030137000_01.png" id="1_mlcmg"]
+[ext_resource type="AudioStream" uid="uid://ca4sf6ili85gd" path="res://Tear/sounds/se/innocent_shine_1.mp3" id="2_ccdv0"]
+[ext_resource type="AudioStream" uid="uid://bea7lfalgaiea" path="res://Tear/sounds/se/innocent_shine_2.mp3" id="3_fh150"]
+[ext_resource type="AudioStream" uid="uid://xls7atla45bp" path="res://Tear/sounds/se/innocent_shine_3.mp3" id="4_4147s"]
+[ext_resource type="AudioStream" uid="uid://b6ofrexcydwbm" path="res://Tear/sounds/se/innocent_shine_4.mp3" id="5_gy7b3"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_xv4rc"]
 blend_mode = 1
@@ -2215,6 +2219,77 @@ tracks/183/keys = {
 "update": 1,
 "values": [6, 5]
 }
+tracks/184/type = "audio"
+tracks/184/imported = false
+tracks/184/enabled = true
+tracks/184/path = NodePath("AudioStreamPlayer2D")
+tracks/184/interp = 1
+tracks/184/loop_wrap = true
+tracks/184/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("2_ccdv0")
+}],
+"times": PackedFloat32Array(0.73333335)
+}
+tracks/184/use_blend = true
+tracks/185/type = "audio"
+tracks/185/imported = false
+tracks/185/enabled = true
+tracks/185/path = NodePath("AudioStreamPlayer2D")
+tracks/185/interp = 1
+tracks/185/loop_wrap = true
+tracks/185/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_fh150")
+}],
+"times": PackedFloat32Array(1.7333333)
+}
+tracks/185/use_blend = true
+tracks/186/type = "audio"
+tracks/186/imported = false
+tracks/186/enabled = true
+tracks/186/path = NodePath("AudioStreamPlayer2D")
+tracks/186/interp = 1
+tracks/186/loop_wrap = true
+tracks/186/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_4147s")
+}],
+"times": PackedFloat32Array(2.4666667)
+}
+tracks/186/use_blend = true
+tracks/187/type = "audio"
+tracks/187/imported = false
+tracks/187/enabled = true
+tracks/187/path = NodePath("AudioStreamPlayer2D")
+tracks/187/interp = 1
+tracks/187/loop_wrap = true
+tracks/187/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("5_gy7b3")
+}],
+"times": PackedFloat32Array(3.2666667)
+}
+tracks/187/use_blend = true
+tracks/188/type = "audio"
+tracks/188/imported = false
+tracks/188/enabled = true
+tracks/188/path = NodePath("AudioStreamPlayer2D")
+tracks/188/interp = 1
+tracks/188/loop_wrap = true
+tracks/188/keys = {
+"clips": [],
+"times": PackedFloat32Array()
+}
+tracks/188/use_blend = true
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_k0080"]
 _data = {
@@ -2228,7 +2303,7 @@ position = Vector2(0, 180)
 
 [node name="000_gr_nsp_3030137000_01_black_bg" type="Polygon2D" parent="Parts"]
 visible = false
-self_modulate = Color(1, 1, 1, 0.1421)
+self_modulate = Color(1, 1, 1, 0.0284)
 position = Vector2(215, -351)
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(-930.8, -930.8, 931.00006, -930.8, 931.00006, 931.00006, -930.8, 931.00006)
@@ -2623,7 +2698,8 @@ region_enabled = true
 region_rect = Rect2(228, 656, 200, 240)
 
 [node name="032_nsp_3030137000_01_ef_t_02_b" type="Sprite2D" parent="Parts"]
-self_modulate = Color(1, 1, 1, 0.6)
+visible = false
+self_modulate = Color(1, 1, 1, 0.2)
 z_index = 1
 material = SubResource("CanvasItemMaterial_xv4rc")
 position = Vector2(-219.88, -964.02)
@@ -2634,7 +2710,8 @@ region_enabled = true
 region_rect = Rect2(656, 8, 240, 240)
 
 [node name="033_nsp_3030137000_01_ef_t_02_b_1" type="Sprite2D" parent="Parts"]
-self_modulate = Color(1, 1, 1, 0.6)
+visible = false
+self_modulate = Color(1, 1, 1, 0.2)
 z_index = 2
 material = SubResource("CanvasItemMaterial_xv4rc")
 position = Vector2(-471.4, -1242.6)
@@ -2749,7 +2826,8 @@ region_enabled = true
 region_rect = Rect2(644, 752, 192, 240)
 
 [node name="043_nsp_3030137000_01_ef_t_04" type="Sprite2D" parent="Parts"]
-self_modulate = Color(1, 1, 1, 0.36)
+visible = false
+self_modulate = Color(1, 1, 1, 0.04)
 z_index = 3
 material = SubResource("CanvasItemMaterial_xv4rc")
 position = Vector2(95.494, -1948.279)
@@ -2761,7 +2839,8 @@ region_enabled = true
 region_rect = Rect2(916, 1000, 72, 240)
 
 [node name="044_nsp_3030137000_01_ef_t_04_1" type="Sprite2D" parent="Parts"]
-self_modulate = Color(1, 1, 1, 0.36)
+visible = false
+self_modulate = Color(1, 1, 1, 0.04)
 z_index = 4
 material = SubResource("CanvasItemMaterial_xv4rc")
 position = Vector2(95.494, -1948.279)
@@ -2773,7 +2852,8 @@ region_enabled = true
 region_rect = Rect2(916, 1000, 72, 240)
 
 [node name="045_nsp_3030137000_01_ef_t_03" type="Sprite2D" parent="Parts"]
-self_modulate = Color(1, 1, 1, 0.36)
+visible = false
+self_modulate = Color(1, 1, 1, 0.04)
 z_index = 5
 material = SubResource("CanvasItemMaterial_xv4rc")
 position = Vector2(-95.151, 971.28)
@@ -2787,3 +2867,5 @@ region_rect = Rect2(84, 1092, 68, 240)
 libraries = {
 &"": SubResource("AnimationLibrary_k0080")
 }
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
