@@ -25,6 +25,11 @@ public class Resurrection() : TearCard(
     [
         new HealVar(5m)
     ];
+    
+    protected override bool ShouldGlowGoldInternal =>
+        Owner.HasPower<WaterFononPower>() ||
+        Owner.HasPower<DarkFononPower>() ||
+        Owner.HasPower<OverlimitPower>();
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
     [

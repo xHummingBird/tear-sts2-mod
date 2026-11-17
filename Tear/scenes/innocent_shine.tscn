@@ -17,7 +17,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 0.033333335, 4.9),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [false, true, false]
+"values": [false, false, false]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -65,7 +65,7 @@ tracks/4/keys = {
 "times": PackedFloat32Array(0, 0.8333333, 4.6666665),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [false, true, false]
+"values": [false, false, false]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
@@ -1649,7 +1649,7 @@ tracks/136/keys = {
 "times": PackedFloat32Array(0, 2.6, 3.2333333),
 "transitions": PackedFloat32Array(1, 1, 1),
 "update": 1,
-"values": [false, true, false]
+"values": [false, false, false]
 }
 tracks/137/type = "value"
 tracks/137/imported = false
@@ -2228,7 +2228,7 @@ position = Vector2(0, 180)
 
 [node name="000_gr_nsp_3030137000_01_black_bg" type="Polygon2D" parent="Parts"]
 visible = false
-self_modulate = Color(1, 1, 1, 0.0284)
+self_modulate = Color(1, 1, 1, 0.1421)
 position = Vector2(215, -351)
 color = Color(0, 0, 0, 1)
 polygon = PackedVector2Array(-930.8, -930.8, 931.00006, -930.8, 931.00006, 931.00006, -930.8, 931.00006)
@@ -2623,8 +2623,7 @@ region_enabled = true
 region_rect = Rect2(228, 656, 200, 240)
 
 [node name="032_nsp_3030137000_01_ef_t_02_b" type="Sprite2D" parent="Parts"]
-visible = false
-self_modulate = Color(1, 1, 1, 0.2)
+self_modulate = Color(1, 1, 1, 0.6)
 z_index = 1
 material = SubResource("CanvasItemMaterial_xv4rc")
 position = Vector2(-219.88, -964.02)
@@ -2635,8 +2634,7 @@ region_enabled = true
 region_rect = Rect2(656, 8, 240, 240)
 
 [node name="033_nsp_3030137000_01_ef_t_02_b_1" type="Sprite2D" parent="Parts"]
-visible = false
-self_modulate = Color(1, 1, 1, 0.2)
+self_modulate = Color(1, 1, 1, 0.6)
 z_index = 2
 material = SubResource("CanvasItemMaterial_xv4rc")
 position = Vector2(-471.4, -1242.6)
@@ -2751,8 +2749,7 @@ region_enabled = true
 region_rect = Rect2(644, 752, 192, 240)
 
 [node name="043_nsp_3030137000_01_ef_t_04" type="Sprite2D" parent="Parts"]
-visible = false
-self_modulate = Color(1, 1, 1, 0.04)
+self_modulate = Color(1, 1, 1, 0.36)
 z_index = 3
 material = SubResource("CanvasItemMaterial_xv4rc")
 position = Vector2(95.494, -1948.279)
@@ -2764,8 +2761,7 @@ region_enabled = true
 region_rect = Rect2(916, 1000, 72, 240)
 
 [node name="044_nsp_3030137000_01_ef_t_04_1" type="Sprite2D" parent="Parts"]
-visible = false
-self_modulate = Color(1, 1, 1, 0.04)
+self_modulate = Color(1, 1, 1, 0.36)
 z_index = 4
 material = SubResource("CanvasItemMaterial_xv4rc")
 position = Vector2(95.494, -1948.279)
@@ -2777,8 +2773,7 @@ region_enabled = true
 region_rect = Rect2(916, 1000, 72, 240)
 
 [node name="045_nsp_3030137000_01_ef_t_03" type="Sprite2D" parent="Parts"]
-visible = false
-self_modulate = Color(1, 1, 1, 0.04)
+self_modulate = Color(1, 1, 1, 0.36)
 z_index = 5
 material = SubResource("CanvasItemMaterial_xv4rc")
 position = Vector2(-95.151, 971.28)

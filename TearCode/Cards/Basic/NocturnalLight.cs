@@ -1,4 +1,5 @@
-﻿using BaseLib.Utils;
+﻿using BaseLib.Extensions;
+using BaseLib.Utils;
 using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
@@ -7,6 +8,7 @@ using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.ValueProps;
 using Tear.TearCode.Extensions;
 using Tear.TearCode.Mechanics;
+using Tear.TearCode.Powers;
 
 namespace Tear.TearCode.Cards.Basic;
 
@@ -22,24 +24,71 @@ public class NocturnalLight() : TearCard(0, CardType.Attack,
     [
         TearStaticHoverTips.Arte
     ];
+    
+    protected override bool ShouldGlowGoldInternal =>
+        Owner.HasPower<EarthFononPower>() ||
+        Owner.HasPower<DarkFononPower>() ||
+        Owner.HasPower<OverlimitPower>();
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         var ownerCreature = Owner?.Creature;
-
+        
+        var hasEarthFonon =
+            ownerCreature.HasPower<EarthFononPower>() ||
+            ownerCreature.HasPower<DarkFononPower>() ||
+            ownerCreature.HasPower<OverlimitPower>();
+        
         if (ownerCreature != null && Owner?.Character is Character.Tear tear)
         {
-            SfxCmd.Play("res://Tear/sounds/nocturnal_light.wav", 0.7f);
+            if (hasEarthFonon)
+                SfxCmd.Play("res://Tear/sounds/inlay_nocturne.wav", 0.7f);
+            else
+                SfxCmd.Play("res://Tear/sounds/nocturnal_light.wav", 0.7f);
             tear.PlayAnimation(ownerCreature, "attack_tear");
             SfxCmd.Play("res://Tear/sounds/se/swing_1.mp3");
             SfxCmd.Play("res://Tear/sounds/se/swing_2.mp3");
-            await Task.Delay(167);
-            SfxCmd.Play("res://Tear/sounds/se/swing_3.mp3");
-            tear.PlayVfxOnTarget(play.Target, "res://Tear/scenes/hit.tscn", "hit");
+            int currentHit = 0;
+            if (hasEarthFonon)
+            {
+                tear.PlayVfxOnTarget(play.Target, "res://Tear/scenes/vfx.tscn", "inlay_nocturne");
+                SfxCmd.Play("res://Tear/sfx/from_tifa/final_heaven_swing.wav");
+                await DamageCmd.Attack(DynamicVars.Damage.BaseValue)
+                    .WithHitCount(2)
+                    .FromCard(this, play)
+                    .Targeting(play.Target)
+                    .WithHitFx(null, "res://Tear/sfx/tear_hit.wav")
+                    .WithNoAttackerAnim()
+                    .WithWaitBeforeHit(0.33f, 0.33f)
+                    .WithHitVfxNode(target =>
+                    {
+                        currentHit++;
+                        if (currentHit > 1)
+                        {
+                            tear.PlayVfxOnTarget(play.Target, "res://Tear/scenes/hit.tscn", "hit");
+                            SfxCmd.Play("res://Tear/sfx/from_tifa/chi_sfx.wav");
+                        }
+                        return null;
+                    })
+                    .Execute(choiceContext);
+            }
+
+            else
+            {
+                await Task.Delay(167);
+                SfxCmd.Play("res://Tear/sounds/se/swing_3.mp3");
+                tear.PlayVfxOnTarget(play.Target, "res://Tear/scenes/hit.tscn", "hit");
+                await CommonActions.CardAttack(this, play.Target)
+                    .WithHitFx(null, "res://Tear/sfx/tear_hit.wav")
+                    .Execute(choiceContext);
+            }
         }
-        await CommonActions.CardAttack(this, play.Target)
+        else  await CommonActions.CardAttack(this, play.Target)
             .WithHitFx(null, "res://Tear/sfx/tear_hit.wav")
             .Execute(choiceContext);
+        
+        
+        
         
     }
 

@@ -5,6 +5,7 @@ using MegaCrit.Sts2.Core.Combat;
 using Tear.TearCode.Character;
 using Tear.TearCode.Extensions;
 using MegaCrit.Sts2.Core.Entities.Cards;
+using MegaCrit.Sts2.Core.Localization;
 using MegaCrit.Sts2.Core.Models;
 using Tear.TearCode.Mechanics;
 using Tear.TearCode.Powers;
@@ -47,5 +48,35 @@ public abstract class TearCard(int cost, CardType type, CardRarity rarity, Targe
                     entry.CardPlay.Card.Owner == Owner &&
                     entry.CardPlay.Card is IFonicHymn);
         }
+    }
+    
+    protected override void AddExtraArgsToDescription(
+        LocString description)
+    {
+        base.AddExtraArgsToDescription(description);
+
+        description.Add(
+            "FireFonon",
+            "[img]res://Tear/images/charui/fire_fonon_icon.png[/img]");
+
+        description.Add(
+            "WindFonon",
+            "[img]res://Tear/images/charui/wind_fonon_icon.png[/img]");
+
+        description.Add(
+            "EarthFonon",
+            "[img]res://Tear/images/charui/earth_fonon_icon.png[/img]");
+
+        description.Add(
+            "WaterFonon",
+            "[img]res://Tear/images/charui/water_fonon_icon.png[/img]");
+
+        description.Add(
+            "LightFonon",
+            "[img]res://Tear/images/charui/light_fonon_icon.png[/img]");
+
+        description.Add(
+            "DarkFonon",
+            "[img]res://Tear/images/charui/dark_fonon_icon.png[/img]");
     }
 }

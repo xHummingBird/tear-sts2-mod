@@ -16,7 +16,7 @@ public class Nightmare() : TearCard(1, CardType.Attack,
 {
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new DamageVar(10m, ValueProp.Move),
+        new DamageVar(11m, ValueProp.Move),
         new PowerVar<WeakPower>(1)
     ];
     

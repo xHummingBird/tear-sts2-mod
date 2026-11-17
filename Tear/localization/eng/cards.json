@@ -2,8 +2,11 @@
   "TEAR-STRIKE_TEAR.description": "Deal {Damage:diff()} damage.",
   "TEAR-STRIKE_TEAR.title": "Strike",
 
-  "TEAR-NOCTURNAL_LIGHT.description": "Deal {Damage:diff()} damage.",
+  "TEAR-NOCTURNAL_LIGHT.description": "Deal {Damage:diff()} damage. \n{EarthFonon}: Hit another time.",
   "TEAR-NOCTURNAL_LIGHT.title": "Nocturnal Light",
+
+  "TEAR-POW_HAMMER.title": "Pow Hammer",
+  "TEAR-POW_HAMMER.description": "Deal {Damage:diff()} damage. \nApply {WeakPower:diff()} [gold]Weak[/gold]. \n{WaterFonon}: Apply {VulnerablePower:diff()} [gold]Vulnerable[/gold].",
 
   "TEAR-DEFEND_TEAR.description": "Gain {Block:diff()} [gold]Block[/gold].",
   "TEAR-DEFEND_TEAR.title": "Defend",
@@ -29,19 +32,19 @@
   "TEAR-TRAINED_ASSASSIN.title": "Trained Assassin",
   "TEAR-TRAINED_ASSASSIN.description": "Deal {Damage:diff()} damage. \nIf this is the first card you play this turn, play a random Attack from your hand.",
   
-  "TEAR-INVOKE_FIRE.title": "Invoke Fire",
+  "TEAR-INVOKE_FIRE.title": "Invoke Flame",
   "TEAR-INVOKE_FIRE.description": "Gain {VigorPower:diff()} [gold]Vigor[/gold]. \nGain {FireFonon}.",
 
-  "TEAR-INVOKE_WATER.title": "Invoke Water",
+  "TEAR-INVOKE_WATER.title": "Invoke Aqua",
   "TEAR-INVOKE_WATER.description": "Gain {Block:diff()} [gold]Block[/gold]. \nGain {WaterFonon}.",
 
-  "TEAR-INVOKE_EARTH.title": "Invoke Earth",
+  "TEAR-INVOKE_EARTH.title": "Invoke Ground",
   "TEAR-INVOKE_EARTH.description": "Next turn, gain {Energy:energyIcons()}. \nGain {EarthFonon}.",
 
-  "TEAR-INVOKE_WIND.title": "Invoke Wind",
+  "TEAR-INVOKE_WIND.title": "Invoke Gale",
   "TEAR-INVOKE_WIND.description": "Draw {Cards:diff()} {Cards:plural:card|cards}. \nGain {WindFonon}.",
 
-  "TEAR-INVOKE_DARK.title": "Invoke Dark",
+  "TEAR-INVOKE_DARK.title": "Invoke Darkness",
   "TEAR-INVOKE_DARK.description": "Apply {VulnerablePower:diff()} [gold]Vulnerable[/gold] to ALL enemies. \nGain {DarkFonon}.",
 
   "TEAR-INVOKE_LIGHT.title": "Invoke Light",
@@ -173,5 +176,14 @@
   "TEAR-GRAND_MAESTRO.description": "Whenever you play a [gold]Fonic Hymn[/gold], deal {Damage:diff()} damage to ALL enemies.",
 
   "TEAR-COMBAT_EXPERT.title": "Combat Expert",
-  "TEAR-COMBAT_EXPERT.description": "Whenever you play an [gold]Arte[/gold], gain 1 [gold]Strength[/gold]."
+  "TEAR-COMBAT_EXPERT.description": "Whenever you play an [gold]Arte[/gold], gain 1 [gold]Strength[/gold].",
+
+  "TEAR-FLOWER_OF_THE_QLIPHOTH.title": "Flower of the Qliphoth",
+  "TEAR-FLOWER_OF_THE_QLIPHOTH.description": "Whenever you play a [gold]Fonic Hymn[/gold], gain {Block:diff()} [gold]Block[/gold].",
+
+  "TEAR-FONIC_MASTERY.title": "Fonic Mastery",
+  "TEAR-FONIC_MASTERY.description": "[gold]Artes[/gold] deal {Amount:diff()}% more damage.",
+  
+  "TEAR-SEVERED_FATE.description": "Deal {Damage:diff()} damage. \n{WindFonon}: Hit ALL enemies.",
+  "TEAR-SEVERED_FATE.title": "Severed Fate"
 }

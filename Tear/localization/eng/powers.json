@@ -93,5 +93,13 @@
 
   "TEAR-COMBAT_EXPERT_POWER.description": "Whenever you play an [gold]Arte[/gold], gain [blue]{Amount}[/blue] [gold]Strength[/gold].",
   "TEAR-COMBAT_EXPERT_POWER.smartDescription": "Whenever you play an [gold]Arte[/gold], gain [blue]{Amount}[/blue] [gold]Strength[/gold].",
-  "TEAR-COMBAT_EXPERT_POWER.title": "Combat Expert"
+  "TEAR-COMBAT_EXPERT_POWER.title": "Combat Expert",
+
+  "TEAR-FLOWER_OF_THE_QLIPHOTH_POWER.description": "Whenever you play a [gold]Fonic Hymn[/gold], gain [blue]{Amount}[/blue] [gold]Block[/gold].",
+  "TEAR-FLOWER_OF_THE_QLIPHOTH_POWER.smartDescription": "Whenever you play a [gold]Fonic Hymn[/gold], gain [blue]{Amount}[/blue] [gold]Block[/gold].",
+  "TEAR-FLOWER_OF_THE_QLIPHOTH_POWER.title": "Flower of the Qliphoth",
+
+  "TEAR-FONIC_MASTERY_POWER.description": "[gold]Artes[/gold] deal [blue]{Amount}%[/blue] more damage.",
+  "TEAR-FONIC_MASTERY_POWER.smartDescription": "[gold]Artes[/gold] deal [blue]{Amount}%[/blue] more damage.",
+  "TEAR-FONIC_MASTERY_POWER.title": "Fonic Mastery"
 }

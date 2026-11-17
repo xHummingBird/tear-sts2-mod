@@ -1,4 +1,5 @@
-﻿using MegaCrit.Sts2.Core.Commands;
+﻿using BaseLib.Extensions;
+using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
@@ -22,6 +23,11 @@ public class FirstAid() : TearCard(
     [
         new HealVar(3m)
     ];
+    
+    protected override bool ShouldGlowGoldInternal =>
+        Owner.HasPower<WaterFononPower>() ||
+        Owner.HasPower<DarkFononPower>() ||
+        Owner.HasPower<OverlimitPower>();
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
     [
@@ -88,7 +94,8 @@ public class FirstAid() : TearCard(
                 ownerCreature,
                 healAmount);
         }
-
+        
+        
         if (hasWaterFonon)
         {
             await PowerCmd.Remove<WaterFononPower>(ownerCreature);
