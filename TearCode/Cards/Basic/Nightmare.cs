@@ -5,6 +5,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models.Powers;
+using MegaCrit.Sts2.Core.Runs;
 using MegaCrit.Sts2.Core.ValueProps;
 using Tear.TearCode.Extensions;
 using Tear.TearCode.Mechanics;
@@ -29,7 +30,7 @@ public class Nightmare() : TearCard(1, CardType.Attack,
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         var ownerCreature = Owner?.Creature;
-
+        CenterCardCinematic.Start(RunManager.Instance.NetService.NetId);
         if (ownerCreature != null && Owner?.Character is Character.Tear tear)
         {
             SfxCmd.Play("res://Tear/sounds/hymns/first_hymn.mp3", 0.7f);
@@ -46,6 +47,7 @@ public class Nightmare() : TearCard(1, CardType.Attack,
         await CommonActions.CardAttack(this, play.Target)
             .WithHitFx(null, "res://Tear/sfx/tear_hit.wav")
             .Execute(choiceContext);
+        CenterCardCinematic.End(RunManager.Instance.NetService.NetId);
         await PowerCmd.Apply<WeakPower>(choiceContext, play.Target, DynamicVars.Weak.BaseValue, Owner.Creature, this);
 
     }

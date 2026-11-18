@@ -6,6 +6,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models.Powers;
+using MegaCrit.Sts2.Core.Runs;
 using MegaCrit.Sts2.Core.ValueProps;
 using Tear.TearCode.Extensions;
 using Tear.TearCode.Mechanics;
@@ -53,7 +54,7 @@ public class SeveredFate() : TearCard(1, CardType.Attack,
             Owner.HasPower<WindFononPower>() ||
             Owner.HasPower<LightFononPower>() ||
             Owner.HasPower<OverlimitPower>();
-        
+        CenterCardCinematic.Start(RunManager.Instance.NetService.NetId);
         if (ownerCreature != null && Owner?.Character is Character.Tear tear)
         {
             if (hasWindFonon)
@@ -72,7 +73,12 @@ public class SeveredFate() : TearCard(1, CardType.Attack,
         await CommonActions.CardAttack(this, play.Target)
             .WithHitFx(null, "res://Tear/sfx/tear_hit.wav")
             .Execute(choiceContext);
-        
+        if (hasWindFonon)
+        {
+            await PowerCmd.Remove<WindFononPower>(ownerCreature);
+            await PowerCmd.Remove<LightFononPower>(ownerCreature);
+        }
+        CenterCardCinematic.End(RunManager.Instance.NetService.NetId);
     }
     
     protected override void OnUpgrade()

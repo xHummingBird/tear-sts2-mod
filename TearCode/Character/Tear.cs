@@ -269,6 +269,33 @@ public class Tear : PlaceholderCharacterModel
         if (goIdle)
             PlayAnimation(player, "idle");
     }
+    
+    public Control PlayCutIn(string animName)
+    {
+        var scene = GD.Load<PackedScene>(
+            "res://Tear/scenes/cutin.tscn");
+
+        var cutIn = scene.Instantiate<Control>();
+
+        NGame.Instance.AddChild(cutIn);
+
+        var visualAnchor =
+            cutIn.GetNode<Node2D>("Visuals");
+
+        var viewportSize =
+            cutIn.GetViewportRect().Size;
+
+        visualAnchor.Position =
+            viewportSize / 2f;
+
+        var animPlayer =
+            cutIn.GetNode<AnimationPlayer>("AnimationPlayer");
+
+        if (animPlayer.HasAnimation(animName))
+            animPlayer.Play(animName);
+
+        return cutIn;
+    }
 
     // =========================================================================
     // SCREEN SHAKE

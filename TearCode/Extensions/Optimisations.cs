@@ -14,6 +14,7 @@ public static class TearAssets
     private static PackedScene? _hitScene;
     private static PackedScene? _holyLanceScene;
     private static PackedScene? _innocentShineScene;
+    private static PackedScene? _cutInScene;
 
     private const string TearScenePath =
         "res://Tear/scenes/tear.tscn";
@@ -32,6 +33,9 @@ public static class TearAssets
 
     private const string InnocentShinePath =
         "res://Tear/scenes/innocent_shine.tscn";
+    
+    private const string CutInPath =
+        "res://Tear/scenes/cutin.tscn";
 
 
     public static bool IsTearInRun(IRunState runState)
@@ -118,6 +122,19 @@ public static class TearAssets
             return _innocentShineScene;
         }
     }
+    
+    public static PackedScene? CutInScene
+    {
+        get
+        {
+            _cutInScene = LoadOrReload(
+                _cutInScene,
+                CutInPath,
+                "Cut In");
+            
+            return _cutInScene;
+        }
+    }
 
     private static PackedScene? LoadOrReload(
         PackedScene? cachedScene,
@@ -158,6 +175,7 @@ public static class TearAssets
         _ = HitScene;
         _ = HolyLanceScene;
         _ = InnocentShineScene;
+        _ = CutInScene;
 
         GD.Print(
             "TearAssets: EnsurePreloaded finished");

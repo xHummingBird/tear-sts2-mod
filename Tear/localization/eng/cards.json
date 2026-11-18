@@ -185,5 +185,11 @@
   "TEAR-FONIC_MASTERY.description": "[gold]Artes[/gold] deal {Amount:diff()}% more damage.",
   
   "TEAR-SEVERED_FATE.description": "Deal {Damage:diff()} damage. \n{WindFonon}: Hit ALL enemies.",
-  "TEAR-SEVERED_FATE.title": "Severed Fate"
+  "TEAR-SEVERED_FATE.title": "Severed Fate",
+
+  "TEAR-HOLY_LANCE.title": "Holy Lance",
+  "TEAR-HOLY_LANCE.description": "Deal {Damage:diff()} damage X times to ALL enemies. \n{EarthFonon}: X is doubled.",
+
+  "TEAR-INNOCENT_SHINE.title": "Innocent Shine",
+  "TEAR-INNOCENT_SHINE.description": "Deal {CalculatedDamage:diff()} damage to ALL enemies. \nDamage increases by {ExtraDamage:diff()} for every [gold]Arte[/gold] you've played this combat."
 }

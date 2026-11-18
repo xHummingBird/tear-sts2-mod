@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=3 uid="uid://bedohqyegxyo4"]
 
-[ext_resource type="AudioStream" uid="uid://cwvpu5i2141tk" path="res://Tear/sounds/se/ab_3030137000_04_se_1.mp3" id="2_4w5o8"]
+[ext_resource type="AudioStream" uid="uid://cwvpu5i2141tk" path="res://Tear/sounds/se/cluster_raid_1.mp3" id="2_4w5o8"]
 [ext_resource type="Texture2D" uid="uid://bssos62emsde2" path="res://Tear/images/spritesheets/ab_all_3030137000_04.png" id="2_v6v35"]
-[ext_resource type="AudioStream" uid="uid://b05oqkxpe54i8" path="res://Tear/sounds/se/ab_3030137000_04_se_1_2.mp3" id="3_wayuf"]
-[ext_resource type="AudioStream" uid="uid://xyroq8vcw2ri" path="res://Tear/sounds/se/ab_3030137000_04_se_1_3.mp3" id="4_1fe01"]
-[ext_resource type="AudioStream" uid="uid://bs8bxiqh021uh" path="res://Tear/sounds/se/ab_3030137000_04_se_1_4.mp3" id="5_tsn0x"]
+[ext_resource type="AudioStream" uid="uid://b05oqkxpe54i8" path="res://Tear/sounds/se/cluster_raid_2.mp3" id="3_wayuf"]
+[ext_resource type="AudioStream" uid="uid://xyroq8vcw2ri" path="res://Tear/sounds/se/cluster_raid_3.mp3" id="4_1fe01"]
+[ext_resource type="AudioStream" uid="uid://bs8bxiqh021uh" path="res://Tear/sounds/se/cluster_raid_4.mp3" id="5_tsn0x"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_aqf0i"]
 blend_mode = 1

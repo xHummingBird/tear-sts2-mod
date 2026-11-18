@@ -5,6 +5,7 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
+using MegaCrit.Sts2.Core.Runs;
 using MegaCrit.Sts2.Core.ValueProps;
 using Tear.TearCode.Extensions;
 using Tear.TearCode.Mechanics;
@@ -38,7 +39,7 @@ public class NocturnalLight() : TearCard(0, CardType.Attack,
             ownerCreature.HasPower<EarthFononPower>() ||
             ownerCreature.HasPower<DarkFononPower>() ||
             ownerCreature.HasPower<OverlimitPower>();
-        
+        CenterCardCinematic.Start(RunManager.Instance.NetService.NetId);
         if (ownerCreature != null && Owner?.Character is Character.Tear tear)
         {
             if (hasEarthFonon)
@@ -86,10 +87,13 @@ public class NocturnalLight() : TearCard(0, CardType.Attack,
         else  await CommonActions.CardAttack(this, play.Target)
             .WithHitFx(null, "res://Tear/sfx/tear_hit.wav")
             .Execute(choiceContext);
-        
-        
-        
-        
+
+        if (hasEarthFonon)
+        {
+            await PowerCmd.Remove<EarthFononPower>(ownerCreature);
+            await PowerCmd.Remove<DarkFononPower>(ownerCreature);
+        }
+        CenterCardCinematic.End(RunManager.Instance.NetService.NetId);
     }
 
     protected override void OnUpgrade()

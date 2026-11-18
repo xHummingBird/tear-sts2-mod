@@ -6,6 +6,7 @@ using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using MegaCrit.Sts2.Core.Models.Powers;
+using MegaCrit.Sts2.Core.Runs;
 using MegaCrit.Sts2.Core.ValueProps;
 using Tear.TearCode.Extensions;
 using Tear.TearCode.Mechanics;
@@ -43,7 +44,7 @@ public class PowHammer() : TearCard(1, CardType.Attack,
             ownerCreature.HasPower<WaterFononPower>() ||
             ownerCreature.HasPower<DarkFononPower>() ||
             ownerCreature.HasPower<OverlimitPower>();
-        
+        CenterCardCinematic.Start(RunManager.Instance.NetService.NetId);
         if (ownerCreature != null && Owner?.Character is Character.Tear tear)
         {
             if (hasWaterFonon)
@@ -68,8 +69,13 @@ public class PowHammer() : TearCard(1, CardType.Attack,
             .Execute(choiceContext);
         await PowerCmd.Apply<WeakPower>(choiceContext, play.Target, DynamicVars.Weak.BaseValue, Owner.Creature, this);
         if (hasWaterFonon)
-            await PowerCmd.Apply<VulnerablePower>(choiceContext, play.Target, DynamicVars.Vulnerable.BaseValue, Owner.Creature, this);
-        
+        {
+            await PowerCmd.Apply<VulnerablePower>(choiceContext, play.Target, DynamicVars.Vulnerable.BaseValue,
+                Owner.Creature, this);
+            await PowerCmd.Remove<WaterFononPower>(ownerCreature);
+            await PowerCmd.Remove<DarkFononPower>(ownerCreature);
+        }
+        CenterCardCinematic.End(RunManager.Instance.NetService.NetId);
     }
     
     protected override void OnUpgrade()

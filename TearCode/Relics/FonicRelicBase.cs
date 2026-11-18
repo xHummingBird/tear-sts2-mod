@@ -21,7 +21,7 @@ public abstract class FonicRelicBase : TearRelic
     [SavedProperty]
     public int StoredOverlimit { get; internal set; }
 
-    public virtual int MaxOverlimit => 70;
+    public virtual int MaxOverlimit => 100;
     
     public decimal StartingCombatHp { get; private set; }
 
@@ -31,7 +31,7 @@ public abstract class FonicRelicBase : TearRelic
 
     protected virtual int OverlimitPerArte => 6;
 
-    protected virtual int OverlimitPerFonicHymn => 9;
+    protected virtual int OverlimitPerFonicHymn => 6;
 
     public override bool ShowCounter => false;
 

@@ -1,6 +1,6 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=5 format=3 uid="uid://bopqicfmjx5pd"]
 
-[ext_resource type="Texture2D" path="res://Tear/images/spritesheets/ab_all_3030137000_03.png" id="2_6hfec"]
+[ext_resource type="Texture2D" uid="uid://cbh6y8dh84qi8" path="res://Tear/images/spritesheets/ab_all_3030137000_03.png" id="2_6hfec"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_nt4po"]
 blend_mode = 1
@@ -4720,106 +4720,161 @@ _data = {
 [node name="ab_all_3030137000_03" type="Node2D"]
 
 [node name="Parts" type="Node2D" parent="."]
+position = Vector2(-370, -900)
+scale = Vector2(2, 2)
 
 [node name="000_ab_all_3030137000_03_star_backef2" type="Sprite2D" parent="Parts"]
-visible = false
+self_modulate = Color(1, 1, 1, 0.602)
+z_index = 20
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(119.196, 494.8177)
+rotation = 3.1415927
+scale = Vector2(0.682, -0.2864)
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
 region_rect = Rect2(794, 156, 156, 156)
 
 [node name="001_ab_all_3030137000_03_uzu" type="Sprite2D" parent="Parts"]
-visible = false
+self_modulate = Color(1, 1, 1, 0.2)
+z_index = 22
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(12.0392, 502.6023)
+rotation = -0.075852774
+scale = Vector2(1.9860107, 0.8964965)
+skew = -0.33104563
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
 region_rect = Rect2(958, 210, 43, 46)
 
 [node name="002_ab_all_3030137000_03_star_backef2_1" type="Sprite2D" parent="Parts"]
-visible = false
+self_modulate = Color(1, 1, 1, 0.602)
+z_index = 23
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(50.196, 401.8177)
+rotation = 3.1415927
+scale = Vector2(0.682, -0.2864)
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
 region_rect = Rect2(794, 156, 156, 156)
 
 [node name="003_ab_all_3030137000_03_uzu_1" type="Sprite2D" parent="Parts"]
-visible = false
+self_modulate = Color(1, 1, 1, 0.2)
+z_index = 25
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(-56.9608, 409.6023)
+rotation = -0.075852774
+scale = Vector2(1.9860107, 0.8964965)
+skew = -0.33104563
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
 region_rect = Rect2(958, 210, 43, 46)
 
 [node name="004_ab_all_3030137000_03_star_backef2_2" type="Sprite2D" parent="Parts"]
-visible = false
+self_modulate = Color(1, 1, 1, 0.602)
+z_index = 26
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(242.196, 346.8177)
+rotation = 3.1415927
+scale = Vector2(0.682, -0.2864)
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
 region_rect = Rect2(794, 156, 156, 156)
 
 [node name="005_ab_all_3030137000_03_uzu_2" type="Sprite2D" parent="Parts"]
-visible = false
+self_modulate = Color(1, 1, 1, 0.2)
+z_index = 28
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(135.0392, 354.6023)
+rotation = -0.075852774
+scale = Vector2(1.9860107, 0.8964965)
+skew = -0.33104563
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
 region_rect = Rect2(958, 210, 43, 46)
 
 [node name="006_ab_all_3030137000_03_star_backef2_3" type="Sprite2D" parent="Parts"]
-visible = false
+self_modulate = Color(1, 1, 1, 0.602)
+z_index = 29
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(356.196, 494.8177)
+rotation = 3.1415927
+scale = Vector2(0.682, -0.2864)
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
 region_rect = Rect2(794, 156, 156, 156)
 
 [node name="007_ab_all_3030137000_03_uzu_3" type="Sprite2D" parent="Parts"]
-visible = false
+self_modulate = Color(1, 1, 1, 0.2)
+z_index = 31
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(249.0392, 502.6023)
+rotation = -0.075852774
+scale = Vector2(1.9860107, 0.8964965)
+skew = -0.33104563
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
 region_rect = Rect2(958, 210, 43, 46)
 
 [node name="008_ab_all_3030137000_03_star_backef2_4" type="Sprite2D" parent="Parts"]
-visible = false
+self_modulate = Color(1, 1, 1, 0.3624)
+z_index = 32
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(425.196, 400.8177)
+rotation = 3.1415927
+scale = Vector2(0.682, -0.2864)
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
 region_rect = Rect2(794, 156, 156, 156)
 
 [node name="009_ab_all_3030137000_03_uzu_4" type="Sprite2D" parent="Parts"]
-visible = false
+self_modulate = Color(1, 1, 1, 0.1204)
+z_index = 34
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(318.0392, 408.6023)
+rotation = -0.075852774
+scale = Vector2(1.9860107, 0.8964965)
+skew = -0.33104563
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
 region_rect = Rect2(958, 210, 43, 46)
 
 [node name="010_ab_all_3030137000_03_flare" type="Sprite2D" parent="Parts"]
-visible = false
+self_modulate = Color(1, 1, 1, 0.199)
+z_index = 35
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(-168.2, 277.72)
+scale = Vector2(1.94, 1.16)
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
 region_rect = Rect2(426, 12, 360, 300)
 
 [node name="011_ab_all_3030137000_03_hl_1" type="Sprite2D" parent="Parts"]
-visible = false
+self_modulate = Color(1, 1, 1, 0.941)
+z_index = 36
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(-96.15, 338.213)
+scale = Vector2(1.9197, 0.775)
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
 region_rect = Rect2(426, 628, 293, 300)
 
 [node name="012_ab_all_3030137000_03_hl_2" type="Sprite2D" parent="Parts"]
-visible = false
+z_index = 37
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(-107.48, 329.2)
+scale = Vector2(1.9987, 0.7954)
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -4827,7 +4882,11 @@ region_rect = Rect2(426, 320, 293, 300)
 
 [node name="013_ab_all_3030137000_03_flareSQ" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.043)
+z_index = 15
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(304.937, -158.0382)
+scale = Vector2(1.083, 5.3273)
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -4835,7 +4894,13 @@ region_rect = Rect2(260, 796, 122, 122)
 
 [node name="014_ab_all_3030137000_03_nami" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.0663)
+z_index = 16
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(426.6222, 190.102)
+rotation = 1.5759073
+scale = Vector2(0.9000117, 4.162801)
+skew = -0.004510522
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -4843,7 +4908,11 @@ region_rect = Rect2(380, 936, 267, 24)
 
 [node name="015_ab_all_3030137000_03_flareSQ_1" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.043)
+z_index = 18
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(120.937, -233.0382)
+scale = Vector2(1.083, 5.3273)
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -4851,7 +4920,13 @@ region_rect = Rect2(260, 796, 122, 122)
 
 [node name="016_ab_all_3030137000_03_nami_1" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.034)
+z_index = 17
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(426.6222, -260.9473)
+rotation = 1.5734122
+scale = Vector2(1.758506, 4.1628027)
+skew = -0.0014628172
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -4859,7 +4934,11 @@ region_rect = Rect2(380, 936, 267, 24)
 
 [node name="017_ab_all_3030137000_03_flareSQ_2" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.043)
+z_index = 21
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(-74.063, -158.0382)
+scale = Vector2(1.083, 5.3273)
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -4867,7 +4946,13 @@ region_rect = Rect2(260, 796, 122, 122)
 
 [node name="018_ab_all_3030137000_03_nami_2" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.0663)
+z_index = 19
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(242.6222, 115.102)
+rotation = 1.5759073
+scale = Vector2(0.9000117, 4.162801)
+skew = -0.004510522
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -4875,7 +4960,11 @@ region_rect = Rect2(380, 936, 267, 24)
 
 [node name="019_ab_all_3030137000_03_flareSQ_3" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.043)
+z_index = 24
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(228.937, -32.9242)
+scale = Vector2(1.083, 5.3273)
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -4883,7 +4972,13 @@ region_rect = Rect2(260, 796, 122, 122)
 
 [node name="020_ab_all_3030137000_03_nami_3" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.034)
+z_index = 20
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(242.6222, -335.9473)
+rotation = 1.5734122
+scale = Vector2(1.758506, 4.1628027)
+skew = -0.0014628172
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -4891,7 +4986,11 @@ region_rect = Rect2(380, 936, 267, 24)
 
 [node name="021_ab_all_3030137000_03_flareSQ_4" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.043)
+z_index = 26
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(1.937, -32.9242)
+scale = Vector2(1.083, 5.3273)
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -4899,167 +4998,268 @@ region_rect = Rect2(260, 796, 122, 122)
 
 [node name="022_ab_all_3030137000_03_nami_4" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.0663)
+z_index = 22
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(47.6222, 190.102)
+rotation = 1.5759073
+scale = Vector2(0.9000117, 4.162801)
+skew = -0.004510522
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
 region_rect = Rect2(380, 936, 267, 24)
 
 [node name="023_ab_all_3030137000_03_LanceAura" type="Sprite2D" parent="Parts"]
-visible = false
+self_modulate = Color(1, 1, 1, 0.8495)
+z_index = 5
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(329.3625, 261.4619)
+rotation = 1.8818144
+scale = Vector2(1.0312781, 1.2492759)
+skew = -0.0006839037
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
 region_rect = Rect2(260, 926, 112, 79)
 
 [node name="024_ab_all_3030137000_03_LanceAura_1" type="Sprite2D" parent="Parts"]
-visible = false
+self_modulate = Color(1, 1, 1, 0.3994)
+z_index = 6
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(359.5433, 134.7393)
+rotation = 1.8805828
+scale = Vector2(2.0511367, 1.0048571)
+skew = 0.0026801825
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
 region_rect = Rect2(260, 926, 112, 79)
 
 [node name="025_ab_all_3030137000_03_lance_orange" type="Sprite2D" parent="Parts"]
-visible = false
+z_index = 7
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(235.3145, 496.2318)
+rotation = -2.832597
+scale = Vector2(0.1561976, 0.64503133)
+skew = -9.012222e-05
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
 region_rect = Rect2(12, 12, 406, 776)
 
 [node name="026_ab_all_3030137000_03_LanceAura_2" type="Sprite2D" parent="Parts"]
-visible = false
+self_modulate = Color(1, 1, 1, 0.8495)
+z_index = 8
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(135.4916, 222.2591)
+rotation = 1.2028775
+scale = Vector2(1.0312108, 1.2492987)
+skew = -0.000651598
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
 region_rect = Rect2(260, 926, 112, 79)
 
 [node name="027_ab_all_3030137000_03_LanceAura_3" type="Sprite2D" parent="Parts"]
-visible = false
+self_modulate = Color(1, 1, 1, 0.3994)
+z_index = 9
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(79.4025, 104.6857)
+rotation = 1.2016518
+scale = Vector2(2.0511744, 1.0048043)
+skew = 0.0027208328
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
 region_rect = Rect2(260, 926, 112, 79)
 
 [node name="028_ab_all_3030137000_03_lance_orange_1" type="Sprite2D" parent="Parts"]
-visible = false
+z_index = 10
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(209.7263, 464.0259)
+rotation = 2.7716622
+scale = Vector2(0.15627137, 0.64493716)
+skew = -3.7670135e-05
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
 region_rect = Rect2(12, 12, 406, 776)
 
 [node name="029_ab_all_3030137000_03_LanceAura_4" type="Sprite2D" parent="Parts"]
-visible = false
+self_modulate = Color(1, 1, 1, 0.8495)
+z_index = 11
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(28.5691, 122.594)
+rotation = 0.9812339
+scale = Vector2(1.0312998, 1.2492712)
+skew = -0.0006825924
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
 region_rect = Rect2(260, 926, 112, 79)
 
 [node name="030_ab_all_3030137000_03_LanceAura_5" type="Sprite2D" parent="Parts"]
-visible = false
+self_modulate = Color(1, 1, 1, 0.3994)
+z_index = 12
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(-51.9958, 20.228)
+rotation = 0.9799541
+scale = Vector2(2.0511231, 1.0048394)
+skew = 0.0027016401
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
 region_rect = Rect2(260, 926, 112, 79)
 
 [node name="031_ab_all_3030137000_03_lance_orange_2" type="Sprite2D" parent="Parts"]
-visible = false
+z_index = 13
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(154.1392, 342.1256)
+rotation = 2.5502172
+scale = Vector2(0.15623221, 0.64500946)
+skew = -0.00019609928
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
 region_rect = Rect2(12, 12, 406, 776)
 
 [node name="032_ab_all_3030137000_03_LanceAura_6" type="Sprite2D" parent="Parts"]
-visible = false
+self_modulate = Color(1, 1, 1, 0.8495)
+z_index = 14
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(241.0369, 72.9315)
+rotation = 1.5764208
+scale = Vector2(1.0312164, 1.2492154)
+skew = -0.00066137314
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
 region_rect = Rect2(260, 926, 112, 79)
 
 [node name="033_ab_all_3030137000_03_LanceAura_7" type="Sprite2D" parent="Parts"]
-visible = false
+self_modulate = Color(1, 1, 1, 0.3994)
+z_index = 15
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(231.7147, -57.0015)
+rotation = 1.5751355
+scale = Vector2(2.0511193, 1.004825)
+skew = 0.0027267933
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
 region_rect = Rect2(260, 926, 112, 79)
 
 [node name="034_ab_all_3030137000_03_lance_orange_3" type="Sprite2D" parent="Parts"]
-visible = false
+z_index = 16
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(221.9385, 325.1164)
+rotation = -3.1383917
+scale = Vector2(0.15620081, 0.6450041)
+skew = 0.00036478043
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
 region_rect = Rect2(12, 12, 406, 776)
 
 [node name="035_ab_all_3030137000_03_LanceAura_8" type="Sprite2D" parent="Parts"]
-visible = false
+self_modulate = Color(1, 1, 1, 0.8495)
+z_index = 17
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(323.8772, 359.5939)
+rotation = 2.178186
+scale = Vector2(1.2375468, 1.2491965)
+skew = -4.7683716e-05
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
 region_rect = Rect2(260, 926, 112, 79)
 
 [node name="036_ab_all_3030137000_03_LanceAura_9" type="Sprite2D" parent="Parts"]
-visible = false
+self_modulate = Color(1, 1, 1, 0.3994)
+z_index = 18
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(404.5792, 225.8733)
+rotation = 2.177122
+scale = Vector2(2.4613407, 1.0048866)
+skew = 0.003592968
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
 region_rect = Rect2(260, 926, 112, 79)
 
 [node name="037_ab_all_3030137000_03_lance_orange_4" type="Sprite2D" parent="Parts"]
-visible = false
+z_index = 19
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(136.5785, 598.0858)
+rotation = -2.5363717
+scale = Vector2(0.15625447, 0.7739548)
+skew = 0.00041365623
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
 region_rect = Rect2(12, 12, 406, 776)
 
 [node name="038_ab_all_3030137000_03_uzu2" type="Sprite2D" parent="Parts"]
-visible = false
+self_modulate = Color(1, 1, 1, 0.4186)
+z_index = 21
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(-3.9349, 506.1078)
+rotation = -0.16263503
+scale = Vector2(2.2171576, 1.2001069)
+skew = -0.5866371
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
 region_rect = Rect2(958, 156, 43, 46)
 
 [node name="039_ab_all_3030137000_03_uzu2_1" type="Sprite2D" parent="Parts"]
-visible = false
+self_modulate = Color(1, 1, 1, 0.4186)
+z_index = 24
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(-72.9349, 413.1078)
+rotation = -0.16263503
+scale = Vector2(2.2171576, 1.2001069)
+skew = -0.5866371
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
 region_rect = Rect2(958, 156, 43, 46)
 
 [node name="040_ab_all_3030137000_03_uzu2_2" type="Sprite2D" parent="Parts"]
-visible = false
+self_modulate = Color(1, 1, 1, 0.4186)
+z_index = 27
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(119.0651, 358.1078)
+rotation = -0.16263503
+scale = Vector2(2.2171576, 1.2001069)
+skew = -0.5866371
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
 region_rect = Rect2(958, 156, 43, 46)
 
 [node name="041_ab_all_3030137000_03_uzu2_3" type="Sprite2D" parent="Parts"]
-visible = false
+self_modulate = Color(1, 1, 1, 0.4186)
+z_index = 30
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(233.0651, 506.1078)
+rotation = -0.16263503
+scale = Vector2(2.2171576, 1.2001069)
+skew = -0.5866371
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
 region_rect = Rect2(958, 156, 43, 46)
 
 [node name="042_ab_all_3030137000_03_uzu2_4" type="Sprite2D" parent="Parts"]
-visible = false
+self_modulate = Color(1, 1, 1, 0.252)
+z_index = 33
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(302.0651, 412.1078)
+rotation = -0.16263503
+scale = Vector2(2.2171576, 1.2001069)
+skew = -0.5866371
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5067,7 +5267,13 @@ region_rect = Rect2(958, 156, 43, 46)
 
 [node name="043_ab_all_3030137000_03_nami_5" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.034)
+z_index = 23
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(47.6222, -260.9473)
+rotation = 1.5734122
+scale = Vector2(1.758506, 4.1628027)
+skew = -0.0014628172
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5075,7 +5281,13 @@ region_rect = Rect2(380, 936, 267, 24)
 
 [node name="044_ab_all_3030137000_03_nami_6" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.0757)
+z_index = 25
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(350.6222, -49.2609)
+rotation = 1.5736585
+scale = Vector2(1.6072067, 4.162802)
+skew = -0.0018051863
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5083,7 +5295,13 @@ region_rect = Rect2(380, 936, 267, 24)
 
 [node name="045_ab_all_3030137000_03_nami_7" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.0663)
+z_index = 27
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(123.6222, 315.216)
+rotation = 1.5759073
+scale = Vector2(0.9000117, 4.162801)
+skew = -0.004510522
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5091,7 +5309,13 @@ region_rect = Rect2(380, 936, 267, 24)
 
 [node name="046_ab_all_3030137000_03_nami_8" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.034)
+z_index = 28
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(123.6222, -135.8333)
+rotation = 1.5734122
+scale = Vector2(1.758506, 4.1628027)
+skew = -0.0014628172
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5099,7 +5323,13 @@ region_rect = Rect2(380, 936, 267, 24)
 
 [node name="047_ab_all_3030137000_03_nami_9" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.102)
+z_index = 29
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(123.6222, -135.8333)
+rotation = 1.5734122
+scale = Vector2(1.758506, 4.1628027)
+skew = -0.0014628172
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5107,7 +5337,12 @@ region_rect = Rect2(380, 936, 267, 24)
 
 [node name="048_ab_all_3030137000_03_star_backef2_5" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.1204)
+z_index = 25
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(214.492, 357.8734)
+rotation = 3.1415927
+scale = Vector2(0.314, -0.1319)
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5115,7 +5350,12 @@ region_rect = Rect2(794, 156, 156, 156)
 
 [node name="049_ab_all_3030137000_03_star_backef2_6" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.4816)
+z_index = 27
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(385.3852, 481.9782)
+rotation = 3.1415927
+scale = Vector2(1.0434, -0.4382)
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5123,7 +5363,12 @@ region_rect = Rect2(794, 156, 156, 156)
 
 [node name="050_ab_all_3030137000_03_star_backef2_7" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.1204)
+z_index = 29
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(328.492, 505.8734)
+rotation = 3.1415927
+scale = Vector2(0.314, -0.1319)
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5131,7 +5376,12 @@ region_rect = Rect2(794, 156, 156, 156)
 
 [node name="051_ab_all_3030137000_03_star_backef2_8" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.2899)
+z_index = 31
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(454.3852, 387.9782)
+rotation = 3.1415927
+scale = Vector2(1.0434, -0.4382)
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5139,47 +5389,67 @@ region_rect = Rect2(794, 156, 156, 156)
 
 [node name="052_ab_all_3030137000_03_star_backef2_9" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.0725)
+z_index = 33
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(397.492, 411.8734)
+rotation = 3.1415927
+scale = Vector2(0.314, -0.1319)
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
 region_rect = Rect2(794, 156, 156, 156)
 
 [node name="053_ab_all_3030137000_03_hit1" type="Sprite2D" parent="Parts"]
-visible = false
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(136.408, 200.284)
+scale = Vector2(1.166, 1.159)
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
 region_rect = Rect2(727, 832, 212, 228)
 
 [node name="054_ab_all_3030137000_03_shougeki" type="Sprite2D" parent="Parts"]
-visible = false
+z_index = 1
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(14.84, 234.84)
+scale = Vector2(1.345, 1.345)
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
 region_rect = Rect2(727, 320, 256, 256)
 
 [node name="055_ab_all_3030137000_03_Hit_bakuhatu" type="Sprite2D" parent="Parts"]
-visible = false
+z_index = 2
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(39.5111, 233.9393)
+rotation = 0.2618182
+scale = Vector2(1.6477538, 1.9702253)
+skew = -3.552437e-05
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
 region_rect = Rect2(794, 12, 200, 136)
 
 [node name="056_ab_all_3030137000_03_kira" type="Sprite2D" parent="Parts"]
-visible = false
+self_modulate = Color(1, 1, 1, 0.379)
+z_index = 3
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(334.2936, 377.6131)
+rotation = 1.4484253
+scale = Vector2(0.118788294, 0.13802622)
+skew = 0.00035250187
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
 region_rect = Rect2(727, 584, 240, 240)
 
 [node name="057_ab_all_3030137000_03_kira_1" type="Sprite2D" parent="Parts"]
-visible = false
+self_modulate = Color(1, 1, 1, 0.379)
+z_index = 4
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(52.184, 345.96)
+scale = Vector2(0.1188, 0.138)
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5187,7 +5457,10 @@ region_rect = Rect2(727, 584, 240, 240)
 
 [node name="058_ab_all_3030137000_03hit2" type="Sprite2D" parent="Parts"]
 visible = false
+z_index = 1
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(201.56, 272.56)
+scale = Vector2(0.562, 0.562)
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5195,7 +5468,11 @@ region_rect = Rect2(12, 796, 240, 240)
 
 [node name="059_ab_all_3030137000_03_kira_2" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.586)
+z_index = 6
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(28.216, 316.6)
+scale = Vector2(0.2112, 0.208)
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5203,7 +5480,11 @@ region_rect = Rect2(727, 584, 240, 240)
 
 [node name="060_ab_all_3030137000_03_hit1_1" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.75)
+z_index = 3
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(153.24, 199.23)
+scale = Vector2(1.1675, 1.1675)
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5211,7 +5492,11 @@ region_rect = Rect2(727, 832, 212, 228)
 
 [node name="061_ab_all_3030137000_03_shougeki_1" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.6667)
+z_index = 5
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(-487.2, 3.8)
+scale = Vector2(5.4, 3.15)
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5219,7 +5504,12 @@ region_rect = Rect2(727, 320, 256, 256)
 
 [node name="062_ab_all_3030137000_03_Hit_bakuhatu_1" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.6667)
+z_index = 6
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(-25.6095, 74.2423)
+rotation = 0.261812
+scale = Vector2(2.8543696, 3.926189)
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5227,7 +5517,13 @@ region_rect = Rect2(794, 12, 200, 136)
 
 [node name="063_ab_all_3030137000_03_kira_3" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.379)
+z_index = 10
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(9.5062, 343.9587)
+rotation = -0.52165186
+scale = Vector2(0.11880084, 0.13797681)
+skew = -0.0003709793
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5235,7 +5531,11 @@ region_rect = Rect2(727, 584, 240, 240)
 
 [node name="064_ab_all_3030137000_03_kira_4" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.793)
+z_index = 11
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(17.248, 299.24)
+scale = Vector2(0.3036, 0.278)
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5243,7 +5543,11 @@ region_rect = Rect2(727, 584, 240, 240)
 
 [node name="065_ab_all_3030137000_03hit2_1" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.3333)
+z_index = 5
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(188.12, 255.12)
+scale = Vector2(0.7073, 0.7073)
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5251,7 +5555,13 @@ region_rect = Rect2(12, 796, 240, 240)
 
 [node name="066_ab_all_3030137000_03_kira_5" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.586)
+z_index = 13
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(-35.65, 330.6527)
+rotation = -0.52190614
+scale = Vector2(0.21121955, 0.20799467)
+skew = -4.2796135e-05
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5259,7 +5569,10 @@ region_rect = Rect2(727, 584, 240, 240)
 
 [node name="067_ab_all_3030137000_03_kira_6" type="Sprite2D" parent="Parts"]
 visible = false
+z_index = 14
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(-19.72, 269.88)
+scale = Vector2(0.396, 0.348)
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5267,7 +5580,11 @@ region_rect = Rect2(727, 584, 240, 240)
 
 [node name="068_ab_all_3030137000_03_hit1_2" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.25)
+z_index = 7
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(225.48, 279.21)
+scale = Vector2(0.5225, 0.5225)
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5275,7 +5592,11 @@ region_rect = Rect2(727, 832, 212, 228)
 
 [node name="069_ab_all_3030137000_03_shougeki_2" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.3333)
+z_index = 8
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(-1006.24, -227.24)
+scale = Vector2(9.455, 4.955)
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5283,7 +5604,13 @@ region_rect = Rect2(727, 320, 256, 256)
 
 [node name="070_ab_all_3030137000_03_kira_7" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.379)
+z_index = 16
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(65.9486, 291.4346)
+rotation = 0.26177475
+scale = Vector2(0.22527462, 0.24092126)
+skew = 0.00021791458
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5291,7 +5618,13 @@ region_rect = Rect2(727, 584, 240, 240)
 
 [node name="071_ab_all_3030137000_03_kira_8" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.793)
+z_index = 17
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(-58.8063, 329.3467)
+rotation = -0.52172005
+scale = Vector2(0.30358842, 0.2780125)
+skew = -0.00019228458
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5299,7 +5632,11 @@ region_rect = Rect2(727, 584, 240, 240)
 
 [node name="072_ab_all_3030137000_03_kira_9" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.75)
+z_index = 18
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(-33.56, 253.14)
+scale = Vector2(0.333, 0.297)
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5307,7 +5644,13 @@ region_rect = Rect2(727, 584, 240, 240)
 
 [node name="073_ab_all_3030137000_03_kira_10" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.586)
+z_index = 19
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(25.9504, 227.2996)
+rotation = 0.26169628
+scale = Vector2(0.40043375, 0.36317578)
+skew = 0.00011217594
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5315,7 +5658,12 @@ region_rect = Rect2(727, 584, 240, 240)
 
 [node name="074_ab_all_3030137000_03_kira_11" type="Sprite2D" parent="Parts"]
 visible = false
+z_index = 20
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(-95.9625, 310.0408)
+rotation = -0.52183974
+scale = Vector2(0.39600715, 0.34803036)
+skew = -5.0663948e-05
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5323,7 +5671,11 @@ region_rect = Rect2(727, 584, 240, 240)
 
 [node name="075_ab_all_3030137000_03_kira_12" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.5)
+z_index = 21
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(-61.4, 218.4)
+scale = Vector2(0.27, 0.246)
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5331,7 +5683,13 @@ region_rect = Rect2(727, 584, 240, 240)
 
 [node name="076_ab_all_3030137000_03_kira_13" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.75)
+z_index = 22
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(-130.8319, 314.71)
+rotation = -0.52182776
+scale = Vector2(0.33302206, 0.29705197)
+skew = -0.00011599064
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5339,7 +5697,11 @@ region_rect = Rect2(727, 584, 240, 240)
 
 [node name="077_ab_all_3030137000_03_kira_14" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.25)
+z_index = 23
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(-88.24, 207.66)
+scale = Vector2(0.207, 0.195)
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5347,7 +5709,13 @@ region_rect = Rect2(727, 584, 240, 240)
 
 [node name="078_ab_all_3030137000_03_uzu_5" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.6667)
+z_index = 52
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(133.6996, 347.1582)
+rotation = -0.066404454
+scale = Vector2(2.1128569, 0.93655324)
+skew = -0.29425335
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5355,7 +5723,13 @@ region_rect = Rect2(958, 210, 43, 46)
 
 [node name="079_ab_all_3030137000_03_uzu_6" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.2)
+z_index = 54
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(236.8566, 485.7558)
+rotation = -0.011866476
+scale = Vector2(2.84, 1.1849766)
+skew = -0.05535853
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5363,7 +5737,13 @@ region_rect = Rect2(958, 210, 43, 46)
 
 [node name="080_ab_all_3030137000_03_uzu_7" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.6667)
+z_index = 57
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(247.6996, 495.1582)
+rotation = -0.066404454
+scale = Vector2(2.1128569, 0.93655324)
+skew = -0.29425335
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5371,7 +5751,13 @@ region_rect = Rect2(958, 210, 43, 46)
 
 [node name="081_ab_all_3030137000_03_uzu_8" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.1204)
+z_index = 59
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(305.8566, 391.7558)
+rotation = -0.011866476
+scale = Vector2(2.84, 1.1849766)
+skew = -0.05535853
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5379,7 +5765,13 @@ region_rect = Rect2(958, 210, 43, 46)
 
 [node name="082_ab_all_3030137000_03_uzu_9" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.4013)
+z_index = 62
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(316.6996, 401.1582)
+rotation = -0.066404454
+scale = Vector2(2.1128569, 0.93655324)
+skew = -0.29425335
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5387,7 +5779,13 @@ region_rect = Rect2(958, 210, 43, 46)
 
 [node name="083_ab_all_3030137000_03_kira_15" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.793)
+z_index = 21
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(77.9864, 237.5876)
+rotation = 0.12218944
+scale = Vector2(0.3035633, 0.27797487)
+skew = 6.830692e-05
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5395,7 +5793,12 @@ region_rect = Rect2(727, 584, 240, 240)
 
 [node name="084_ab_all_3030137000_03_kira_16" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.586)
+z_index = 22
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(184.9701, 181.2398)
+rotation = 0.7853982
+scale = Vector2(0.40036386, 0.36317003)
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5403,7 +5806,12 @@ region_rect = Rect2(727, 584, 240, 240)
 
 [node name="085_ab_all_3030137000_03_kira_17" type="Sprite2D" parent="Parts"]
 visible = false
+z_index = 23
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(38.0198, 191.9393)
+rotation = 0.0017676749
+scale = Vector2(0.39600062, 0.3480005)
+skew = -4.36306e-05
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5411,7 +5819,13 @@ region_rect = Rect2(727, 584, 240, 240)
 
 [node name="086_ab_all_3030137000_03_kira_18" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.5)
+z_index = 24
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(113.7722, 129.8573)
+rotation = 0.52364856
+scale = Vector2(0.26997674, 0.24596341)
+skew = 3.6120415e-05
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5419,7 +5833,13 @@ region_rect = Rect2(727, 584, 240, 240)
 
 [node name="087_ab_all_3030137000_03_kira_19" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.125)
+z_index = 22
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(-142.3453, 417.8889)
+rotation = -0.7737308
+scale = Vector2(0.20606494, 0.19226453)
+skew = -0.016448498
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5427,7 +5847,12 @@ region_rect = Rect2(727, 584, 240, 240)
 
 [node name="088_ab_all_3030137000_03_kira_20" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.379)
+z_index = 23
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(128.2752, 234.7755)
+rotation = 0.38413432
+scale = Vector2(0.22521278, 0.24095985)
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5435,7 +5860,13 @@ region_rect = Rect2(727, 584, 240, 240)
 
 [node name="089_ab_all_3030137000_03_kira_21" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.793)
+z_index = 24
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(-0.1701, 257.2012)
+rotation = -0.39952898
+scale = Vector2(0.3036111, 0.2780188)
+skew = -0.00021481514
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5443,7 +5874,13 @@ region_rect = Rect2(727, 584, 240, 240)
 
 [node name="090_ab_all_3030137000_03_kira_22" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.75)
+z_index = 25
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(34.1753, 184.6393)
+rotation = 0.12223178
+scale = Vector2(0.33298442, 0.2970143)
+skew = -4.839897e-05
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5451,7 +5888,12 @@ region_rect = Rect2(727, 584, 240, 240)
 
 [node name="091_ab_all_3030137000_03_kira_23" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.6667)
+z_index = 26
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(174.0223, 52.9413)
+rotation = 0.7853982
+scale = Vector2(0.750806, 0.60754615)
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5459,7 +5901,13 @@ region_rect = Rect2(727, 584, 240, 240)
 
 [node name="092_ab_all_3030137000_03_kira_24" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.3333)
+z_index = 27
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(-10.5808, 145.3726)
+rotation = 0.0018518497
+scale = Vector2(0.2700005, 0.24600033)
+skew = -0.0002259016
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5467,7 +5915,13 @@ region_rect = Rect2(727, 584, 240, 240)
 
 [node name="093_ab_all_3030137000_03_uzu2_5" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.1855)
+z_index = 55
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(123.2331, 356.2377)
+rotation = -0.21011674
+scale = Vector2(2.0596998, 1.2694806)
+skew = -0.49616003
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5475,7 +5929,13 @@ region_rect = Rect2(958, 156, 43, 46)
 
 [node name="094_ab_all_3030137000_03_uzu2_6" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.3045)
+z_index = 57
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(220.7819, 493.5625)
+rotation = -0.12674986
+scale = Vector2(2.9158914, 1.5395801)
+skew = -0.34474075
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5483,7 +5943,13 @@ region_rect = Rect2(958, 156, 43, 46)
 
 [node name="095_ab_all_3030137000_03_uzu2_7" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.1855)
+z_index = 60
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(237.2331, 504.2377)
+rotation = -0.21011674
+scale = Vector2(2.0596998, 1.2694806)
+skew = -0.49616003
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5491,7 +5957,13 @@ region_rect = Rect2(958, 156, 43, 46)
 
 [node name="096_ab_all_3030137000_03_uzu2_8" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.3045)
+z_index = 62
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(289.7819, 399.5625)
+rotation = -0.12674986
+scale = Vector2(2.9158914, 1.5395801)
+skew = -0.34474075
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5499,7 +5971,13 @@ region_rect = Rect2(958, 156, 43, 46)
 
 [node name="097_ab_all_3030137000_03_uzu2_9" type="Sprite2D" parent="Parts"]
 visible = false
+self_modulate = Color(1, 1, 1, 0.1855)
+z_index = 65
 material = SubResource("CanvasItemMaterial_nt4po")
+position = Vector2(306.2331, 410.2377)
+rotation = -0.21011674
+scale = Vector2(2.0596998, 1.2694806)
+skew = -0.49616003
 texture = ExtResource("2_6hfec")
 centered = false
 region_enabled = true
@@ -5509,3 +5987,5 @@ region_rect = Rect2(958, 156, 43, 46)
 libraries = {
 &"": SubResource("AnimationLibrary_ou8em")
 }
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
