@@ -32,17 +32,17 @@ public static class BattleTheme
     private static readonly MusicTrack VictoryFanfare =
         new(
             "res://Tear/music/1-06 Victory!.mp3",
-            -12f);
+            -14f);
 
     private static readonly MusicTrack VictoryFanfareShort =
         new(
             "res://Tear/music/1-06 Victory!.mp3",
-            -12f);
+            -14f);
 
     private static readonly MusicTrack GameOverTheme =
         new(
             "res://Tear/music/3-16 Game over.mp3",
-            -12f);
+            -14f);
 
     // ============================================================
     // NORMAL
@@ -54,37 +54,37 @@ public static class BattleTheme
     [
         new(
             "res://Tear/music/1-05 The arrow was shot.mp3",
-            -12f),
+            -14f),
     ];
 
     private static readonly MusicTrack[] Act2Normal =
     [
         new(
             "res://Tear/music/1-05 The arrow was shot.mp3",
-            -12f),
+            -14f),
 
         new(
             "res://Tear/music/2-22 The edge of a decision.mp3",
-            -12f),
+            -14f),
     ];
 
     private static readonly MusicTrack[] Act3Normal =
     [
         new(
             "res://Tear/music/1-05 The arrow was shot.mp3",
-            -12f),
+            -14f),
 
         new(
             "res://Tear/music/2-22 The edge of a decision.mp3",
-            -12f),
+            -14f),
 
         new(
             "res://Tear/music/3-28 Everlasting fight.mp3",
-            -12f),
+            -14f),
         
         new(
             "res://Tear/music/4-02 Never surrender.mp3",
-            -12f)
+            -14f)
     ];
 
     // ============================================================
@@ -95,25 +95,25 @@ public static class BattleTheme
     [
         new(
             "res://Tear/music/2-22 The edge of a decision.mp3",
-            -12f),
+            -14f),
     ];
 
     private static readonly MusicTrack[] Act2Elite =
     [
         new(
             "res://Tear/music/1-14 Fang which wants blood.mp3",
-            -12f),
+            -14f),
     ];
 
     private static readonly MusicTrack[] Act3Elite =
     [
         new(
             "res://Tear/music/1-14 Fang which wants blood.mp3",
-            -12f),
+            -14f),
 
         new(
             "res://Tear/music/1-18 Awkward justice.mp3",
-            -12f),
+            -14f),
     ];
 
     // ============================================================
@@ -124,25 +124,25 @@ public static class BattleTheme
     [
         new(
             "res://Tear/music/1-14 Fang which wants blood.mp3",
-            -12f),
+            -14f),
     ];
 
     private static readonly MusicTrack[] Act2Boss =
     [
         new(
             "res://Tear/music/1-18 Awkward justice.mp3",
-            -12f),
+            -14f),
     ];
 
     private static readonly MusicTrack[] Act3Boss =
     [
         new(
             "res://Tear/music/4-18 meaning of birth.mp3",
-            -12f),
+            -14f),
 
         new(
             "res://Tear/music/3-29 Eternal mind.mp3",
-            -12f),
+            -14f),
     ];
 
     // ============================================================

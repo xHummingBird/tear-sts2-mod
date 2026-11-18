@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bw87re7nia7ay"
-path="res://.godot/imported/fortunes_arc.png-0202afb65dcf075ce8b45d19ba0a1f5f.ctex"
+uid="uid://bbsp2dcnd8yy8"
+path="res://.godot/imported/yulias_blessing.png-91747c2870c8d804087553d927916c0a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Tear/images/card_portraits/big/fortunes_arc.png"
-dest_files=["res://.godot/imported/fortunes_arc.png-0202afb65dcf075ce8b45d19ba0a1f5f.ctex"]
+source_file="res://Tear/images/card_portraits/big/yulias_blessing.png"
+dest_files=["res://.godot/imported/yulias_blessing.png-91747c2870c8d804087553d927916c0a.ctex"]
 
 [params]
 
