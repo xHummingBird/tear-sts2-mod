@@ -9,4 +9,6 @@ public class BlueCrystalRod : FonicRelicBase
     protected override int OverlimitPerTurn => 7;
     protected override int OverlimitPerCard => 5;
     protected override int OverlimitPerArte => 8;
+
+    protected override int OverlimitPerFonicHymn => 8;
 }

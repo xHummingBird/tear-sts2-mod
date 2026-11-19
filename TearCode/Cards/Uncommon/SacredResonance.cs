@@ -12,11 +12,6 @@ public class SacredResonance() : TearCard(
     CardRarity.Uncommon,
     TargetType.Self)
 {
-    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
-    [
-        HoverTipFactory.FromPower<SacredResonancePower>()
-    ];
-
     protected override async Task OnPlay(
         PlayerChoiceContext choiceContext,
         CardPlay play)

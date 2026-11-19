@@ -75,7 +75,7 @@
   "TEAR-FONON_ABSORPTION_POWER.smartDescription": "At the start of your turn, if you do not have an elemental [gold]Fonon[/gold], gain either [gold]Light Fonon[/gold] or [gold]Dark Fonon[/gold]. Whenever you play an [gold]Arte[/gold], gain [blue]{Amount}[/blue] additional [gold]Over Limit[/gold].",
   "TEAR-FONON_ABSORPTION_POWER.title": "Fonon Absorption",
 
-  "TEAR-SACRED_RESONANCE_POWER.description": "[gold]Fonic Hymns[/gold] deal [blue]{Amount}%[/blue] more damage.",
+  "TEAR-SACRED_RESONANCE_POWER.description": "[gold]Fonic Hymns[/gold] deal [blue]50%[/blue] more damage.",
   "TEAR-SACRED_RESONANCE_POWER.smartDescription": "[gold]Fonic Hymns[/gold] deal [blue]{Amount}%[/blue] more damage.",
   "TEAR-SACRED_RESONANCE_POWER.title": "Sacred Resonance",
 

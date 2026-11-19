@@ -152,7 +152,7 @@
   "TEAR-YULIAS_BLESSING.description": "Whenever you gain an elemental [gold]Fonon[/gold], draw {Cards:diff()} {Cards:plural:card|cards}.",
 
   "TEAR-RESOLUTE_MELODY.title": "Resolute Melody",
-  "TEAR-RESOLUTE_MELODY.description": "Whenever you gain an elemental [gold]Fonon[/gold], gain {VigorPower:diff()} [gold]Vigor[/gold].",
+  "TEAR-RESOLUTE_MELODY.description": "Whenever you gain an elemental [gold]Fonon[/gold], gain 3 [gold]Vigor[/gold].",
 
   "TEAR-YULIAS_DESCENDANT.title": "Yulia's Descendant",
   "TEAR-YULIAS_DESCENDANT.description": "[gold]Fonic Hymns[/gold] gain [gold]Retain[/gold]. \nAt the start of your turn, gain {Overlimit:diff()} [gold]Over Limit[/gold].",
