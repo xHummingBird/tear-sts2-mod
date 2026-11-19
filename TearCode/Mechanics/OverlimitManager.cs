@@ -250,6 +250,10 @@ public static class OverlimitManager
         bool alreadyInOverlimit =
             owner.HasPower<OverlimitPower>();
 
+        var powerAmount = 2;
+        if (owner.Player.GetRelic<FonicCrest>() != null)
+            powerAmount = 3;
+
         /*
          * OverlimitPower owns the Overlimit lifecycle.
          *
@@ -264,7 +268,7 @@ public static class OverlimitManager
             await PowerCmd.Apply<OverlimitPower>(
                 choiceContext,
                 owner,
-                2m,
+                powerAmount,
                 source,
                 card);
         }

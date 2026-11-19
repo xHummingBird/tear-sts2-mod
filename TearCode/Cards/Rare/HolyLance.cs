@@ -97,7 +97,7 @@ public class HolyLance() : TearCard(
                     tear.PlayVfxBehindTarget(
                         middleEnemy,
                         "res://Tear/scenes/cluster_raid.tscn",
-                        "effect");
+                        "effect_test");
                 }
                 await Task.Delay(500);
                 SfxCmd.Play("res://Tear/sounds/se/cluster_raid_3.mp3");
@@ -119,7 +119,7 @@ public class HolyLance() : TearCard(
                     tear.PlayVfxBehindTarget(
                         middleEnemy,
                         "res://Tear/scenes/holy_lance.tscn",
-                        "effect");
+                        "effect_test");
                 }
                 await Task.Delay(600);
                 SfxCmd.Play("res://Tear/sounds/se/holy_lance_2.mp3");

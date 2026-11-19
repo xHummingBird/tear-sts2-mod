@@ -1,5 +1,41 @@
 {
-  "TEAR-ROD.description": "Gain 5 Overlimit at the start of your turn.",
-  "TEAR-ROD.flavor": "",
-  "TEAR-ROD.title": "Cane"
+  "TEAR-ROD.description": "Gain 5 [gold]Over Limit[/gold] at the start of your turn.",
+  "TEAR-ROD.flavor": "A plain cane, until Tear starts swinging it around.",
+  "TEAR-ROD.title": "Cane",
+
+  "TEAR-BLUE_CRYSTAL_ROD.description": "Gain 2 additional [gold]Over Limit[/gold] from cards and at the start of your turn.",
+  "TEAR-BLUE_CRYSTAL_ROD.flavor": "A fonic rod crowned with a brilliant blue crystal. Subtlety was never the point.",
+  "TEAR-BLUE_CRYSTAL_ROD.title": "Blue Crystal Rod",
+
+  "TEAR-FONSTONE_FRAGMENT.description": "At the start of combat, gain a random elemental [gold]Fonon[/gold].",
+  "TEAR-FONSTONE_FRAGMENT.flavor": "A tiny shard of fonstone, still humming with whatever element got stuck inside.",
+  "TEAR-FONSTONE_FRAGMENT.title": "Fonstone Fragment",
+
+  "TEAR-SPIRIT_BANGLE.description": "Start combat with 25 [gold]Over Limit[/gold].",
+  "TEAR-SPIRIT_BANGLE.flavor": "A simple bangle that keeps the wearer's fonic energy ready to boil over.",
+  "TEAR-SPIRIT_BANGLE.title": "Spirit Bangle",
+
+  "TEAR-THROWING_KNIFE.description": "The first [gold]Arte[/gold] you play each combat is free to play.",
+  "TEAR-THROWING_KNIFE.flavor": "Technically a weapon. Mostly a very sharp way to get things started.",
+  "TEAR-THROWING_KNIFE.title": "Throwing Knife",
+
+  "TEAR-HOLY_CROSS.description": "At the end of combat, [gold]Heal[/gold] 5 HP.",
+  "TEAR-HOLY_CROSS.flavor": "A small cross said to soothe wounds. Five HP at a time, apparently.",
+  "TEAR-HOLY_CROSS.title": "Holy Cross",
+
+  "TEAR-UNICORN_HORN.description": "At the start of combat, add a random [gold]Fonic Hymn[/gold] to your hand.",
+  "TEAR-UNICORN_HORN.flavor": "It doesn't belong to an actual unicorn. Probably.",
+  "TEAR-UNICORN_HORN.title": "Unicorn Horn",
+
+  "TEAR-FONIC_ROD.description": "Whenever you gain an elemental [gold]Fonon[/gold], deal 5 damage to ALL enemies.",
+  "TEAR-FONIC_ROD.flavor": "Turns ambient fonic energy into something considerably less ambient.",
+  "TEAR-FONIC_ROD.title": "Fonic Rod",
+
+  "TEAR-FONIC_CREST.description": "[gold]Over Limit[/gold] lasts 1 additional turn.",
+  "TEAR-FONIC_CREST.flavor": "A crest resonating with concentrated fonic power. Apparently Over Limit needed an encore.",
+  "TEAR-FONIC_CREST.title": "Fonic Crest",
+
+  "TEAR-TEARS_PENDANT.description": "[gold]Artes[/gold] and [gold]Fonic Hymns[/gold] deal 25% more damage.",
+  "TEAR-TEARS_PENDANT.flavor": "A familiar pendant kept close to the heart. It makes every [gold]Arte[/gold] hit a little closer to someone else's.",
+  "TEAR-TEARS_PENDANT.title": "Tear's Pendant"
 }

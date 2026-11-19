@@ -49,7 +49,7 @@ public class SeveredFate() : TearCard(1, CardType.Attack,
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
     {
         var ownerCreature = Owner?.Creature;
-        
+        var enemies = CombatState.HittableEnemies.ToList();
         var hasWindFonon =
             Owner.HasPower<WindFononPower>() ||
             Owner.HasPower<LightFononPower>() ||
@@ -66,9 +66,26 @@ public class SeveredFate() : TearCard(1, CardType.Attack,
             SfxCmd.Play("res://Tear/sounds/se/swing_2.mp3");
             await Task.Delay(167);
             SfxCmd.Play("res://Tear/sounds/se/swing_3.mp3");
-            tear.PlayVfxOnTarget(play.Target, "res://Tear/scenes/vfx.tscn", "severed_fate");
-            await Task.Delay(333);
-            tear.PlayVfxOnTarget(play.Target, "res://Tear/scenes/hit.tscn", "hit");
+            if (hasWindFonon)
+            {
+                if (enemies.Count > 0)
+                {
+                    var middleEnemy = enemies[enemies.Count / 2];
+
+                    tear.PlayVfxBehindTarget(middleEnemy, "res://Tear/scenes/vfx.tscn", "fatal_circle");
+                    SfxCmd.Play("res://Tear/sounds/se/cluster_raid_1.mp3");
+                    await Task.Delay(100);
+                    SfxCmd.Play("res://Tear/sfx/from_tifa/chi_sfx_2.wav");
+                    foreach (var enemy in enemies)
+                        tear.PlayVfxOnTarget(enemy, "res://Tear/scenes/hit.tscn", "hit");
+                }
+            }
+            else
+            {
+                tear.PlayVfxOnTarget(play.Target, "res://Tear/scenes/vfx.tscn", "severed_fate");
+                await Task.Delay(333);
+                tear.PlayVfxOnTarget(play.Target, "res://Tear/scenes/hit.tscn", "hit");
+            }
         }
         await CommonActions.CardAttack(this, play.Target)
             .WithHitFx(null, "res://Tear/sfx/tear_hit.wav")

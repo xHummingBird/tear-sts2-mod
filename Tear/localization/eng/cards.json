@@ -18,7 +18,7 @@
   "TEAR-HIDDEN_KNIFE.description": "Deal {Damage:diff()} damage. \nDraw {Cards:diff()} {Cards:plural:card|cards}.",
 
   "TEAR-MAGIC_ATTACK.title": "Magic Attack",
-  "TEAR-MAGIC_ATTACK.description": "Deal {Damage:diff()} damage. \nGain {Overlimit:diff()} [gold]Overlimit[/gold].",
+  "TEAR-MAGIC_ATTACK.description": "Deal {Damage:diff()} damage. \nGain {Overlimit:diff()} [gold]Over Limit[/gold].",
 
   "TEAR-HEAVY_SWING.title": "Heavy Swing",
   "TEAR-HEAVY_SWING.description": "Deal {Damage:diff()} damage. \nGain {WindFonon}. \nThe next Attack you play costs 0 {Energy:energyIcons()}.",
@@ -191,5 +191,38 @@
   "TEAR-HOLY_LANCE.description": "Deal {Damage:diff()} damage X times to ALL enemies. \n{EarthFonon}: X is doubled.",
 
   "TEAR-INNOCENT_SHINE.title": "Innocent Shine",
-  "TEAR-INNOCENT_SHINE.description": "Deal {CalculatedDamage:diff()} damage to ALL enemies. \nDamage increases by {ExtraDamage:diff()} for every [gold]Arte[/gold] you've played this combat."
+  "TEAR-INNOCENT_SHINE.description": "Deal {CalculatedDamage:diff()} damage to ALL enemies. \nDamage increases by {ExtraDamage:diff()} for every [gold]Arte[/gold] you've played this combat.",
+
+  "TEAR-NOCTURNAL_AQUA.description": "Deal {CalculatedDamage:diff()} damage to ALL enemies. \nIf there is only 1 enemy, deal {ExtraDamage:diff()} additional damage.",
+  "TEAR-NOCTURNAL_AQUA.title": "Nocturnal Aqua",
+
+  "TEAR-BANISHING_SORROW.title": "Banishing Sorrow",
+  "TEAR-BANISHING_SORROW.description": "Deal {Damage:diff()} damage. \nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold]. \n{FireFonon}: Targets ALL enemies.",
+
+  "TEAR-ECLAIR_DE_LARMES.title": "Éclair de Larmes",
+  "TEAR-ECLAIR_DE_LARMES.description": "Deal {Damage:diff()} damage to ALL enemies. \n{FireFonon}: Double the effectiveness of [gold]Vulnerable[/gold] and [gold]Weak[/gold] for {Turns:diff()} turns.",
+
+  "TEAR-RESOLUTE_ELEGY.title": "Resolute Elegy",
+  "TEAR-RESOLUTE_ELEGY.description": "Deal {Damage:diff()} damage to ALL enemies. \nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold] and {WeakPower:diff()} [gold]Weak[/gold] to ALL enemies. \nGain {DarkFonon}.",
+
+  "TEAR-CANDLE_SUPPLY.title": "Candle Supply",
+  "TEAR-CANDLE_SUPPLY.description": "Deal {Damage:diff()} damage. \nCosts {energyPrefix:energyIcons(1)} less for each Skill you've played this turn. \nGain {FireFonon}.",
+
+  "TEAR-RINENUTO_FUGUE.title": "Ritenuto Fugue",
+  "TEAR-RINENUTO_FUGUE.description": "Deal {Damage:diff()} damage {HitCount} times. \nGain {LightFonon}.",
+
+  "TEAR-HARMONISE_SCORE.title": "Harmonise Score",
+  "TEAR-HARMONISE_SCORE.description": "Deal {Damage:diff()} damage to ALL enemies. \nHit an additional time for each [gold]Fonic Hymn[/gold] card you have.",
+
+  "TEAR-FORTUNES_ARC.description": "Deal {CalculatedDamage:diff()} damage to ALL enemies. \nDamage increases by {ExtraDamage:diff()} for every [gold]Fonic Hymn[/gold] you've played this combat.",
+  "TEAR-FORTUNES_ARC.title": "Fortune's Arc",
+
+  "TEAR-MYSTIC_ARTE.title": "Mystic Arte",
+  "TEAR-MYSTIC_ARTE.description": "Play [gold]Innocent Shine[/gold]. \nIf you've played a [gold]Fonic Hymn[/gold] this turn, you may choose to play [gold]Fortune's Arc[/gold] instead.",
+
+  "TEAR-MYXOLIDIA_OF_FONONS.title": "Myxolidia of Fonons",
+  "TEAR-MYXOLIDIA_OF_FONONS.description": "Deal {Damage:diff()} damage to ALL enemies. \nApply {WeakPower:diff()} [gold]Weak[/gold] and {VulnerablePower:diff()} [gold]Vulnerable[/gold] to ALL enemies. \nGain {DarkFonon}.",
+
+  "TEAR-JUDGMENT.description": "Deal {Damage:diff()} damage {HitCount} times to a random enemy. \nGain {FireFonon}.",
+  "TEAR-JUDGMENT.title": "Judgment"
 }

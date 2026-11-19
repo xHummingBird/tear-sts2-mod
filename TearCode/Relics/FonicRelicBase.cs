@@ -1,5 +1,6 @@
 ﻿using BaseLib.Extensions;
 using MegaCrit.Sts2.Core.Combat;
+using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Context;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.Entities.Creatures;
@@ -11,8 +12,10 @@ using MegaCrit.Sts2.Core.Rooms;
 using MegaCrit.Sts2.Core.Runs;
 using MegaCrit.Sts2.Core.Saves.Runs;
 using Tear.TearCode.Cards;
+using Tear.TearCode.Cards.Ancient;
 using Tear.TearCode.Extensions;
 using Tear.TearCode.Mechanics;
+using Tear.TearCode.Powers;
 
 namespace Tear.TearCode.Relics;
 
@@ -49,6 +52,9 @@ public abstract class FonicRelicBase : TearRelic
             RunManager.Instance.NetService.NetId,
             Owner.RunState.CurrentActIndex + 1,
             room.RoomType);
+
+        if (Owner.GetRelic<SpiritBangle>() != null)
+            OverlimitManager.SetOverlimit(Owner, 25);
 
         return Task.CompletedTask;
     }
@@ -167,6 +173,9 @@ public abstract class FonicRelicBase : TearRelic
             choiceContext,
             Owner.Creature,
             null);
+        
+        if (card is MysticArte)
+            PowerCmd.Remove<OverlimitPower>(Owner.Creature);
     }
 
     protected virtual int CalculateTurnStartGain()

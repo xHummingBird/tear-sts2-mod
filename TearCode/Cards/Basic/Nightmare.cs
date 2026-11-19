@@ -9,6 +9,7 @@ using MegaCrit.Sts2.Core.Runs;
 using MegaCrit.Sts2.Core.ValueProps;
 using Tear.TearCode.Extensions;
 using Tear.TearCode.Mechanics;
+using Tear.TearCode.Powers;
 
 namespace Tear.TearCode.Cards.Basic;
 
@@ -24,7 +25,8 @@ public class Nightmare() : TearCard(1, CardType.Attack,
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
     [
         TearStaticHoverTips.FonicHymn,
-        HoverTipFactory.FromPower<WeakPower>()
+        HoverTipFactory.FromPower<WeakPower>(),
+        HoverTipFactory.FromPower<DarkFononPower>()
     ];
 
     protected override async Task OnPlay(PlayerChoiceContext choiceContext, CardPlay play)
@@ -49,6 +51,7 @@ public class Nightmare() : TearCard(1, CardType.Attack,
             .Execute(choiceContext);
         CenterCardCinematic.End(RunManager.Instance.NetService.NetId);
         await PowerCmd.Apply<WeakPower>(choiceContext, play.Target, DynamicVars.Weak.BaseValue, Owner.Creature, this);
+        await PowerCmd.Apply<DarkFononPower>(choiceContext, Owner.Creature, 1m, Owner.Creature, this);
 
     }
     protected override void OnUpgrade()
