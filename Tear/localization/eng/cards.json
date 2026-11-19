@@ -224,5 +224,11 @@
   "TEAR-MYXOLIDIA_OF_FONONS.description": "Deal {Damage:diff()} damage to ALL enemies. \nApply {WeakPower:diff()} [gold]Weak[/gold] and {VulnerablePower:diff()} [gold]Vulnerable[/gold] to ALL enemies. \nGain {DarkFonon}.",
 
   "TEAR-JUDGMENT.description": "Deal {Damage:diff()} damage {HitCount} times to a random enemy. \nGain {FireFonon}.",
-  "TEAR-JUDGMENT.title": "Judgment"
+  "TEAR-JUDGMENT.title": "Judgment",
+
+  "TEAR-SEVENTH_LIGHT.title": "Seventh Light",
+  "TEAR-SEVENTH_LIGHT.description": "Deal {Damage:diff()} damage {HitCount} times to ALL enemies. \n{WindFonon}: Hit 3 additional times.",
+
+  "TEAR-GRAND_CROSS.title": "Grand Cross",
+  "TEAR-GRAND_CROSS.description": "Deal {Damage:diff()} damage to ALL enemies. \nGain {LightFonon}."
 }

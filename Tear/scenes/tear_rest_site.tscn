@@ -1,0 +1,4097 @@
+[gd_scene load_steps=10 format=3 uid="uid://ctm7sutykwtlp"]
+
+[ext_resource type="Script" path="res://TearCode/Nodes/TearNRestSiteCharacter.cs" id="1_nrpkg"]
+[ext_resource type="Texture2D" uid="uid://b2ejuho67daby" path="res://Tear/images/spritesheets/npc_3030137000_01_a.png" id="1_r2g66"]
+[ext_resource type="Texture2D" uid="uid://ctv88t5dd5ynh" path="res://Tear/images/spritesheets/npc_3030137000_01_b.png" id="2_oh476"]
+[ext_resource type="PackedScene" uid="uid://5fkryglj1k0e" path="res://Tear/scenes/selection_reticle.tscn" id="4_rlv4i"]
+
+[sub_resource type="Gradient" id="Gradient_xmhbx"]
+offsets = PackedFloat32Array(0.525, 0.843, 1)
+colors = PackedColorArray(0, 0, 0, 0.502, 0, 0, 0, 0.2, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_3flym"]
+gradient = SubResource("Gradient_xmhbx")
+width = 126
+height = 126
+fill = 1
+fill_from = Vector2(0.4996016, 0.4996016)
+fill_to = Vector2(1.0111554, 0.4996016)
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_fjmg5"]
+blend_mode = 1
+
+[sub_resource type="Animation" id="Animation_j33mo"]
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Visuals/000_gr_npc_3030137000_01_shadow:visible")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Visuals/000_gr_npc_3030137000_01_shadow:transform")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Transform2D(0.5, 0, 0, 0.091, 0, -4)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Visuals/000_gr_npc_3030137000_01_shadow:self_modulate")
+tracks/2/interp = 0
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Visuals/000_gr_npc_3030137000_01_shadow:z_index")
+tracks/3/interp = 0
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Visuals/001_npc_3030137000_01_wait_backhair:visible")
+tracks/4/interp = 0
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Visuals/001_npc_3030137000_01_wait_backhair:transform")
+tracks/5/interp = 0
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Transform2D(1, 0, 0, 1, -128, -256)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Visuals/001_npc_3030137000_01_wait_backhair:self_modulate")
+tracks/6/interp = 0
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Visuals/001_npc_3030137000_01_wait_backhair:z_index")
+tracks/7/interp = 0
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Visuals/002_npc_3030137000_01_wait_wepon:visible")
+tracks/8/interp = 0
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Visuals/002_npc_3030137000_01_wait_wepon:transform")
+tracks/9/interp = 0
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Transform2D(-0.4909, -0.8712, 0.8712, -0.4909, -85.4199, -18.8004)]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Visuals/002_npc_3030137000_01_wait_wepon:self_modulate")
+tracks/10/interp = 0
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Visuals/002_npc_3030137000_01_wait_wepon:z_index")
+tracks/11/interp = 0
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [2]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("Visuals/003_npc_3030137000_01_wait_Rarm:visible")
+tracks/12/interp = 0
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/13/type = "value"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath("Visuals/003_npc_3030137000_01_wait_Rarm:transform")
+tracks/13/interp = 0
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Transform2D(1, 0, 0, 1, -128, -256)]
+}
+tracks/14/type = "value"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath("Visuals/003_npc_3030137000_01_wait_Rarm:self_modulate")
+tracks/14/interp = 0
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/15/type = "value"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath("Visuals/003_npc_3030137000_01_wait_Rarm:z_index")
+tracks/15/interp = 0
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+tracks/16/type = "value"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath("Visuals/004_npc_3030137000_01_wait_body:visible")
+tracks/16/interp = 0
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/17/type = "value"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath("Visuals/004_npc_3030137000_01_wait_body:transform")
+tracks/17/interp = 0
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Transform2D(1, 0, 0, 1, -128, -256)]
+}
+tracks/18/type = "value"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath("Visuals/004_npc_3030137000_01_wait_body:self_modulate")
+tracks/18/interp = 0
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/19/type = "value"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath("Visuals/004_npc_3030137000_01_wait_body:z_index")
+tracks/19/interp = 0
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/20/type = "value"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath("Visuals/005_npc_3030137000_01_wait_Larm:visible")
+tracks/20/interp = 0
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/21/type = "value"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath("Visuals/005_npc_3030137000_01_wait_Larm:transform")
+tracks/21/interp = 0
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Transform2D(1, 0, 0, 1, -128, -256)]
+}
+tracks/22/type = "value"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath("Visuals/005_npc_3030137000_01_wait_Larm:self_modulate")
+tracks/22/interp = 0
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/23/type = "value"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath("Visuals/005_npc_3030137000_01_wait_Larm:z_index")
+tracks/23/interp = 0
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [5]
+}
+tracks/24/type = "value"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath("Visuals/006_npc_3030137000_01_wait_head_a:visible")
+tracks/24/interp = 0
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/25/type = "value"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath("Visuals/006_npc_3030137000_01_wait_head_a:transform")
+tracks/25/interp = 0
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Transform2D(1, 0, 0, 1, -128, -256)]
+}
+tracks/26/type = "value"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath("Visuals/006_npc_3030137000_01_wait_head_a:self_modulate")
+tracks/26/interp = 0
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/27/type = "value"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath("Visuals/006_npc_3030137000_01_wait_head_a:z_index")
+tracks/27/interp = 0
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [6]
+}
+tracks/28/type = "value"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath("Visuals/007_npc_3030137000_01_wait_head_b:visible")
+tracks/28/interp = 0
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/29/type = "value"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath("Visuals/008_npc_3030137000_01_setup_backhair:visible")
+tracks/29/interp = 0
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/30/type = "value"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath("Visuals/009_npc_3030137000_01_setup_Larm:visible")
+tracks/30/interp = 0
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/31/type = "value"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath("Visuals/010_npc_3030137000_01_setup_body:visible")
+tracks/31/interp = 0
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/32/type = "value"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath("Visuals/011_npc_3030137000_01_setup_Rarm:visible")
+tracks/32/interp = 0
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/33/type = "value"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath("Visuals/012_npc_3030137000_01_setup_head:visible")
+tracks/33/interp = 0
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/34/type = "value"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath("Visuals/013_npc_3030137000_01_attack01_Larm:visible")
+tracks/34/interp = 0
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/35/type = "value"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath("Visuals/014_npc_3030137000_01_attack01_backhair:visible")
+tracks/35/interp = 0
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/36/type = "value"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath("Visuals/015_npc_3030137000_01_attack01_body:visible")
+tracks/36/interp = 0
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/37/type = "value"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath("Visuals/016_npc_3030137000_01_attack01_head:visible")
+tracks/37/interp = 0
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/38/type = "value"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath("Visuals/017_npc_3030137000_01_attack01_Rarm:visible")
+tracks/38/interp = 0
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/39/type = "value"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("Visuals/018_npc_3030137000_01_attack02_body:visible")
+tracks/39/interp = 0
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/40/type = "value"
+tracks/40/imported = false
+tracks/40/enabled = true
+tracks/40/path = NodePath("Visuals/019_npc_3030137000_01_attack02_Larm:visible")
+tracks/40/interp = 0
+tracks/40/loop_wrap = true
+tracks/40/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/41/type = "value"
+tracks/41/imported = false
+tracks/41/enabled = true
+tracks/41/path = NodePath("Visuals/020_npc_3030137000_01_attack02_Rhand:visible")
+tracks/41/interp = 0
+tracks/41/loop_wrap = true
+tracks/41/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/42/type = "value"
+tracks/42/imported = false
+tracks/42/enabled = true
+tracks/42/path = NodePath("Visuals/021_npc_3030137000_01_attack02_Rarm:visible")
+tracks/42/interp = 0
+tracks/42/loop_wrap = true
+tracks/42/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/43/type = "value"
+tracks/43/imported = false
+tracks/43/enabled = true
+tracks/43/path = NodePath("Visuals/022_npc_3030137000_01_attack02_head:visible")
+tracks/43/interp = 0
+tracks/43/loop_wrap = true
+tracks/43/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/44/type = "value"
+tracks/44/imported = false
+tracks/44/enabled = true
+tracks/44/path = NodePath("Visuals/023_npc_3030137000_01_hit01:visible")
+tracks/44/interp = 0
+tracks/44/loop_wrap = true
+tracks/44/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/45/type = "value"
+tracks/45/imported = false
+tracks/45/enabled = true
+tracks/45/path = NodePath("Visuals/024_npc_3030137000_01_hit02:visible")
+tracks/45/interp = 0
+tracks/45/loop_wrap = true
+tracks/45/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/46/type = "value"
+tracks/46/imported = false
+tracks/46/enabled = true
+tracks/46/path = NodePath("Visuals/025_npc_3030137000_01_hit02_1:visible")
+tracks/46/interp = 0
+tracks/46/loop_wrap = true
+tracks/46/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/47/type = "value"
+tracks/47/imported = false
+tracks/47/enabled = true
+tracks/47/path = NodePath("Visuals/026_npc_3030137000_01_attack03_Rarm:visible")
+tracks/47/interp = 0
+tracks/47/loop_wrap = true
+tracks/47/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/48/type = "value"
+tracks/48/imported = false
+tracks/48/enabled = true
+tracks/48/path = NodePath("Visuals/027_npc_3030137000_01_attack03_Rhand:visible")
+tracks/48/interp = 0
+tracks/48/loop_wrap = true
+tracks/48/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/49/type = "value"
+tracks/49/imported = false
+tracks/49/enabled = true
+tracks/49/path = NodePath("Visuals/028_npc_3030137000_01_attack03_head:visible")
+tracks/49/interp = 0
+tracks/49/loop_wrap = true
+tracks/49/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/50/type = "value"
+tracks/50/imported = false
+tracks/50/enabled = true
+tracks/50/path = NodePath("Visuals/029_npc_3030137000_01_slash01:visible")
+tracks/50/interp = 0
+tracks/50/loop_wrap = true
+tracks/50/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/51/type = "value"
+tracks/51/imported = false
+tracks/51/enabled = true
+tracks/51/path = NodePath("Visuals/030_npc_3030137000_01_slash01_1:visible")
+tracks/51/interp = 0
+tracks/51/loop_wrap = true
+tracks/51/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/52/type = "value"
+tracks/52/imported = false
+tracks/52/enabled = true
+tracks/52/path = NodePath("Visuals/031_npc_3030137000_01_hit03:visible")
+tracks/52/interp = 0
+tracks/52/loop_wrap = true
+tracks/52/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/53/type = "value"
+tracks/53/imported = false
+tracks/53/enabled = true
+tracks/53/path = NodePath("Visuals/032_gr_npc_3030137000_01_black_bg:visible")
+tracks/53/interp = 0
+tracks/53/loop_wrap = true
+tracks/53/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/54/type = "value"
+tracks/54/imported = false
+tracks/54/enabled = true
+tracks/54/path = NodePath("Visuals/033_npc_3030137000_01_attack06_backhair:visible")
+tracks/54/interp = 0
+tracks/54/loop_wrap = true
+tracks/54/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/55/type = "value"
+tracks/55/imported = false
+tracks/55/enabled = true
+tracks/55/path = NodePath("Visuals/034_npc_3030137000_01_attack06_body:visible")
+tracks/55/interp = 0
+tracks/55/loop_wrap = true
+tracks/55/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/56/type = "value"
+tracks/56/imported = false
+tracks/56/enabled = true
+tracks/56/path = NodePath("Visuals/035_npc_3030137000_01_attack06_Larm:visible")
+tracks/56/interp = 0
+tracks/56/loop_wrap = true
+tracks/56/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/57/type = "value"
+tracks/57/imported = false
+tracks/57/enabled = true
+tracks/57/path = NodePath("Visuals/036_npc_3030137000_01_attack06_Lhand:visible")
+tracks/57/interp = 0
+tracks/57/loop_wrap = true
+tracks/57/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/58/type = "value"
+tracks/58/imported = false
+tracks/58/enabled = true
+tracks/58/path = NodePath("Visuals/037_npc_3030137000_01_attack06_head:visible")
+tracks/58/interp = 0
+tracks/58/loop_wrap = true
+tracks/58/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/59/type = "value"
+tracks/59/imported = false
+tracks/59/enabled = true
+tracks/59/path = NodePath("Visuals/038_npc_3030137000_01_ovl_00:visible")
+tracks/59/interp = 0
+tracks/59/loop_wrap = true
+tracks/59/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/60/type = "value"
+tracks/60/imported = false
+tracks/60/enabled = true
+tracks/60/path = NodePath("Visuals/039_npc_3030137000_01_ovl_00_1:visible")
+tracks/60/interp = 0
+tracks/60/loop_wrap = true
+tracks/60/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/61/type = "value"
+tracks/61/imported = false
+tracks/61/enabled = true
+tracks/61/path = NodePath("Visuals/040_npc_3030137000_01_ovl_01:visible")
+tracks/61/interp = 0
+tracks/61/loop_wrap = true
+tracks/61/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/62/type = "value"
+tracks/62/imported = false
+tracks/62/enabled = true
+tracks/62/path = NodePath("Visuals/041_npc_3030137000_01_ovl_02:visible")
+tracks/62/interp = 0
+tracks/62/loop_wrap = true
+tracks/62/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/63/type = "value"
+tracks/63/imported = false
+tracks/63/enabled = true
+tracks/63/path = NodePath("Visuals/042_npc_3030137000_01_ovl_02_1:visible")
+tracks/63/interp = 0
+tracks/63/loop_wrap = true
+tracks/63/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/64/type = "value"
+tracks/64/imported = false
+tracks/64/enabled = true
+tracks/64/path = NodePath("Visuals/043_npc_3030137000_01_ovl_02_2:visible")
+tracks/64/interp = 0
+tracks/64/loop_wrap = true
+tracks/64/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/65/type = "value"
+tracks/65/imported = false
+tracks/65/enabled = true
+tracks/65/path = NodePath("Visuals/044_npc_3030137000_01_ovl_02_3:visible")
+tracks/65/interp = 0
+tracks/65/loop_wrap = true
+tracks/65/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/66/type = "value"
+tracks/66/imported = false
+tracks/66/enabled = true
+tracks/66/path = NodePath("Visuals/045_npc_3030137000_01_ef_t_19:visible")
+tracks/66/interp = 0
+tracks/66/loop_wrap = true
+tracks/66/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/67/type = "value"
+tracks/67/imported = false
+tracks/67/enabled = true
+tracks/67/path = NodePath("Visuals/046_npc_3030137000_01_ovl_04:visible")
+tracks/67/interp = 0
+tracks/67/loop_wrap = true
+tracks/67/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/68/type = "value"
+tracks/68/imported = false
+tracks/68/enabled = true
+tracks/68/path = NodePath("Visuals/047_npc_3030137000_01_ovl_04_1:visible")
+tracks/68/interp = 0
+tracks/68/loop_wrap = true
+tracks/68/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/69/type = "value"
+tracks/69/imported = false
+tracks/69/enabled = true
+tracks/69/path = NodePath("Visuals/048_npc_3030137000_01_ovl_04_2:visible")
+tracks/69/interp = 0
+tracks/69/loop_wrap = true
+tracks/69/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/70/type = "value"
+tracks/70/imported = false
+tracks/70/enabled = true
+tracks/70/path = NodePath("Visuals/049_npc_3030137000_01_ovl_02_4:visible")
+tracks/70/interp = 0
+tracks/70/loop_wrap = true
+tracks/70/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/71/type = "value"
+tracks/71/imported = false
+tracks/71/enabled = true
+tracks/71/path = NodePath("Visuals/050_npc_3030137000_01_ovl_02_5:visible")
+tracks/71/interp = 0
+tracks/71/loop_wrap = true
+tracks/71/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/72/type = "value"
+tracks/72/imported = false
+tracks/72/enabled = true
+tracks/72/path = NodePath("Visuals/051_npc_3030137000_01_ovl_02_6:visible")
+tracks/72/interp = 0
+tracks/72/loop_wrap = true
+tracks/72/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/73/type = "value"
+tracks/73/imported = false
+tracks/73/enabled = true
+tracks/73/path = NodePath("Visuals/052_npc_3030137000_01_ovl_02_7:visible")
+tracks/73/interp = 0
+tracks/73/loop_wrap = true
+tracks/73/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/74/type = "value"
+tracks/74/imported = false
+tracks/74/enabled = true
+tracks/74/path = NodePath("Visuals/053_npc_3030137000_01_ovl_05:visible")
+tracks/74/interp = 0
+tracks/74/loop_wrap = true
+tracks/74/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/75/type = "value"
+tracks/75/imported = false
+tracks/75/enabled = true
+tracks/75/path = NodePath("Visuals/054_npc_3030137000_01_attack05_Rarm:visible")
+tracks/75/interp = 0
+tracks/75/loop_wrap = true
+tracks/75/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/76/type = "value"
+tracks/76/imported = false
+tracks/76/enabled = true
+tracks/76/path = NodePath("Visuals/055_npc_3030137000_01_attack05_body:visible")
+tracks/76/interp = 0
+tracks/76/loop_wrap = true
+tracks/76/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/77/type = "value"
+tracks/77/imported = false
+tracks/77/enabled = true
+tracks/77/path = NodePath("Visuals/056_npc_3030137000_01_attack05_Larm:visible")
+tracks/77/interp = 0
+tracks/77/loop_wrap = true
+tracks/77/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/78/type = "value"
+tracks/78/imported = false
+tracks/78/enabled = true
+tracks/78/path = NodePath("Visuals/057_npc_3030137000_01_attack05_head:visible")
+tracks/78/interp = 0
+tracks/78/loop_wrap = true
+tracks/78/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/79/type = "value"
+tracks/79/imported = false
+tracks/79/enabled = true
+tracks/79/path = NodePath("Visuals/058_npc_3030137000_01_attack05_Lhand:visible")
+tracks/79/interp = 0
+tracks/79/loop_wrap = true
+tracks/79/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/80/type = "value"
+tracks/80/imported = false
+tracks/80/enabled = true
+tracks/80/path = NodePath("Visuals/059_npc_3030137000_01_attack05_Rhand:visible")
+tracks/80/interp = 0
+tracks/80/loop_wrap = true
+tracks/80/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/81/type = "value"
+tracks/81/imported = false
+tracks/81/enabled = true
+tracks/81/path = NodePath("Visuals/060_npc_3030137000_01_ef_light_01:visible")
+tracks/81/interp = 0
+tracks/81/loop_wrap = true
+tracks/81/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/82/type = "value"
+tracks/82/imported = false
+tracks/82/enabled = true
+tracks/82/path = NodePath("Visuals/061_npc_3030137000_01_ef_light_01_1:visible")
+tracks/82/interp = 0
+tracks/82/loop_wrap = true
+tracks/82/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/83/type = "value"
+tracks/83/imported = false
+tracks/83/enabled = true
+tracks/83/path = NodePath("Visuals/062_npc_3030137000_01_ef_light_02:visible")
+tracks/83/interp = 0
+tracks/83/loop_wrap = true
+tracks/83/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/84/type = "value"
+tracks/84/imported = false
+tracks/84/enabled = true
+tracks/84/path = NodePath("Visuals/063_npc_3030137000_01_ef_light_02_1:visible")
+tracks/84/interp = 0
+tracks/84/loop_wrap = true
+tracks/84/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/85/type = "value"
+tracks/85/imported = false
+tracks/85/enabled = true
+tracks/85/path = NodePath("Visuals/064_npc_3030137000_01_ef_t_18_:visible")
+tracks/85/interp = 0
+tracks/85/loop_wrap = true
+tracks/85/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/86/type = "value"
+tracks/86/imported = false
+tracks/86/enabled = true
+tracks/86/path = NodePath("Visuals/065_npc_3030137000_01_ef_t_18__1:visible")
+tracks/86/interp = 0
+tracks/86/loop_wrap = true
+tracks/86/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/87/type = "value"
+tracks/87/imported = false
+tracks/87/enabled = true
+tracks/87/path = NodePath("Visuals/066_npc_3030137000_01_ef_t_19_:visible")
+tracks/87/interp = 0
+tracks/87/loop_wrap = true
+tracks/87/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/88/type = "value"
+tracks/88/imported = false
+tracks/88/enabled = true
+tracks/88/path = NodePath("Visuals/067_npc_3030137000_01_ef_t_19__1:visible")
+tracks/88/interp = 0
+tracks/88/loop_wrap = true
+tracks/88/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/89/type = "value"
+tracks/89/imported = false
+tracks/89/enabled = true
+tracks/89/path = NodePath("Visuals/068_npc_3030137000_01_ability_Larm:visible")
+tracks/89/interp = 0
+tracks/89/loop_wrap = true
+tracks/89/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/90/type = "value"
+tracks/90/imported = false
+tracks/90/enabled = true
+tracks/90/path = NodePath("Visuals/069_npc_3030137000_01_ability_body:visible")
+tracks/90/interp = 0
+tracks/90/loop_wrap = true
+tracks/90/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/91/type = "value"
+tracks/91/imported = false
+tracks/91/enabled = true
+tracks/91/path = NodePath("Visuals/070_npc_3030137000_01_ability_Rarm:visible")
+tracks/91/interp = 0
+tracks/91/loop_wrap = true
+tracks/91/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/92/type = "value"
+tracks/92/imported = false
+tracks/92/enabled = true
+tracks/92/path = NodePath("Visuals/071_npc_3030137000_01_ability_Rhand:visible")
+tracks/92/interp = 0
+tracks/92/loop_wrap = true
+tracks/92/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/93/type = "value"
+tracks/93/imported = false
+tracks/93/enabled = true
+tracks/93/path = NodePath("Visuals/072_npc_3030137000_01_ef_light_03:visible")
+tracks/93/interp = 0
+tracks/93/loop_wrap = true
+tracks/93/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/94/type = "value"
+tracks/94/imported = false
+tracks/94/enabled = true
+tracks/94/path = NodePath("Visuals/073_npc_3030137000_01_ef_light_03_1:visible")
+tracks/94/interp = 0
+tracks/94/loop_wrap = true
+tracks/94/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/95/type = "value"
+tracks/95/imported = false
+tracks/95/enabled = true
+tracks/95/path = NodePath("Visuals/074_npc_3030137000_01_ef_light_04:visible")
+tracks/95/interp = 0
+tracks/95/loop_wrap = true
+tracks/95/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/96/type = "value"
+tracks/96/imported = false
+tracks/96/enabled = true
+tracks/96/path = NodePath("Visuals/075_npc_3030137000_01_ef_light_04_1:visible")
+tracks/96/interp = 0
+tracks/96/loop_wrap = true
+tracks/96/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/97/type = "value"
+tracks/97/imported = false
+tracks/97/enabled = true
+tracks/97/path = NodePath("Visuals/076_npc_3030137000_01_ef_light_pt_03:visible")
+tracks/97/interp = 0
+tracks/97/loop_wrap = true
+tracks/97/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/98/type = "value"
+tracks/98/imported = false
+tracks/98/enabled = true
+tracks/98/path = NodePath("Visuals/077_npc_3030137000_01_ef_light_pt_03_1:visible")
+tracks/98/interp = 0
+tracks/98/loop_wrap = true
+tracks/98/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/99/type = "value"
+tracks/99/imported = false
+tracks/99/enabled = true
+tracks/99/path = NodePath("Visuals/078_npc_3030137000_01_light02_pt:visible")
+tracks/99/interp = 0
+tracks/99/loop_wrap = true
+tracks/99/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/100/type = "value"
+tracks/100/imported = false
+tracks/100/enabled = true
+tracks/100/path = NodePath("Visuals/079_npc_3030137000_01_light02_pt_1:visible")
+tracks/100/interp = 0
+tracks/100/loop_wrap = true
+tracks/100/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/101/type = "value"
+tracks/101/imported = false
+tracks/101/enabled = true
+tracks/101/path = NodePath("Visuals/080_npc_3030137000_01_ef_light_pt_03_2:visible")
+tracks/101/interp = 0
+tracks/101/loop_wrap = true
+tracks/101/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/102/type = "value"
+tracks/102/imported = false
+tracks/102/enabled = true
+tracks/102/path = NodePath("Visuals/081_npc_3030137000_01_ef_light_pt_03_3:visible")
+tracks/102/interp = 0
+tracks/102/loop_wrap = true
+tracks/102/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/103/type = "value"
+tracks/103/imported = false
+tracks/103/enabled = true
+tracks/103/path = NodePath("Visuals/082_npc_3030137000_01_ef_light_pt_03_4:visible")
+tracks/103/interp = 0
+tracks/103/loop_wrap = true
+tracks/103/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/104/type = "value"
+tracks/104/imported = false
+tracks/104/enabled = true
+tracks/104/path = NodePath("Visuals/083_npc_3030137000_01_ef_light_05:visible")
+tracks/104/interp = 0
+tracks/104/loop_wrap = true
+tracks/104/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/105/type = "value"
+tracks/105/imported = false
+tracks/105/enabled = true
+tracks/105/path = NodePath("Visuals/084_npc_3030137000_01_ef_light_05_1:visible")
+tracks/105/interp = 0
+tracks/105/loop_wrap = true
+tracks/105/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/106/type = "value"
+tracks/106/imported = false
+tracks/106/enabled = true
+tracks/106/path = NodePath("Visuals/085_npc_3030137000_01_ef_light_06:visible")
+tracks/106/interp = 0
+tracks/106/loop_wrap = true
+tracks/106/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/107/type = "value"
+tracks/107/imported = false
+tracks/107/enabled = true
+tracks/107/path = NodePath("Visuals/086_npc_3030137000_01_ef_light_06_1:visible")
+tracks/107/interp = 0
+tracks/107/loop_wrap = true
+tracks/107/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/108/type = "value"
+tracks/108/imported = false
+tracks/108/enabled = true
+tracks/108/path = NodePath("Visuals/087_npc_3030137000_01_ef_light_07:visible")
+tracks/108/interp = 0
+tracks/108/loop_wrap = true
+tracks/108/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/109/type = "value"
+tracks/109/imported = false
+tracks/109/enabled = true
+tracks/109/path = NodePath("Visuals/088_npc_3030137000_01_ef_light_07_1:visible")
+tracks/109/interp = 0
+tracks/109/loop_wrap = true
+tracks/109/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/110/type = "value"
+tracks/110/imported = false
+tracks/110/enabled = true
+tracks/110/path = NodePath("Visuals/089_npc_3030137000_01_ef_light_08:visible")
+tracks/110/interp = 0
+tracks/110/loop_wrap = true
+tracks/110/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/111/type = "value"
+tracks/111/imported = false
+tracks/111/enabled = true
+tracks/111/path = NodePath("Visuals/090_npc_3030137000_01_ef_light_08_1:visible")
+tracks/111/interp = 0
+tracks/111/loop_wrap = true
+tracks/111/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/112/type = "value"
+tracks/112/imported = false
+tracks/112/enabled = true
+tracks/112/path = NodePath("Visuals/091_npc_3030137000_01_ef_light_pt_03_5:visible")
+tracks/112/interp = 0
+tracks/112/loop_wrap = true
+tracks/112/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/113/type = "value"
+tracks/113/imported = false
+tracks/113/enabled = true
+tracks/113/path = NodePath("Visuals/092_npc_3030137000_01_ef_light_pt_03_6:visible")
+tracks/113/interp = 0
+tracks/113/loop_wrap = true
+tracks/113/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/114/type = "value"
+tracks/114/imported = false
+tracks/114/enabled = true
+tracks/114/path = NodePath("Visuals/093_npc_3030137000_01_ef_light_pt_03_7:visible")
+tracks/114/interp = 0
+tracks/114/loop_wrap = true
+tracks/114/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/115/type = "value"
+tracks/115/imported = false
+tracks/115/enabled = true
+tracks/115/path = NodePath("Visuals/094_npc_3030137000_01_ef_light_pt_03_8:visible")
+tracks/115/interp = 0
+tracks/115/loop_wrap = true
+tracks/115/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/116/type = "value"
+tracks/116/imported = false
+tracks/116/enabled = true
+tracks/116/path = NodePath("Visuals/095_npc_3030137000_01_ef_light_pt_03_9:visible")
+tracks/116/interp = 0
+tracks/116/loop_wrap = true
+tracks/116/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/117/type = "value"
+tracks/117/imported = false
+tracks/117/enabled = true
+tracks/117/path = NodePath("Visuals/096_npc_3030137000_01_ef_light_09:visible")
+tracks/117/interp = 0
+tracks/117/loop_wrap = true
+tracks/117/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/118/type = "value"
+tracks/118/imported = false
+tracks/118/enabled = true
+tracks/118/path = NodePath("Visuals/097_npc_3030137000_01_ef_light_09_1:visible")
+tracks/118/interp = 0
+tracks/118/loop_wrap = true
+tracks/118/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/119/type = "value"
+tracks/119/imported = false
+tracks/119/enabled = true
+tracks/119/path = NodePath("Visuals/098_npc_3030137000_01_light02_pt_2:visible")
+tracks/119/interp = 0
+tracks/119/loop_wrap = true
+tracks/119/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/120/type = "value"
+tracks/120/imported = false
+tracks/120/enabled = true
+tracks/120/path = NodePath("Visuals/099_npc_3030137000_01_ef_light_10:visible")
+tracks/120/interp = 0
+tracks/120/loop_wrap = true
+tracks/120/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/121/type = "value"
+tracks/121/imported = false
+tracks/121/enabled = true
+tracks/121/path = NodePath("Visuals/100_npc_3030137000_01_ef_light_10_1:visible")
+tracks/121/interp = 0
+tracks/121/loop_wrap = true
+tracks/121/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/122/type = "value"
+tracks/122/imported = false
+tracks/122/enabled = true
+tracks/122/path = NodePath("Visuals/101_npc_3030137000_01_win_body:visible")
+tracks/122/interp = 0
+tracks/122/loop_wrap = true
+tracks/122/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/123/type = "value"
+tracks/123/imported = false
+tracks/123/enabled = true
+tracks/123/path = NodePath("Visuals/102_npc_3030137000_01_win_Rarm:visible")
+tracks/123/interp = 0
+tracks/123/loop_wrap = true
+tracks/123/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/124/type = "value"
+tracks/124/imported = false
+tracks/124/enabled = true
+tracks/124/path = NodePath("Visuals/103_npc_3030137000_01_win_Larm:visible")
+tracks/124/interp = 0
+tracks/124/loop_wrap = true
+tracks/124/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/125/type = "value"
+tracks/125/imported = false
+tracks/125/enabled = true
+tracks/125/path = NodePath("Visuals/104_npc_3030137000_01_win_head:visible")
+tracks/125/interp = 0
+tracks/125/loop_wrap = true
+tracks/125/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/126/type = "value"
+tracks/126/imported = false
+tracks/126/enabled = true
+tracks/126/path = NodePath("Visuals/105_npc_3030137000_01_win_Lhand:visible")
+tracks/126/interp = 0
+tracks/126/loop_wrap = true
+tracks/126/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/127/type = "value"
+tracks/127/imported = false
+tracks/127/enabled = true
+tracks/127/path = NodePath("Visuals/106_npc_3030137000_01_damage_body:visible")
+tracks/127/interp = 0
+tracks/127/loop_wrap = true
+tracks/127/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/128/type = "value"
+tracks/128/imported = false
+tracks/128/enabled = true
+tracks/128/path = NodePath("Visuals/107_npc_3030137000_01_ef_t_00:visible")
+tracks/128/interp = 0
+tracks/128/loop_wrap = true
+tracks/128/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/129/type = "value"
+tracks/129/imported = false
+tracks/129/enabled = true
+tracks/129/path = NodePath("Visuals/108_npc_3030137000_01_ef_t_02_a:visible")
+tracks/129/interp = 0
+tracks/129/loop_wrap = true
+tracks/129/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/130/type = "value"
+tracks/130/imported = false
+tracks/130/enabled = true
+tracks/130/path = NodePath("Visuals/109_npc_3030137000_01_ef_t_15:visible")
+tracks/130/interp = 0
+tracks/130/loop_wrap = true
+tracks/130/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/131/type = "value"
+tracks/131/imported = false
+tracks/131/enabled = true
+tracks/131/path = NodePath("Visuals/110_npc_3030137000_01_ef_t_00_1:visible")
+tracks/131/interp = 0
+tracks/131/loop_wrap = true
+tracks/131/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/132/type = "value"
+tracks/132/imported = false
+tracks/132/enabled = true
+tracks/132/path = NodePath("Visuals/111_npc_3030137000_01_ef_t_16:visible")
+tracks/132/interp = 0
+tracks/132/loop_wrap = true
+tracks/132/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/133/type = "value"
+tracks/133/imported = false
+tracks/133/enabled = true
+tracks/133/path = NodePath("Visuals/112_npc_3030137000_01_ef_t_16_1:visible")
+tracks/133/interp = 0
+tracks/133/loop_wrap = true
+tracks/133/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/134/type = "value"
+tracks/134/imported = false
+tracks/134/enabled = true
+tracks/134/path = NodePath("Visuals/113_npc_3030137000_01_light02_pt_3:visible")
+tracks/134/interp = 0
+tracks/134/loop_wrap = true
+tracks/134/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/135/type = "value"
+tracks/135/imported = false
+tracks/135/enabled = true
+tracks/135/path = NodePath("Visuals/114_npc_3030137000_01_light02_pt_4:visible")
+tracks/135/interp = 0
+tracks/135/loop_wrap = true
+tracks/135/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/136/type = "value"
+tracks/136/imported = false
+tracks/136/enabled = true
+tracks/136/path = NodePath("Visuals/115_npc_3030137000_01_light02_pt_5:visible")
+tracks/136/interp = 0
+tracks/136/loop_wrap = true
+tracks/136/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/137/type = "value"
+tracks/137/imported = false
+tracks/137/enabled = true
+tracks/137/path = NodePath("Visuals/116_npc_3030137000_01_ef_light_pt_03_10:visible")
+tracks/137/interp = 0
+tracks/137/loop_wrap = true
+tracks/137/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/138/type = "value"
+tracks/138/imported = false
+tracks/138/enabled = true
+tracks/138/path = NodePath("Visuals/117_npc_3030137000_01_ef_light_pt_03_11:visible")
+tracks/138/interp = 0
+tracks/138/loop_wrap = true
+tracks/138/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/139/type = "value"
+tracks/139/imported = false
+tracks/139/enabled = true
+tracks/139/path = NodePath("Visuals/118_npc_3030137000_01_ef_light_pt_03_12:visible")
+tracks/139/interp = 0
+tracks/139/loop_wrap = true
+tracks/139/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/140/type = "value"
+tracks/140/imported = false
+tracks/140/enabled = true
+tracks/140/path = NodePath("Visuals/119_npc_3030137000_01_ef_light_pt_03_13:visible")
+tracks/140/interp = 0
+tracks/140/loop_wrap = true
+tracks/140/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/141/type = "value"
+tracks/141/imported = false
+tracks/141/enabled = true
+tracks/141/path = NodePath("Visuals/120_npc_3030137000_01_ef_light_pt_03_14:visible")
+tracks/141/interp = 0
+tracks/141/loop_wrap = true
+tracks/141/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/142/type = "value"
+tracks/142/imported = false
+tracks/142/enabled = true
+tracks/142/path = NodePath("Visuals/121_npc_3030137000_01_ef_light_11:visible")
+tracks/142/interp = 0
+tracks/142/loop_wrap = true
+tracks/142/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/143/type = "value"
+tracks/143/imported = false
+tracks/143/enabled = true
+tracks/143/path = NodePath("Visuals/122_npc_3030137000_01_ef_light_11_1:visible")
+tracks/143/interp = 0
+tracks/143/loop_wrap = true
+tracks/143/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/144/type = "value"
+tracks/144/imported = false
+tracks/144/enabled = true
+tracks/144/path = NodePath("Visuals/123_npc_3030137000_01_light02_pt_6:visible")
+tracks/144/interp = 0
+tracks/144/loop_wrap = true
+tracks/144/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/145/type = "value"
+tracks/145/imported = false
+tracks/145/enabled = true
+tracks/145/path = NodePath("Visuals/124_npc_3030137000_01_ef_light_12:visible")
+tracks/145/interp = 0
+tracks/145/loop_wrap = true
+tracks/145/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/146/type = "value"
+tracks/146/imported = false
+tracks/146/enabled = true
+tracks/146/path = NodePath("Visuals/125_npc_3030137000_01_ef_light_12_1:visible")
+tracks/146/interp = 0
+tracks/146/loop_wrap = true
+tracks/146/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/147/type = "value"
+tracks/147/imported = false
+tracks/147/enabled = true
+tracks/147/path = NodePath("Visuals/126_npc_3030137000_01_ef_light_13:visible")
+tracks/147/interp = 0
+tracks/147/loop_wrap = true
+tracks/147/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/148/type = "value"
+tracks/148/imported = false
+tracks/148/enabled = true
+tracks/148/path = NodePath("Visuals/127_npc_3030137000_01_ef_light_13_1:visible")
+tracks/148/interp = 0
+tracks/148/loop_wrap = true
+tracks/148/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/149/type = "value"
+tracks/149/imported = false
+tracks/149/enabled = true
+tracks/149/path = NodePath("Visuals/128_npc_3030137000_01_light02_pt_7:visible")
+tracks/149/interp = 0
+tracks/149/loop_wrap = true
+tracks/149/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/150/type = "value"
+tracks/150/imported = false
+tracks/150/enabled = true
+tracks/150/path = NodePath("Visuals/129_npc_3030137000_01_light02_pt_8:visible")
+tracks/150/interp = 0
+tracks/150/loop_wrap = true
+tracks/150/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/151/type = "value"
+tracks/151/imported = false
+tracks/151/enabled = true
+tracks/151/path = NodePath("Visuals/130_npc_3030137000_01_light02_pt_9:visible")
+tracks/151/interp = 0
+tracks/151/loop_wrap = true
+tracks/151/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/152/type = "value"
+tracks/152/imported = false
+tracks/152/enabled = true
+tracks/152/path = NodePath("Visuals/131_npc_3030137000_01_ef_light_14:visible")
+tracks/152/interp = 0
+tracks/152/loop_wrap = true
+tracks/152/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/153/type = "value"
+tracks/153/imported = false
+tracks/153/enabled = true
+tracks/153/path = NodePath("Visuals/132_npc_3030137000_01_ef_light_14_1:visible")
+tracks/153/interp = 0
+tracks/153/loop_wrap = true
+tracks/153/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/154/type = "value"
+tracks/154/imported = false
+tracks/154/enabled = true
+tracks/154/path = NodePath("Visuals/133_npc_3030137000_01_ef_t_18__2:visible")
+tracks/154/interp = 0
+tracks/154/loop_wrap = true
+tracks/154/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/155/type = "value"
+tracks/155/imported = false
+tracks/155/enabled = true
+tracks/155/path = NodePath("Visuals/134_npc_3030137000_01_ef_t_18__3:visible")
+tracks/155/interp = 0
+tracks/155/loop_wrap = true
+tracks/155/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/156/type = "value"
+tracks/156/imported = false
+tracks/156/enabled = true
+tracks/156/path = NodePath("Visuals/135_npc_3030137000_01_light02_pt_10:visible")
+tracks/156/interp = 0
+tracks/156/loop_wrap = true
+tracks/156/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/157/type = "value"
+tracks/157/imported = false
+tracks/157/enabled = true
+tracks/157/path = NodePath("Visuals/136_npc_3030137000_01_light02_pt_11:visible")
+tracks/157/interp = 0
+tracks/157/loop_wrap = true
+tracks/157/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/158/type = "value"
+tracks/158/imported = false
+tracks/158/enabled = true
+tracks/158/path = NodePath("Visuals/137_npc_3030137000_01_light02_pt_12:visible")
+tracks/158/interp = 0
+tracks/158/loop_wrap = true
+tracks/158/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/159/type = "value"
+tracks/159/imported = false
+tracks/159/enabled = true
+tracks/159/path = NodePath("Visuals/138_npc_3030137000_01_light02_pt_13:visible")
+tracks/159/interp = 0
+tracks/159/loop_wrap = true
+tracks/159/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/160/type = "value"
+tracks/160/imported = false
+tracks/160/enabled = true
+tracks/160/path = NodePath("Visuals/139_npc_3030137000_01_light02_pt_14:visible")
+tracks/160/interp = 0
+tracks/160/loop_wrap = true
+tracks/160/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/161/type = "value"
+tracks/161/imported = false
+tracks/161/enabled = true
+tracks/161/path = NodePath("Visuals/140_npc_3030137000_01_light02_pt_15:visible")
+tracks/161/interp = 0
+tracks/161/loop_wrap = true
+tracks/161/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/162/type = "value"
+tracks/162/imported = false
+tracks/162/enabled = true
+tracks/162/path = NodePath("Visuals/141_npc_3030137000_01_light02_pt_16:visible")
+tracks/162/interp = 0
+tracks/162/loop_wrap = true
+tracks/162/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/163/type = "value"
+tracks/163/imported = false
+tracks/163/enabled = true
+tracks/163/path = NodePath("Visuals/142_npc_3030137000_01_ef_t_19__2:visible")
+tracks/163/interp = 0
+tracks/163/loop_wrap = true
+tracks/163/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/164/type = "value"
+tracks/164/imported = false
+tracks/164/enabled = true
+tracks/164/path = NodePath("Visuals/143_npc_3030137000_01_ef_t_19__3:visible")
+tracks/164/interp = 0
+tracks/164/loop_wrap = true
+tracks/164/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/165/type = "value"
+tracks/165/imported = false
+tracks/165/enabled = true
+tracks/165/path = NodePath("Visuals/144_npc_3030137000_01_ef_t_17:visible")
+tracks/165/interp = 0
+tracks/165/loop_wrap = true
+tracks/165/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/166/type = "value"
+tracks/166/imported = false
+tracks/166/enabled = true
+tracks/166/path = NodePath("Visuals/145_gr_npc_3030137000_01_white_bg:visible")
+tracks/166/interp = 0
+tracks/166/loop_wrap = true
+tracks/166/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/167/type = "value"
+tracks/167/imported = false
+tracks/167/enabled = true
+tracks/167/path = NodePath("Visuals/146_gr_npc_3030137000_01_white_bg_1:visible")
+tracks/167/interp = 0
+tracks/167/loop_wrap = true
+tracks/167/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/168/type = "value"
+tracks/168/imported = false
+tracks/168/enabled = true
+tracks/168/path = NodePath("Visuals/147_npc_3030137000_01_slash03:visible")
+tracks/168/interp = 0
+tracks/168/loop_wrap = true
+tracks/168/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/169/type = "value"
+tracks/169/imported = false
+tracks/169/enabled = true
+tracks/169/path = NodePath("Visuals/148_npc_3030137000_01_slash03_1:visible")
+tracks/169/interp = 0
+tracks/169/loop_wrap = true
+tracks/169/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/170/type = "value"
+tracks/170/imported = false
+tracks/170/enabled = true
+tracks/170/path = NodePath("Visuals/149_npc_3030137000_01_attack04_Rarm:visible")
+tracks/170/interp = 0
+tracks/170/loop_wrap = true
+tracks/170/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/171/type = "value"
+tracks/171/imported = false
+tracks/171/enabled = true
+tracks/171/path = NodePath("Visuals/150_npc_3030137000_01_attack04_head:visible")
+tracks/171/interp = 0
+tracks/171/loop_wrap = true
+tracks/171/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/172/type = "value"
+tracks/172/imported = false
+tracks/172/enabled = true
+tracks/172/path = NodePath("Visuals/151_npc_3030137000_01_attack04_body:visible")
+tracks/172/interp = 0
+tracks/172/loop_wrap = true
+tracks/172/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/173/type = "value"
+tracks/173/imported = false
+tracks/173/enabled = true
+tracks/173/path = NodePath("Visuals/152_npc_3030137000_01_attack04_Larm:visible")
+tracks/173/interp = 0
+tracks/173/loop_wrap = true
+tracks/173/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/174/type = "value"
+tracks/174/imported = false
+tracks/174/enabled = true
+tracks/174/path = NodePath("Visuals/153_npc_3030137000_01_attack04_backhair:visible")
+tracks/174/interp = 0
+tracks/174/loop_wrap = true
+tracks/174/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/175/type = "value"
+tracks/175/imported = false
+tracks/175/enabled = true
+tracks/175/path = NodePath("Visuals/154_npc_3030137000_01_attack04_ear:visible")
+tracks/175/interp = 0
+tracks/175/loop_wrap = true
+tracks/175/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/176/type = "value"
+tracks/176/imported = false
+tracks/176/enabled = true
+tracks/176/path = NodePath("Visuals/155_npc_3030137000_01_attack04_sideburn:visible")
+tracks/176/interp = 0
+tracks/176/loop_wrap = true
+tracks/176/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/177/type = "value"
+tracks/177/imported = false
+tracks/177/enabled = true
+tracks/177/path = NodePath("Visuals/156_npc_3030137000_01_down_Rarm:visible")
+tracks/177/interp = 0
+tracks/177/loop_wrap = true
+tracks/177/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/178/type = "value"
+tracks/178/imported = false
+tracks/178/enabled = true
+tracks/178/path = NodePath("Visuals/157_npc_3030137000_01_down_body:visible")
+tracks/178/interp = 0
+tracks/178/loop_wrap = true
+tracks/178/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/179/type = "value"
+tracks/179/imported = false
+tracks/179/enabled = true
+tracks/179/path = NodePath("Visuals/158_npc_3030137000_01_down_Rhand:visible")
+tracks/179/interp = 0
+tracks/179/loop_wrap = true
+tracks/179/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/180/type = "value"
+tracks/180/imported = false
+tracks/180/enabled = true
+tracks/180/path = NodePath("Visuals/159_npc_3030137000_01_down_Larm:visible")
+tracks/180/interp = 0
+tracks/180/loop_wrap = true
+tracks/180/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/181/type = "value"
+tracks/181/imported = false
+tracks/181/enabled = true
+tracks/181/path = NodePath("Visuals/160_npc_3030137000_01_down_head:visible")
+tracks/181/interp = 0
+tracks/181/loop_wrap = true
+tracks/181/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/182/type = "value"
+tracks/182/imported = false
+tracks/182/enabled = true
+tracks/182/path = NodePath("Visuals/161_npc_3030137000_01_down_ase:visible")
+tracks/182/interp = 0
+tracks/182/loop_wrap = true
+tracks/182/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_5eihg"]
+_data = {
+&"wait": SubResource("Animation_j33mo")
+}
+
+[node name="TearRestSite" type="Node2D"]
+scale = Vector2(1.75, 1.75)
+script = ExtResource("1_nrpkg")
+
+[node name="Visuals" type="Node2D" parent="."]
+position = Vector2(100, 80)
+scale = Vector2(-1.3, 1.3)
+
+[node name="000_gr_npc_3030137000_01_shadow" type="Sprite2D" parent="Visuals"]
+position = Vector2(0, -4)
+scale = Vector2(0.5, 0.091)
+texture = SubResource("GradientTexture2D_3flym")
+centered = false
+offset = Vector2(-62.7, -62.7)
+
+[node name="001_npc_3030137000_01_wait_backhair" type="Sprite2D" parent="Visuals"]
+z_index = 1
+position = Vector2(-128, -256)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(272, 8, 256, 256)
+
+[node name="002_npc_3030137000_01_wait_wepon" type="Sprite2D" parent="Visuals"]
+z_index = 2
+position = Vector2(-85.4199, -18.8004)
+rotation = -2.0839267
+scale = Vector2(0.9999862, 0.9999862)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(904, 400, 24, 160)
+
+[node name="003_npc_3030137000_01_wait_Rarm" type="Sprite2D" parent="Visuals"]
+z_index = 3
+position = Vector2(-128, -256)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(8, 536, 256, 256)
+
+[node name="004_npc_3030137000_01_wait_body" type="Sprite2D" parent="Visuals"]
+z_index = 4
+position = Vector2(-128, -256)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(536, 8, 256, 256)
+
+[node name="005_npc_3030137000_01_wait_Larm" type="Sprite2D" parent="Visuals"]
+z_index = 5
+position = Vector2(-128, -256)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(536, 272, 256, 256)
+
+[node name="006_npc_3030137000_01_wait_head_a" type="Sprite2D" parent="Visuals"]
+z_index = 6
+position = Vector2(-128, -256)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(8, 272, 256, 256)
+
+[node name="007_npc_3030137000_01_wait_head_b" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 6
+position = Vector2(-137.2762, -242.6293)
+rotation = -0.09253402
+scale = Vector2(0.9999781, 0.9999781)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(272, 272, 256, 256)
+
+[node name="008_npc_3030137000_01_setup_backhair" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 1
+position = Vector2(32.4777, -164.4041)
+rotation = 3.1031961
+scale = Vector2(0.91697586, -1.0660464)
+skew = 0.16584635
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(896, 8, 68, 88)
+
+[node name="009_npc_3030137000_01_setup_Larm" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 3
+position = Vector2(5.3576, -115.6693)
+rotation = 0.022300761
+scale = Vector2(1.0000486, 1.0010353)
+skew = 0.048885703
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(800, 464, 44, 56)
+
+[node name="010_npc_3030137000_01_setup_body" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 4
+position = Vector2(-128, -255.1918)
+scale = Vector2(1, 0.9968)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(8, 8, 256, 256)
+
+[node name="011_npc_3030137000_01_setup_Rarm" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 5
+position = Vector2(-41.0248, -115.3953)
+rotation = -0.004199975
+scale = Vector2(1.0000088, 1.0000088)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(980, 196, 36, 60)
+
+[node name="012_npc_3030137000_01_setup_head" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 6
+position = Vector2(-25, -169.5208)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(908, 300, 44, 92)
+
+[node name="013_npc_3030137000_01_attack01_Larm" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 2
+position = Vector2(-28, -120)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(936, 516, 56, 40)
+
+[node name="014_npc_3030137000_01_attack01_backhair" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 3
+position = Vector2(-20.3509, -169.998)
+scale = Vector2(1, 1.0079921)
+skew = 0.12912941
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(800, 104, 56, 92)
+
+[node name="015_npc_3030137000_01_attack01_body" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 4
+position = Vector2(-74.4523, -252.9219)
+scale = Vector2(1, 1.0099735)
+skew = 0.2094543
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(8, 1328, 256, 256)
+
+[node name="016_npc_3030137000_01_attack01_head" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 5
+position = Vector2(4, -171)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(800, 204, 48, 96)
+
+[node name="017_npc_3030137000_01_attack01_Rarm" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 6
+position = Vector2(14.0357, -131.9957)
+rotation = 0.5026354
+scale = Vector2(1.0119637, 1)
+skew = -0.15359104
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(800, 588, 48, 24)
+
+[node name="018_npc_3030137000_01_attack02_body" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 2
+position = Vector2(-99.6512, -246.1794)
+scale = Vector2(1, 0.979955)
+skew = 0.19543421
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(272, 800, 256, 256)
+
+[node name="019_npc_3030137000_01_attack02_Larm" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 3
+position = Vector2(-11.2822, -116.6407)
+rotation = 0.11344002
+scale = Vector2(1.0000275, 1.0000275)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(980, 264, 36, 20)
+
+[node name="020_npc_3030137000_01_attack02_Rhand" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 4
+position = Vector2(14.394, -110.7137)
+rotation = 0.1344018
+scale = Vector2(1.0000185, 1.0000185)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(960, 636, 24, 16)
+
+[node name="021_npc_3030137000_01_attack02_Rarm" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 6
+position = Vector2(32.9099, -112.5924)
+rotation = 0.41009146
+scale = Vector2(1.000017, 1.001983)
+skew = -0.07151854
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(920, 644, 20, 16)
+
+[node name="022_npc_3030137000_01_attack02_head" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 7
+position = Vector2(-12, -165)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(800, 308, 44, 92)
+
+[node name="023_npc_3030137000_01_hit01" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5)
+z_index = 10
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-328, -104.4)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(732, 504, 240, 192)
+
+[node name="024_npc_3030137000_01_hit02" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 11
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-128.5, -122.036)
+rotation = 1.5707964
+scale = Vector2(0.533, 0.65)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(732, 704, 184, 220)
+
+[node name="025_npc_3030137000_01_hit02_1" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 12
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-91.561, -18.0401)
+rotation = -1.5689542
+scale = Vector2(0.38000065, -0.65)
+skew = -0.0018421412
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(732, 704, 184, 220)
+
+[node name="026_npc_3030137000_01_attack03_Rarm" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 5
+position = Vector2(-54.4737, -106.6236)
+rotation = -0.2042206
+scale = Vector2(0.9999802, 0.9999802)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(960, 604, 32, 24)
+
+[node name="027_npc_3030137000_01_attack03_Rhand" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 6
+position = Vector2(-69.4988, -108.2861)
+rotation = 0.36654204
+scale = Vector2(1.0000297, 1.0000297)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(844, 548, 36, 32)
+
+[node name="028_npc_3030137000_01_attack03_head" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 7
+position = Vector2(-46, -166)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(972, 8, 44, 88)
+
+[node name="029_npc_3030137000_01_slash01" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.1111)
+z_index = 8
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-163.8654, -130.6587)
+rotation = 0.22831984
+scale = Vector2(0.8968757, 0.44199002)
+skew = 0.84968436
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(644, 932, 240, 127)
+
+[node name="030_npc_3030137000_01_slash01_1" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.1111)
+z_index = 9
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-163.8654, -130.6587)
+rotation = 0.22831984
+scale = Vector2(0.8968757, 0.44199002)
+skew = 0.84968436
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(644, 932, 240, 127)
+
+[node name="031_npc_3030137000_01_hit03" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.1111)
+z_index = 8
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-352.1556, -139.7778)
+scale = Vector2(0.7078, 0.7078)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(484, 504, 240, 200)
+
+[node name="032_gr_npc_3030137000_01_black_bg" type="Polygon2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.258)
+position = Vector2(-125, -197)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-930.8, -930.8, 931.00006, -930.8, 931.00006, 931.00006, -930.8, 931.00006)
+
+[node name="033_npc_3030137000_01_attack06_backhair" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 2
+position = Vector2(-34.5246, -172.9993)
+scale = Vector2(1, 0.99997675)
+skew = 0.01880145
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(800, 8, 88, 88)
+
+[node name="034_npc_3030137000_01_attack06_body" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 6
+position = Vector2(-128.8831, -255.9985)
+scale = Vector2(1, 1.0000061)
+skew = -0.0034999847
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(272, 1064, 256, 256)
+
+[node name="035_npc_3030137000_01_attack06_Larm" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 7
+position = Vector2(10.1741, -119.7653)
+rotation = -0.038408004
+scale = Vector2(1.0000376, 1.0000376)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(924, 604, 28, 32)
+
+[node name="036_npc_3030137000_01_attack06_Lhand" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 8
+position = Vector2(27.8971, -102.8029)
+rotation = 0.5364285
+scale = Vector2(0.99692917, 1.0031029)
+skew = 0.014847636
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(852, 504, 40, 36)
+
+[node name="037_npc_3030137000_01_attack06_head" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 9
+position = Vector2(-22.6, -175)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(864, 104, 52, 92)
+
+[node name="038_npc_3030137000_01_ovl_00" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 10
+position = Vector2(-159.04, -254.04)
+scale = Vector2(1.342, 1.342)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(8, 8, 240, 240)
+
+[node name="039_npc_3030137000_01_ovl_00_1" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 11
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-163, -258)
+scale = Vector2(1.375, 1.375)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(8, 8, 240, 240)
+
+[node name="040_npc_3030137000_01_ovl_01" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 12
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-4, -289)
+scale = Vector2(1, 0.6)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(1000, 8, 8, 240)
+
+[node name="041_npc_3030137000_01_ovl_02" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.301)
+z_index = 13
+position = Vector2(-256.0635, -14.8034)
+rotation = -1.5689542
+scale = Vector2(0.38000065, 2.0990033)
+skew = -7.939339e-05
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(8, 752, 128, 240)
+
+[node name="042_npc_3030137000_01_ovl_02_1" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.301)
+z_index = 14
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-256.0635, -14.8034)
+rotation = -1.5689542
+scale = Vector2(0.38000065, 2.0990033)
+skew = -7.939339e-05
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(8, 752, 128, 240)
+
+[node name="043_npc_3030137000_01_ovl_02_2" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.1198)
+z_index = 15
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-256.0635, -14.8034)
+rotation = -1.5689542
+scale = Vector2(0.38000065, 2.0990033)
+skew = -7.939339e-05
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(8, 752, 128, 240)
+
+[node name="044_npc_3030137000_01_ovl_02_3" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.1198)
+z_index = 16
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-256.0635, -14.8034)
+rotation = -1.5689542
+scale = Vector2(0.38000065, 2.0990033)
+skew = -7.939339e-05
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(8, 752, 128, 240)
+
+[node name="045_npc_3030137000_01_ef_t_19" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.102)
+z_index = 17
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-437.08, -532.08)
+scale = Vector2(3.609, 3.609)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(752, 256, 240, 240)
+
+[node name="046_npc_3030137000_01_ovl_04" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 18
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-19.9069, 125.7451)
+rotation = -0.68418616
+scale = Vector2(1.4269608, -1.4430043)
+skew = 0.012226701
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(256, 8, 240, 240)
+
+[node name="047_npc_3030137000_01_ovl_04_1" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 19
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(33.8539, 69.5971)
+rotation = -0.63181835
+scale = Vector2(0.83201677, -1.3829939)
+skew = -0.27222097
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(256, 8, 240, 240)
+
+[node name="048_npc_3030137000_01_ovl_04_2" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 20
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-15.3974, -372.4407)
+rotation = 2.914709
+scale = Vector2(0.8860064, -2.147983)
+skew = -0.2705201
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(256, 8, 240, 240)
+
+[node name="049_npc_3030137000_01_ovl_02_4" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.2007)
+z_index = 17
+position = Vector2(209.9351, -102.8663)
+rotation = 0.4193828
+scale = Vector2(1.0692618, 2.6981244)
+skew = 1.0947882
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(8, 752, 128, 240)
+
+[node name="050_npc_3030137000_01_ovl_02_5" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.2007)
+z_index = 18
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(209.9351, -102.8663)
+rotation = 0.4193828
+scale = Vector2(1.0692618, 2.6981244)
+skew = 1.0947882
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(8, 752, 128, 240)
+
+[node name="051_npc_3030137000_01_ovl_02_6" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.0799)
+z_index = 19
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(209.9351, -102.8663)
+rotation = 0.4193828
+scale = Vector2(1.0692618, 2.6981244)
+skew = 1.0947882
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(8, 752, 128, 240)
+
+[node name="052_npc_3030137000_01_ovl_02_7" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.0799)
+z_index = 20
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(209.9351, -102.8663)
+rotation = 0.4193828
+scale = Vector2(1.0692618, 2.6981244)
+skew = 1.0947882
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(8, 752, 128, 240)
+
+[node name="053_npc_3030137000_01_ovl_05" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.398)
+z_index = 22
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-208, -262.072)
+scale = Vector2(1.7, 1.423)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(396, 888, 240, 128)
+
+[node name="054_npc_3030137000_01_attack05_Rarm" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 2
+position = Vector2(-36.4644, -118.7316)
+rotation = 0.10991736
+scale = Vector2(1.000035, 1.000035)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(828, 620, 20, 36)
+
+[node name="055_npc_3030137000_01_attack05_body" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 3
+position = Vector2(-140.7732, -256.9938)
+scale = Vector2(1, 1.0000244)
+skew = -0.0069999695
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(8, 1064, 256, 256)
+
+[node name="056_npc_3030137000_01_attack05_Larm" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 4
+position = Vector2(-7.3004, -116.0128)
+rotation = -0.25827047
+scale = Vector2(0.99996567, 0.99996567)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(800, 620, 20, 36)
+
+[node name="057_npc_3030137000_01_attack05_head" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 5
+position = Vector2(-39, -172)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(852, 308, 44, 92)
+
+[node name="058_npc_3030137000_01_attack05_Lhand" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 6
+position = Vector2(38.5719, -116.5668)
+rotation = 1.6633303
+scale = Vector2(0.9999781, 0.9999781)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(936, 564, 36, 32)
+
+[node name="059_npc_3030137000_01_attack05_Rhand" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 8
+position = Vector2(-49.129, -118.3321)
+rotation = -0.26353323
+scale = Vector2(1.0000253, 1.0000253)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(856, 588, 24, 40)
+
+[node name="060_npc_3030137000_01_ef_light_01" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5)
+z_index = 19
+position = Vector2(-94.06, -141.193)
+scale = Vector2(1.22, 1.441)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(144, 980, 152, 84)
+
+[node name="061_npc_3030137000_01_ef_light_01_1" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5)
+z_index = 20
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-94.06, -141.193)
+scale = Vector2(1.22, 1.441)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(144, 980, 152, 84)
+
+[node name="062_npc_3030137000_01_ef_light_02" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5)
+z_index = 10
+position = Vector2(-94.06, -141.193)
+scale = Vector2(1.22, 1.441)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(304, 1024, 152, 84)
+
+[node name="063_npc_3030137000_01_ef_light_02_1" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5)
+z_index = 11
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-94.06, -141.193)
+scale = Vector2(1.22, 1.441)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(304, 1024, 152, 84)
+
+[node name="064_npc_3030137000_01_ef_t_18_" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.3495)
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-125.806, -47.48)
+scale = Vector2(1.074, 0.354)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(504, 256, 240, 240)
+
+[node name="065_npc_3030137000_01_ef_t_18__1" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.4208)
+z_index = 1
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-125.806, -47.48)
+scale = Vector2(1.074, 0.354)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(504, 256, 240, 240)
+
+[node name="066_npc_3030137000_01_ef_t_19_" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.3495)
+z_index = 2
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-80.0966, -30.5305)
+scale = Vector2(0.6874, 0.2266)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(8, 504, 240, 240)
+
+[node name="067_npc_3030137000_01_ef_t_19__1" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.3495)
+z_index = 3
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-80.0966, -30.5305)
+scale = Vector2(0.6874, 0.2266)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(8, 504, 240, 240)
+
+[node name="068_npc_3030137000_01_ability_Larm" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 8
+position = Vector2(1.8204, -116.8267)
+rotation = -0.09253402
+scale = Vector2(0.9999781, 0.9999781)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(800, 408, 60, 48)
+
+[node name="069_npc_3030137000_01_ability_body" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 9
+position = Vector2(-127.4453, -254.7217)
+scale = Vector2(1, 0.99490243)
+skew = 0.002211213
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(536, 1064, 256, 256)
+
+[node name="070_npc_3030137000_01_ability_Rarm" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 10
+position = Vector2(-30.7475, -116.495)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(888, 616, 24, 32)
+
+[node name="071_npc_3030137000_01_ability_Rhand" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 13
+position = Vector2(-38.6578, -114.5251)
+rotation = -0.29610217
+scale = Vector2(1.0000197, 1.0000197)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(980, 564, 36, 32)
+
+[node name="072_npc_3030137000_01_ef_light_03" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5)
+z_index = 12
+position = Vector2(-94.06, -141.193)
+scale = Vector2(1.22, 1.441)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(464, 1024, 152, 84)
+
+[node name="073_npc_3030137000_01_ef_light_03_1" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5)
+z_index = 13
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-94.06, -141.193)
+scale = Vector2(1.22, 1.441)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(464, 1024, 152, 84)
+
+[node name="074_npc_3030137000_01_ef_light_04" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5)
+z_index = 12
+position = Vector2(-94.06, -141.193)
+scale = Vector2(1.22, 1.441)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(624, 1067, 152, 84)
+
+[node name="075_npc_3030137000_01_ef_light_04_1" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5)
+z_index = 13
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-94.06, -141.193)
+scale = Vector2(1.22, 1.441)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(624, 1067, 152, 84)
+
+[node name="076_npc_3030137000_01_ef_light_pt_03" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 4
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-68.04, -57.04)
+scale = Vector2(0.242, 0.242)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(504, 8, 240, 240)
+
+[node name="077_npc_3030137000_01_ef_light_pt_03_1" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 5
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(11.96, -57.04)
+scale = Vector2(0.242, 0.242)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(504, 8, 240, 240)
+
+[node name="078_npc_3030137000_01_light02_pt" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 14
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(49.006, -135.04)
+scale = Vector2(0.409, 0.592)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(256, 732, 132, 240)
+
+[node name="079_npc_3030137000_01_light02_pt_1" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 15
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(57.3087, -98.3005)
+scale = Vector2(0.2904, 0.4203)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(256, 732, 132, 240)
+
+[node name="080_npc_3030137000_01_ef_light_pt_03_2" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 16
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-104.04, -37.04)
+scale = Vector2(0.242, 0.242)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(504, 8, 240, 240)
+
+[node name="081_npc_3030137000_01_ef_light_pt_03_3" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 17
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(71.96, -37.04)
+scale = Vector2(0.242, 0.242)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(504, 8, 240, 240)
+
+[node name="082_npc_3030137000_01_ef_light_pt_03_4" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5)
+z_index = 18
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-19.04, -21.04)
+scale = Vector2(0.242, 0.242)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(504, 8, 240, 240)
+
+[node name="083_npc_3030137000_01_ef_light_05" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5)
+z_index = 19
+position = Vector2(-94.06, -141.193)
+scale = Vector2(1.22, 1.441)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(784, 1067, 152, 84)
+
+[node name="084_npc_3030137000_01_ef_light_05_1" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5)
+z_index = 20
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-94.06, -141.193)
+scale = Vector2(1.22, 1.441)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(784, 1067, 152, 84)
+
+[node name="085_npc_3030137000_01_ef_light_06" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5)
+z_index = 19
+position = Vector2(-94.06, -141.193)
+scale = Vector2(1.22, 1.441)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(8, 1072, 152, 84)
+
+[node name="086_npc_3030137000_01_ef_light_06_1" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5)
+z_index = 20
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-94.06, -141.193)
+scale = Vector2(1.22, 1.441)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(8, 1072, 152, 84)
+
+[node name="087_npc_3030137000_01_ef_light_07" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5)
+z_index = 19
+position = Vector2(-94.06, -141.193)
+scale = Vector2(1.22, 1.441)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(168, 1116, 152, 84)
+
+[node name="088_npc_3030137000_01_ef_light_07_1" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5)
+z_index = 20
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-94.06, -141.193)
+scale = Vector2(1.22, 1.441)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(168, 1116, 152, 84)
+
+[node name="089_npc_3030137000_01_ef_light_08" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5)
+z_index = 19
+position = Vector2(-94.06, -141.193)
+scale = Vector2(1.22, 1.441)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(328, 1116, 152, 84)
+
+[node name="090_npc_3030137000_01_ef_light_08_1" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5)
+z_index = 20
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-94.06, -141.193)
+scale = Vector2(1.22, 1.441)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(328, 1116, 152, 84)
+
+[node name="091_npc_3030137000_01_ef_light_pt_03_5" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 20
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-144.04, -39.6359)
+scale = Vector2(0.242, 0.242)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(504, 8, 240, 240)
+
+[node name="092_npc_3030137000_01_ef_light_pt_03_6" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 21
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(71.96, -83.6543)
+scale = Vector2(0.242, 0.242)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(504, 8, 240, 240)
+
+[node name="093_npc_3030137000_01_ef_light_pt_03_7" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 22
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(31.96, -39.6359)
+scale = Vector2(0.242, 0.242)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(504, 8, 240, 240)
+
+[node name="094_npc_3030137000_01_ef_light_pt_03_8" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5)
+z_index = 23
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-19.04, -67.6543)
+scale = Vector2(0.242, 0.242)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(504, 8, 240, 240)
+
+[node name="095_npc_3030137000_01_ef_light_pt_03_9" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5)
+z_index = 24
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-59.04, -23.6359)
+scale = Vector2(0.242, 0.242)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(504, 8, 240, 240)
+
+[node name="096_npc_3030137000_01_ef_light_09" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5)
+z_index = 24
+position = Vector2(-94.06, -141.193)
+scale = Vector2(1.22, 1.441)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(488, 1159, 152, 84)
+
+[node name="097_npc_3030137000_01_ef_light_09_1" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5)
+z_index = 25
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-94.06, -141.193)
+scale = Vector2(1.22, 1.441)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(488, 1159, 152, 84)
+
+[node name="098_npc_3030137000_01_light02_pt_2" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 18
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(55.9345, -98.3005)
+scale = Vector2(0.31, 0.4203)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(256, 732, 132, 240)
+
+[node name="099_npc_3030137000_01_ef_light_10" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5)
+z_index = 25
+position = Vector2(-94.06, -141.193)
+scale = Vector2(1.22, 1.441)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(648, 1159, 152, 84)
+
+[node name="100_npc_3030137000_01_ef_light_10_1" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5)
+z_index = 26
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-94.06, -141.193)
+scale = Vector2(1.22, 1.441)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(648, 1159, 152, 84)
+
+[node name="101_npc_3030137000_01_win_body" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 4
+position = Vector2(-132.9897, -255.9687)
+scale = Vector2(1, 1.0000232)
+skew = -0.01570034
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(272, 536, 256, 256)
+
+[node name="102_npc_3030137000_01_win_Rarm" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 3
+position = Vector2(-31, -118)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(988, 104, 28, 64)
+
+[node name="103_npc_3030137000_01_win_Larm" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 5
+position = Vector2(10, -116)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(1000, 400, 16, 36)
+
+[node name="104_npc_3030137000_01_win_head" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 6
+position = Vector2(-19.1684, -175.3734)
+rotation = 0.05583134
+scale = Vector2(0.99995804, 0.99995804)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(960, 300, 44, 92)
+
+[node name="105_npc_3030137000_01_win_Lhand" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 7
+position = Vector2(-8, -116)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(888, 568, 28, 40)
+
+[node name="106_npc_3030137000_01_damage_body" type="Sprite2D" parent="Visuals"]
+visible = false
+position = Vector2(-128, -256)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(536, 536, 256, 256)
+
+[node name="107_npc_3030137000_01_ef_t_00" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.0188)
+z_index = 30
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-221.6, -294.6)
+scale = Vector2(1.83, 1.83)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(752, 8, 240, 240)
+
+[node name="108_npc_3030137000_01_ef_t_02_a" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.0625)
+z_index = 31
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-343.25, -483.9)
+scale = Vector2(2.55, 2.55)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(8, 256, 240, 240)
+
+[node name="109_npc_3030137000_01_ef_t_15" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.0502)
+z_index = 33
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-222, -305)
+scale = Vector2(2.18, 2.18)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(256, 504, 220, 220)
+
+[node name="110_npc_3030137000_01_ef_t_00_1" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.0028)
+z_index = 32
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-331.6667, -404.6667)
+scale = Vector2(2.7472, 2.7472)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(752, 8, 240, 240)
+
+[node name="111_npc_3030137000_01_ef_t_16" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.0753)
+z_index = 32
+position = Vector2(-433.3952, -300.3783)
+rotation = -0.11170627
+scale = Vector2(3.7685883, 3.7685883)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(484, 712, 240, 168)
+
+[node name="112_npc_3030137000_01_ef_t_16_1" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.0995)
+z_index = 33
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-435.0151, -300.1966)
+rotation = -0.11170627
+scale = Vector2(3.7685883, 3.7685883)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(484, 712, 240, 168)
+
+[node name="113_npc_3030137000_01_light02_pt_3" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.1322)
+z_index = 7
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-2.0709, -174.9646)
+scale = Vector2(0.277, 0.66472864)
+skew = -0.076195
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(256, 732, 132, 240)
+
+[node name="114_npc_3030137000_01_light02_pt_4" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.6049)
+z_index = 8
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(14.3761, -138.4696)
+scale = Vector2(0.2458, 0.49255994)
+skew = 0.03248906
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(256, 732, 132, 240)
+
+[node name="115_npc_3030137000_01_light02_pt_5" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 9
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-92.008, -127.56)
+scale = Vector2(0.288, 0.488)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(256, 732, 132, 240)
+
+[node name="116_npc_3030137000_01_ef_light_pt_03_10" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 29
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(31.96, -76.5176)
+scale = Vector2(0.242, 0.242)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(504, 8, 240, 240)
+
+[node name="117_npc_3030137000_01_ef_light_pt_03_11" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 30
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(86.96, -37.04)
+scale = Vector2(0.242, 0.242)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(504, 8, 240, 240)
+
+[node name="118_npc_3030137000_01_ef_light_pt_03_12" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.25)
+z_index = 31
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-19.04, -116.04)
+scale = Vector2(0.242, 0.242)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(504, 8, 240, 240)
+
+[node name="119_npc_3030137000_01_ef_light_pt_03_13" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5)
+z_index = 32
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-59.04, -60.5176)
+scale = Vector2(0.242, 0.242)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(504, 8, 240, 240)
+
+[node name="120_npc_3030137000_01_ef_light_pt_03_14" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5)
+z_index = 33
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-4.04, -21.04)
+scale = Vector2(0.242, 0.242)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(504, 8, 240, 240)
+
+[node name="121_npc_3030137000_01_ef_light_11" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5)
+z_index = 37
+position = Vector2(-94.06, -141.193)
+scale = Vector2(1.22, 1.441)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(808, 1159, 152, 84)
+
+[node name="122_npc_3030137000_01_ef_light_11_1" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5)
+z_index = 38
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-94.06, -141.193)
+scale = Vector2(1.22, 1.441)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(808, 1159, 152, 84)
+
+[node name="123_npc_3030137000_01_light02_pt_6" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.0123)
+z_index = 10
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-79.573, -174.2151)
+scale = Vector2(0.2871, 0.70836204)
+skew = 0.08168745
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(256, 732, 132, 240)
+
+[node name="124_npc_3030137000_01_ef_light_12" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5)
+z_index = 30
+position = Vector2(-94.06, -141.193)
+scale = Vector2(1.22, 1.441)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(8, 1164, 152, 84)
+
+[node name="125_npc_3030137000_01_ef_light_12_1" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5)
+z_index = 31
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-94.06, -141.193)
+scale = Vector2(1.22, 1.441)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(8, 1164, 152, 84)
+
+[node name="126_npc_3030137000_01_ef_light_13" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5)
+z_index = 30
+position = Vector2(-94.06, -141.193)
+scale = Vector2(1.22, 1.441)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(168, 1208, 152, 84)
+
+[node name="127_npc_3030137000_01_ef_light_13_1" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5)
+z_index = 31
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-94.06, -141.193)
+scale = Vector2(1.22, 1.441)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(168, 1208, 152, 84)
+
+[node name="128_npc_3030137000_01_light02_pt_7" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.0816)
+z_index = 11
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-91.1335, -181.671)
+scale = Vector2(0.2819, 0.74090296)
+skew = 0.00283432
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(256, 732, 132, 240)
+
+[node name="129_npc_3030137000_01_light02_pt_8" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.301)
+z_index = 25
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-41.686, -163)
+scale = Vector2(0.571, 0.825)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(256, 732, 132, 240)
+
+[node name="130_npc_3030137000_01_light02_pt_9" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.0334)
+z_index = 26
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-19.6521, -229.1882)
+scale = Vector2(0.5556, 1.138517)
+skew = 0.08609533
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(256, 732, 132, 240)
+
+[node name="131_npc_3030137000_01_ef_light_14" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5)
+z_index = 28
+position = Vector2(-94.06, -141.193)
+scale = Vector2(1.22, 1.441)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(328, 1208, 152, 84)
+
+[node name="132_npc_3030137000_01_ef_light_14_1" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5)
+z_index = 29
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-94.06, -141.193)
+scale = Vector2(1.22, 1.441)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(328, 1208, 152, 84)
+
+[node name="133_npc_3030137000_01_ef_t_18__2" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5)
+z_index = 39
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-184.1012, -278.7928)
+scale = Vector2(1.5639, 1.5639)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(504, 256, 240, 240)
+
+[node name="134_npc_3030137000_01_ef_t_18__3" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.602)
+z_index = 40
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-184.1012, -278.7928)
+scale = Vector2(1.5639, 1.5639)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(504, 256, 240, 240)
+
+[node name="135_npc_3030137000_01_light02_pt_10" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.0983)
+z_index = 27
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-37.7574, -216.432)
+scale = Vector2(0.5229, 1.0747031)
+skew = 0.0024192333
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(256, 732, 132, 240)
+
+[node name="136_npc_3030137000_01_light02_pt_11" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.8)
+z_index = 28
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-90.994, -141.0074)
+scale = Vector2(0.409, 0.6062)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(256, 732, 132, 240)
+
+[node name="137_npc_3030137000_01_light02_pt_12" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 29
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(9.006, -122.04)
+scale = Vector2(0.409, 0.592)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(256, 732, 132, 240)
+
+[node name="138_npc_3030137000_01_light02_pt_13" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.5289)
+z_index = 30
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(6.87, -130.3266)
+scale = Vector2(0.3463, 0.631437)
+skew = -0.048321366
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(256, 732, 132, 240)
+
+[node name="139_npc_3030137000_01_light02_pt_14" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.6694)
+z_index = 31
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(10.4396, -116.9831)
+scale = Vector2(0.3296, 0.5687276)
+skew = -0.033941984
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(256, 732, 132, 240)
+
+[node name="140_npc_3030137000_01_light02_pt_15" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.8264)
+z_index = 32
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(13.9707, -101.9754)
+scale = Vector2(0.311, 0.49827948)
+skew = -0.01786244
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(256, 732, 132, 240)
+
+[node name="141_npc_3030137000_01_light02_pt_16" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 31
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(17.3087, -85.3005)
+scale = Vector2(0.2904, 0.4203)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(256, 732, 132, 240)
+
+[node name="142_npc_3030137000_01_ef_t_19__2" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.375)
+z_index = 41
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-102.48, -189.04)
+scale = Vector2(0.88, 0.88)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(8, 504, 240, 240)
+
+[node name="143_npc_3030137000_01_ef_t_19__3" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.375)
+z_index = 42
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-102.48, -189.04)
+scale = Vector2(0.88, 0.88)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(8, 504, 240, 240)
+
+[node name="144_npc_3030137000_01_ef_t_17" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.1667)
+z_index = 13
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-279.16, -367.16)
+scale = Vector2(2.343, 2.343)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(256, 256, 240, 240)
+
+[node name="145_gr_npc_3030137000_01_white_bg" type="Polygon2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.0003)
+z_index = 9
+position = Vector2(-206, -194)
+polygon = PackedVector2Array(-1029.8, -1029.8, 1030, -1029.8, 1030, 1030, -1029.8, 1030)
+
+[node name="146_gr_npc_3030137000_01_white_bg_1" type="Polygon2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.102)
+z_index = 10
+position = Vector2(-207, -213)
+polygon = PackedVector2Array(-1029.8, -1029.8, 1030, -1029.8, 1030, 1030, -1029.8, 1030)
+
+[node name="147_npc_3030137000_01_slash03" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.1111)
+z_index = 2
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-112.3675, -118.0319)
+rotation = 0.08569292
+scale = Vector2(1.0772529, 1.173081)
+skew = 0.53231704
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(488, 1251, 212, 44)
+
+[node name="148_npc_3030137000_01_slash03_1" type="Sprite2D" parent="Visuals"]
+visible = false
+self_modulate = Color(1, 1, 1, 0.1111)
+z_index = 3
+material = SubResource("CanvasItemMaterial_fjmg5")
+position = Vector2(-112.3675, -118.0319)
+rotation = 0.08569292
+scale = Vector2(1.0772529, 1.173081)
+skew = 0.53231704
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(488, 1251, 212, 44)
+
+[node name="149_npc_3030137000_01_attack04_Rarm" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 2
+position = Vector2(-35.2315, -115.3852)
+rotation = -0.4852045
+scale = Vector2(1.000023, 1.1300277)
+skew = 0.47821343
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(936, 464, 52, 44)
+
+[node name="150_npc_3030137000_01_attack04_head" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 3
+position = Vector2(-60, -167)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(924, 196, 48, 96)
+
+[node name="151_npc_3030137000_01_attack04_body" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 4
+position = Vector2(-187.0412, -258.4033)
+scale = Vector2(1, 1.0100142)
+skew = -0.12916899
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(536, 800, 256, 256)
+
+[node name="152_npc_3030137000_01_attack04_Larm" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 5
+position = Vector2(-91.8451, -92.6578)
+rotation = -0.43806493
+scale = Vector2(1.0000285, 1.0099938)
+skew = -0.11692405
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(936, 400, 56, 56)
+
+[node name="153_npc_3030137000_01_attack04_backhair" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 6
+position = Vector2(-35.7433, -163.0036)
+scale = Vector2(1, 1.0099822)
+skew = 0.12737608
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(924, 104, 56, 84)
+
+[node name="154_npc_3030137000_01_attack04_ear" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 7
+position = Vector2(-29, -134)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(992, 636, 12, 16)
+
+[node name="155_npc_3030137000_01_attack04_sideburn" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 8
+position = Vector2(-40.7049, -160.9983)
+scale = Vector2(1, 1.0100281)
+skew = 0.1465596
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(868, 408, 20, 88)
+
+[node name="156_npc_3030137000_01_down_Rarm" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 2
+position = Vector2(-30, -102.5)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(996, 464, 20, 36)
+
+[node name="157_npc_3030137000_01_down_body" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 3
+position = Vector2(-128, -253.47)
+scale = Vector2(1, 0.99)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(8, 800, 256, 256)
+
+[node name="158_npc_3030137000_01_down_Rhand" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 5
+position = Vector2(-23, -73.5)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(856, 636, 20, 32)
+
+[node name="159_npc_3030137000_01_down_Larm" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 6
+position = Vector2(-24.0156, -102.4345)
+rotation = -0.0025999942
+scale = Vector2(1.0000033, 1.0000033)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(800, 528, 36, 36)
+
+[node name="160_npc_3030137000_01_down_head" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 7
+position = Vector2(-49, -147.5)
+texture = ExtResource("1_r2g66")
+centered = false
+region_enabled = true
+region_rect = Rect2(856, 204, 44, 96)
+
+[node name="161_npc_3030137000_01_down_ase" type="Sprite2D" parent="Visuals"]
+visible = false
+z_index = 8
+position = Vector2(6, -137)
+texture = ExtResource("2_oh476")
+centered = false
+region_enabled = true
+region_rect = Rect2(924, 704, 24, 20)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_5eihg")
+}
+autoplay = "wait"
+
+[node name="ControlRoot" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SelectionReticle" parent="ControlRoot" instance=ExtResource("4_rlv4i")]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 24.000002
+offset_top = -154.85713
+offset_right = 174.28569
+offset_bottom = 91.42854
+
+[node name="HitBox" type="Control" parent="ControlRoot"]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = 25.14286
+offset_top = -161.14285
+offset_right = 174.2857
+offset_bottom = 96.0
+
+[node name="ThoughtBubbleRight" type="Control" parent="ControlRoot"]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = 154.28572
+offset_top = -121.71429
+offset_right = 154.28572
+offset_bottom = -121.71429
+
+[node name="ThoughtBubbleLeft" type="Control" parent="ControlRoot"]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = 40.0
+offset_top = -125.14285
+offset_right = 40.0
+offset_bottom = -125.14285

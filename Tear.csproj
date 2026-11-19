@@ -93,6 +93,13 @@
         <GodotResourceFiles Include="Tear/**"/>
     </ItemGroup>
 
+    <ItemGroup>
+      <Content Include="TearCode\Nodes\NTear.cs.uid" />
+      <Content Include="TearCode\Nodes\TearNMerchantCharacter.cs.uid" />
+      <Content Include="TearCode\Nodes\TearNRestSiteCharacter.cs.uid" />
+      <Content Include="TearCode\Nodes\TearNSelectionReticle.cs.uid" />
+    </ItemGroup>
+
     <Target Name="GodotPublish" AfterTargets="Publish" Condition="'$(GodotPath)' != '' and Exists('$(GodotPath)') and '$(IsInnerGodotExport)' != 'true'" Inputs="@(GodotResourceFiles)" Outputs="$(ModsPath)$(MSBuildProjectName)/$(MSBuildProjectName).pck">
         <Message Text="Exporting Godot .pck to mods folder" Importance="high"/>
         <Exec Command="&quot;$(GodotPath)&quot; --headless --export-pack &quot;BasicExport&quot; &quot;$(ModsPath)$(MSBuildProjectName)/$(MSBuildProjectName).pck&quot;"

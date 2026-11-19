@@ -1,5 +1,5 @@
+Control
 AudioStreamPlayer2D
 Sprite2D
-Control
 AnimationPlayer
 AudioStreamPlayer2D      - Matches the "sound" keyword.
