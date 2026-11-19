@@ -188,12 +188,19 @@ public class Tear : PlaceholderCharacterModel
         float speed = 1.0f;
 
         animPlayer.SpeedScale = speed;
+
+        if (godotTrigger == "attack_tear")
+        {
+            animPlayer.Stop();
+        }
+
         animPlayer.Play(godotTrigger);
 
         if (godotTrigger is not ("die" or "dead"))
         {
             animPlayer.Queue("idle_tear");
         }
+
 
         float effectiveLength =
             (float)animation.Length / speed;

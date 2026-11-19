@@ -11,7 +11,7 @@
   "TEAR-DEFEND_TEAR.description": "Gain {Block:diff()} [gold]Block[/gold].",
   "TEAR-DEFEND_TEAR.title": "Defend",
   
-  "TEAR-NIGHTMARE.description": "Deal {Damage:diff()} damage. \nApply {WeakPower:diff()} [gold]Weak[/gold].",
+  "TEAR-NIGHTMARE.description": "Deal {Damage:diff()} damage. \nApply {WeakPower:diff()} [gold]Weak[/gold]. \nGain {DarkFonon}.",
   "TEAR-NIGHTMARE.title": "Nightmare",
 
   "TEAR-HIDDEN_KNIFE.title": "Hidden Knife",
