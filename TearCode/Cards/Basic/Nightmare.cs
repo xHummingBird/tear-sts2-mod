@@ -10,6 +10,7 @@ using MegaCrit.Sts2.Core.ValueProps;
 using Tear.TearCode.Extensions;
 using Tear.TearCode.Mechanics;
 using Tear.TearCode.Powers;
+using Tear.TearCode.Relics;
 
 namespace Tear.TearCode.Cards.Basic;
 
@@ -35,7 +36,8 @@ public class Nightmare() : TearCard(1, CardType.Attack,
         CenterCardCinematic.Start(RunManager.Instance.NetService.NetId);
         if (ownerCreature != null && Owner?.Character is Character.Tear tear)
         {
-            SfxCmd.Play("res://Tear/sounds/hymns/first_hymn.mp3", 0.7f);
+            if (Owner.GetRelic<SpecialFlagA>() != null)
+                SfxCmd.Play("res://Tear/sounds/hymns/first_hymn.mp3", 0.7f);
             tear.PlayAnimation(ownerCreature, "cast_1");
             SfxCmd.Play("res://Tear/sounds/se/cast_1.mp3");
             await Task.Delay(500);

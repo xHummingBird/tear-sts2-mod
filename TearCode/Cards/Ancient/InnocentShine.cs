@@ -146,6 +146,8 @@ public class InnocentShine() : TearCard(
         await CommonActions.CardAttack(this, play.Target)
             .WithHitFx(null, "res://Tear/sfx/tear_hit.wav")
             .Execute(choiceContext);
+        await PowerCmd.Remove<OverlimitPower>(Owner.Creature);
+        OverlimitManager.SetOverlimit(Owner, 0);
         CenterCardCinematic.End(RunManager.Instance.NetService.NetId);
     }
 

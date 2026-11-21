@@ -37,5 +37,13 @@
 
   "TEAR-TEARS_PENDANT.description": "[gold]Artes[/gold] and [gold]Fonic Hymns[/gold] deal 25% more damage.",
   "TEAR-TEARS_PENDANT.flavor": "A familiar pendant kept close to the heart. It makes every [gold]Arte[/gold] hit a little closer to someone else's.",
-  "TEAR-TEARS_PENDANT.title": "Tear's Pendant"
+  "TEAR-TEARS_PENDANT.title": "Tear's Pendant",
+
+  "TEAR-SPECIAL_FLAG_A.title": "Special Flag A",
+  "TEAR-SPECIAL_FLAG_A.description": "Enable hymn audio when playing Fonic Hymns.",
+  "TEAR-SPECIAL_FLAG_A.flavor": "For diehard Tales of the Abyss fans.",
+
+  "TEAR-SPECIAL_FLAG_B.title": "Special Flag B",
+  "TEAR-SPECIAL_FLAG_B.description": "Disable hymn audio when playing Fonic Hymns.",
+  "TEAR-SPECIAL_FLAG_B.flavor": "C'mon man, it's not that bad."
 }

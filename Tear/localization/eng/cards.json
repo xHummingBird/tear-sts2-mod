@@ -2,16 +2,16 @@
   "TEAR-STRIKE_TEAR.description": "Deal {Damage:diff()} damage.",
   "TEAR-STRIKE_TEAR.title": "Strike",
 
-  "TEAR-NOCTURNAL_LIGHT.description": "Deal {Damage:diff()} damage. \n{EarthFonon}: Hit another time.",
+  "TEAR-NOCTURNAL_LIGHT.description": "[gold]Arte[/gold]\nDeal {Damage:diff()} damage. \n{EarthFonon}{DarkFonon}: Hit another time.",
   "TEAR-NOCTURNAL_LIGHT.title": "Nocturnal Light",
 
   "TEAR-POW_HAMMER.title": "Pow Hammer",
-  "TEAR-POW_HAMMER.description": "Deal {Damage:diff()} damage. \nApply {WeakPower:diff()} [gold]Weak[/gold]. \n{WaterFonon}: Apply {VulnerablePower:diff()} [gold]Vulnerable[/gold].",
+  "TEAR-POW_HAMMER.description": "[gold]Arte[/gold]\nDeal {Damage:diff()} damage. \nApply {WeakPower:diff()} [gold]Weak[/gold]. \n{WaterFonon}{DarkFonon}: Apply {VulnerablePower:diff()} [gold]Vulnerable[/gold].",
 
   "TEAR-DEFEND_TEAR.description": "Gain {Block:diff()} [gold]Block[/gold].",
   "TEAR-DEFEND_TEAR.title": "Defend",
   
-  "TEAR-NIGHTMARE.description": "Deal {Damage:diff()} damage. \nApply {WeakPower:diff()} [gold]Weak[/gold]. \nGain {DarkFonon}.",
+  "TEAR-NIGHTMARE.description": "[gold]Fonic Hymn[/gold]\nDeal {Damage:diff()} damage. \nApply {WeakPower:diff()} [gold]Weak[/gold]. \nGain {DarkFonon}.",
   "TEAR-NIGHTMARE.title": "Nightmare",
 
   "TEAR-HIDDEN_KNIFE.title": "Hidden Knife",
@@ -57,23 +57,23 @@
   "TEAR-ELEGANCE.description": "Gain {Block:diff()} [gold]Block[/gold]. \nNext turn, gain {Energy:energyIcons()}.",
 
   "TEAR-ENHANCE_CAST.title": "Enhance Cast",
-  "TEAR-ENHANCE_CAST.description": "The next Attack you play costs 0 {energyPrefix:energyIcons(1)}. \n{WindFonon}: The next Skill you play costs 0 {energyPrefix:energyIcons(1)}.",
+  "TEAR-ENHANCE_CAST.description": "[gold]Arte[/gold]\nThe next Attack you play costs 0 {energyPrefix:energyIcons(1)}. \n{WindFonon}{LightFonon}: The next Skill you play costs 0 {energyPrefix:energyIcons(1)}.",
 
   "TEAR-CHARGE.title": "Charge",
-  "TEAR-CHARGE.description": "Gain {Energy:energyIcons()}. \n{EarthFonon}: Gain {Energy:energyIcons()}.",
+  "TEAR-CHARGE.description": "[gold]Arte[/gold]\nGain {Energy:energyIcons()}. \n{EarthFonon}{DarkFonon}: Gain {Energy:energyIcons()}.",
 
   "TEAR-FORCE_FIELD.title": "Force Field",
-  "TEAR-FORCE_FIELD.description": "Gain {BufferPower:diff()} [gold]Buffer[/gold]. \nGain {EarthFonon}.",
+  "TEAR-FORCE_FIELD.description": "[gold]Fonic Hymn[/gold]\nGain {BufferPower:diff()} [gold]Buffer[/gold]. \nGain {EarthFonon}.",
 
   "TEAR-FIRST_AID.title": "First Aid",
-  "TEAR-FIRST_AID.description": "Heal {Heal:diff()} HP. \n{WaterFonon}: Double the healing. \nCannot heal above the HP you had at the start of combat.",
+  "TEAR-FIRST_AID.description": "[gold]Arte[/gold]\nHeal {Heal:diff()} HP. \n{WaterFonon}{DarkFonon}: Double the healing. \nCannot heal above the HP you had at the start of combat.",
 
   "TEAR-HEALING_CIRCLE.title": "Healing Circle",
-  "TEAR-HEALING_CIRCLE.description": "Exhaust up to {Cards:diff()} cards. \nRecover {Heal:diff()} HP for each card Exhausted. \nYou can only heal up to your starting combat HP. \n{WindFonon}: Double the healing.",
+  "TEAR-HEALING_CIRCLE.description": "[gold]Arte[/gold]\nExhaust up to {Cards:diff()} cards. \nHeal {Heal:diff()} HP for each card Exhausted. \nYou can only heal up to your starting combat HP. \n{WindFonon}{LightFonon}: Double the healing.",
   "TEAR-HEALING_CIRCLE.selectionScreenPrompt": "Choose up to 3 cards to Exhaust.",
 
   "TEAR-RESURRECTION.title": "Resurrection",
-  "TEAR-RESURRECTION.description": "Recover {Heal:diff()} HP. \nGain [gold]Resurrection[/gold]. \nGain {LightFonon}. \n{WaterFonon}: Costs 0 {energyPrefix:energyIcons(1)} and applies [gold]Resurrection[/gold] to ALL allies.",
+  "TEAR-RESURRECTION.description": "[gold]Arte[/gold]\nHeal {Heal:diff()} HP. \nGain [gold]Resurrection[/gold]. \nGain {LightFonon}. \n{WaterFonon}{DarkFonon}: Costs 0 {energyPrefix:energyIcons(1)} and applies [gold]Resurrection[/gold] to ALL allies.",
 
   "TEAR-ENCORE.title": "Encore",
   "TEAR-ENCORE.description": "Play a random [gold]Fonic Hymn[/gold] from your discard pile and [gold]Exhaust[/gold] it.",
@@ -83,13 +83,13 @@
   "TEAR-RECOMPOSE.selectionScreenPrompt": "Choose a card to Exhaust.",
 
   "TEAR-REVITALISE.title": "Revitalise",
-  "TEAR-REVITALISE.description": "Recover {Heal:diff()}% of your missing HP relative to your starting combat HP. \nGain {WaterFonon}.",
+  "TEAR-REVITALISE.description": "[gold]Fonic Hymn[/gold]\nHeal {Heal:diff()}% of your missing HP relative to your starting combat HP. \nGain {WaterFonon}.",
 
   "TEAR-CAST_ARTE.title": "Cast Arte",
   "TEAR-CAST_ARTE.description": "Add a random [gold]Arte[/gold] to your hand. \nIt is free to play this turn.",
 
   "TEAR-HOLY_SONG.title": "Holy Song",
-  "TEAR-HOLY_SONG.description": "This turn, gain {StrengthPower:diff()} [gold]Strength[/gold] and {DexterityPower:diff()} [gold]Dexterity[/gold]. \nGain {WindFonon}.",
+  "TEAR-HOLY_SONG.description": "[gold]Fonic Hymn[/gold]\nThis turn, gain {StrengthPower:diff()} [gold]Strength[/gold] and {DexterityPower:diff()} [gold]Dexterity[/gold]. \nGain {WindFonon}.",
 
   "TEAR-LUCKY_MAGIC.title": "Lucky Magic",
   "TEAR-LUCKY_MAGIC.description": "Draw {Cards:diff()} card. \nIf the drawn card is an [gold]Arte[/gold], it is free to play this turn.",
@@ -131,7 +131,7 @@
   "TEAR-REPRISE.description": "Your next [gold]Arte[/gold] or [gold]Fonic Hymn[/gold] is played twice.",
 
   "TEAR-BACK_ACTION.title": "Back Action",
-  "TEAR-BACK_ACTION.description": "Gain {Block:diff()} [gold]Block[/gold]. \nIf this is the first card you play this turn, your next Attack costs 0 {Energy:energyIcons()}.",
+  "TEAR-BACK_ACTION.description": "Gain {Block:diff()} [gold]Block[/gold]. \nIf this is the first card you play this turn, your next Attack costs 0 {energyPrefix:energyIcons(1)}.",
 
   "TEAR-FONIC_BARRIER.title": "Fonic Barrier",
   "TEAR-FONIC_BARRIER.description": "Gain {Block:diff()} [gold]Block[/gold]. \nFor 1 turn, reflect all blocked damage to the attacker.",
@@ -170,7 +170,7 @@
   "TEAR-FIFTH_HARMONY.description": "Whenever you draw a [gold]Fonic Hymn[/gold], draw 1 card.",
 
   "TEAR-PITCH_PERFECT.title": "Pitch Perfect",
-  "TEAR-PITCH_PERFECT.description": "The first {Amount:diff()} {Amount:plural:card|cards} you play each turn {Amount:plural:is|are} free.",
+  "TEAR-PITCH_PERFECT.description": "The first {Cards:diff()} {Cards:plural:card|cards} you play each turn {Cards:plural:is|are} free.",
 
   "TEAR-GRAND_MAESTRO.title": "Grand Maestro",
   "TEAR-GRAND_MAESTRO.description": "Whenever you play a [gold]Fonic Hymn[/gold], deal {Damage:diff()} damage to ALL enemies.",
@@ -182,13 +182,13 @@
   "TEAR-FLOWER_OF_THE_QLIPHOTH.description": "Whenever you play a [gold]Fonic Hymn[/gold], gain {Block:diff()} [gold]Block[/gold].",
 
   "TEAR-FONIC_MASTERY.title": "Fonic Mastery",
-  "TEAR-FONIC_MASTERY.description": "[gold]Artes[/gold] deal {Amount:diff()}% more damage.",
+  "TEAR-FONIC_MASTERY.description": "[gold]Artes[/gold] deal {FonicMasteryPower:diff()}% more damage.",
   
-  "TEAR-SEVERED_FATE.description": "Deal {Damage:diff()} damage. \n{WindFonon}: Hit ALL enemies.",
+  "TEAR-SEVERED_FATE.description": "[gold]Arte[/gold]\nDeal {Damage:diff()} damage. \n{WindFonon}{LightFonon}: Hit ALL enemies.",
   "TEAR-SEVERED_FATE.title": "Severed Fate",
 
   "TEAR-HOLY_LANCE.title": "Holy Lance",
-  "TEAR-HOLY_LANCE.description": "Deal {Damage:diff()} damage X times to ALL enemies. \n{EarthFonon}: X is doubled.",
+  "TEAR-HOLY_LANCE.description": "[gold]Arte[/gold]\nDeal {Damage:diff()} damage X times to ALL enemies. \n{EarthFonon}{DarkFonon}: X is doubled.",
 
   "TEAR-INNOCENT_SHINE.title": "Innocent Shine",
   "TEAR-INNOCENT_SHINE.description": "Deal {CalculatedDamage:diff()} damage to ALL enemies. \nDamage increases by {ExtraDamage:diff()} for every [gold]Arte[/gold] you've played this combat.",
@@ -197,10 +197,10 @@
   "TEAR-NOCTURNAL_AQUA.title": "Nocturnal Aqua",
 
   "TEAR-BANISHING_SORROW.title": "Banishing Sorrow",
-  "TEAR-BANISHING_SORROW.description": "Deal {Damage:diff()} damage. \nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold]. \n{FireFonon}: Targets ALL enemies.",
+  "TEAR-BANISHING_SORROW.description": "[gold]Arte[/gold]\nDeal {Damage:diff()} damage. \nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold]. \n{FireFonon}{LightFonon}: Targets ALL enemies.",
 
   "TEAR-ECLAIR_DE_LARMES.title": "Éclair de Larmes",
-  "TEAR-ECLAIR_DE_LARMES.description": "Deal {Damage:diff()} damage to ALL enemies. \n{FireFonon}: Double the effectiveness of [gold]Vulnerable[/gold] and [gold]Weak[/gold] for {Turns:diff()} turns.",
+  "TEAR-ECLAIR_DE_LARMES.description": "[gold]Arte[/gold]\nDeal {Damage:diff()} damage to ALL enemies. \n{FireFonon}{LightFonon}: Double the effectiveness of [gold]Vulnerable[/gold] and [gold]Weak[/gold] for {Turns:diff()} turns.",
 
   "TEAR-RESOLUTE_ELEGY.title": "Resolute Elegy",
   "TEAR-RESOLUTE_ELEGY.description": "Deal {Damage:diff()} damage to ALL enemies. \nApply {VulnerablePower:diff()} [gold]Vulnerable[/gold] and {WeakPower:diff()} [gold]Weak[/gold] to ALL enemies. \nGain {DarkFonon}.",
@@ -221,14 +221,20 @@
   "TEAR-MYSTIC_ARTE.description": "Play [gold]Innocent Shine[/gold]. \nIf you've played a [gold]Fonic Hymn[/gold] this turn, you may choose to play [gold]Fortune's Arc[/gold] instead.",
 
   "TEAR-MYXOLIDIA_OF_FONONS.title": "Myxolidia of Fonons",
-  "TEAR-MYXOLIDIA_OF_FONONS.description": "Deal {Damage:diff()} damage to ALL enemies. \nApply {WeakPower:diff()} [gold]Weak[/gold] and {VulnerablePower:diff()} [gold]Vulnerable[/gold] to ALL enemies. \nGain {DarkFonon}.",
+  "TEAR-MYXOLIDIA_OF_FONONS.description": "[gold]Fonic Hymn[/gold]\nDeal {Damage:diff()} damage to ALL enemies. \nApply {WeakPower:diff()} [gold]Weak[/gold] and {VulnerablePower:diff()} [gold]Vulnerable[/gold] to ALL enemies. \nGain {DarkFonon}.",
 
-  "TEAR-JUDGMENT.description": "Deal {Damage:diff()} damage {HitCount} times to a random enemy. \nGain {FireFonon}.",
+  "TEAR-JUDGMENT.description": "[gold]Fonic Hymn[/gold]\nDeal {Damage:diff()} damage {HitCount} times to a random enemy. \nGain {FireFonon}.",
   "TEAR-JUDGMENT.title": "Judgment",
 
   "TEAR-SEVENTH_LIGHT.title": "Seventh Light",
-  "TEAR-SEVENTH_LIGHT.description": "Deal {Damage:diff()} damage {HitCount} times to ALL enemies. \n{WindFonon}: Hit 3 additional times.",
+  "TEAR-SEVENTH_LIGHT.description": "[gold]Arte[/gold]\nDeal {Damage:diff()} damage {HitCount} times to ALL enemies. \n{WindFonon}{LightFonon}: Hit 3 additional times.",
 
   "TEAR-GRAND_CROSS.title": "Grand Cross",
-  "TEAR-GRAND_CROSS.description": "Deal {Damage:diff()} damage to ALL enemies. \nGain {LightFonon}."
+  "TEAR-GRAND_CROSS.description": "[gold]Fonic Hymn[/gold]\nDeal {Damage:diff()} damage to ALL enemies. \nGain {LightFonon}.",
+
+  "TEAR-DONT_PLAY_HYMN.description": "Disable hymn audio when playing Fonic Hymns.",
+  "TEAR-DONT_PLAY_HYMN.title": "Don't Play Hymn",
+
+  "TEAR-PLAY_HYMN.description": "Enable hymn audio when playing Fonic Hymns.",
+  "TEAR-PLAY_HYMN.title": "Play Hymn"
 }

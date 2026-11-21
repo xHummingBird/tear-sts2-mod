@@ -107,6 +107,39 @@ public abstract class FonicRelicBase : TearRelic
             RunManager.Instance.NetService.NetId,
             isBoss);
     }
+    
+    public override async Task BeforeHandDraw(
+        Player player,
+        PlayerChoiceContext choiceContext,
+        ICombatState combatState)
+    {
+        if (Owner.GetRelic<SpecialFlagA>() != null ||
+            Owner.GetRelic<SpecialFlagB>() != null)
+            return;
+
+        if (player == Owner.Creature.Player && combatState.RoundNumber <= 1)
+        {
+            var cards = new List<CardModel>
+            {
+                combatState.CreateCard(ModelDb.Card<PlayHymn>(), player),
+                combatState.CreateCard(ModelDb.Card<DontPlayHymn>(), player)
+            };
+
+            var selectedCard = await CardSelectCmd.FromChooseACardScreen(
+                new BlockingPlayerChoiceContext(),
+                cards,
+                player);
+
+            if (selectedCard is PlayHymn)
+            {
+                await RelicCmd.Obtain<SpecialFlagA>(player);
+            }
+            else if (selectedCard is DontPlayHymn)
+            {
+                await RelicCmd.Obtain<SpecialFlagB>(player);
+            }
+        }
+    }
 
     public override async Task AfterCardPlayed(
         PlayerChoiceContext choiceContext,
@@ -121,6 +154,9 @@ public abstract class FonicRelicBase : TearRelic
             return;
 
         if (card.Owner != Owner)
+            return;
+
+        if (card is FortunesArc or InnocentShine)
             return;
 
         int amount;
@@ -173,9 +209,12 @@ public abstract class FonicRelicBase : TearRelic
             choiceContext,
             Owner.Creature,
             null);
-        
+
         if (card is MysticArte)
+        {
             PowerCmd.Remove<OverlimitPower>(Owner.Creature);
+            OverlimitManager.SetOverlimit(Owner, 0);
+        }
     }
 
     protected virtual int CalculateTurnStartGain()

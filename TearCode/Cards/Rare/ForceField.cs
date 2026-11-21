@@ -7,6 +7,7 @@ using MegaCrit.Sts2.Core.Models.Powers;
 using Tear.TearCode.Extensions;
 using Tear.TearCode.Mechanics;
 using Tear.TearCode.Powers;
+using Tear.TearCode.Relics;
 
 namespace Tear.TearCode.Cards.Rare;
 
@@ -36,7 +37,8 @@ public class ForceField() : TearCard(
 
         if (ownerCreature != null && Owner?.Character is Character.Tear tear)
         {
-            SfxCmd.Play("res://Tear/sounds/hymns/second_hymn.mp3", 0.7f);
+            if (Owner.GetRelic<SpecialFlagA>() != null)
+                SfxCmd.Play("res://Tear/sounds/hymns/second_hymn.mp3", 0.7f);
             tear.PlayAnimation(ownerCreature, "cast_1");
             SfxCmd.Play("res://Tear/sounds/se/cast_1.mp3");
             await Task.Delay(500);

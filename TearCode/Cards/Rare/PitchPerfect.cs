@@ -2,6 +2,7 @@
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
+using MegaCrit.Sts2.Core.Localization.DynamicVars;
 using Tear.TearCode.Powers;
 
 namespace Tear.TearCode.Cards.Rare;
@@ -12,9 +13,9 @@ public class PitchPerfect() : TearCard(
     CardRarity.Rare,
     TargetType.Self)
 {
-    protected override IEnumerable<IHoverTip> ExtraHoverTips =>
+    protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        HoverTipFactory.FromPower<PitchPerfectPower>()
+        new CardsVar(1)
     ];
 
     protected override async Task OnPlay(
@@ -24,12 +25,13 @@ public class PitchPerfect() : TearCard(
         await PowerCmd.Apply<PitchPerfectPower>(
             choiceContext,
             Owner.Creature,
-            IsUpgraded ? 2m : 1m,
+            DynamicVars.Cards.BaseValue,
             Owner.Creature,
             this);
     }
 
     protected override void OnUpgrade()
     {
+        DynamicVars.Cards.UpgradeValueBy(1);
     }
 }

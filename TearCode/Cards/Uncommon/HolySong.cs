@@ -8,6 +8,7 @@ using MegaCrit.Sts2.Core.Models.Powers;
 using Tear.TearCode.Extensions;
 using Tear.TearCode.Mechanics;
 using Tear.TearCode.Powers;
+using Tear.TearCode.Relics;
 
 namespace Tear.TearCode.Cards.Uncommon;
 
@@ -35,6 +36,9 @@ public class HolySong() : TearCard(
         PlayerChoiceContext choiceContext,
         CardPlay play)
     {
+        if (Owner.GetRelic<SpecialFlagA>() != null)
+            SfxCmd.Play("res://Tear/sounds/hymns/third_hymn.mp3");
+        
         await PowerCmd.Apply<HolySongStrengthPower>(
             choiceContext,
             Owner.Creature,

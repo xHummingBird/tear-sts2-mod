@@ -17,7 +17,7 @@ using Tear.TearCode.Relics;
 namespace Tear.TearCode.Cards.Rare;
 
 public class HealingCircle() : TearCard(
-    2,
+    1,
     CardType.Skill,
     CardRarity.Rare,
     TargetType.Self), IArtes

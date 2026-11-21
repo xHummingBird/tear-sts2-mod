@@ -12,7 +12,7 @@ using Tear.TearCode.Relics;
 namespace Tear.TearCode.Cards.Uncommon;
 
 public class FirstAid() : TearCard(
-    2,
+    1,
     CardType.Skill,
     CardRarity.Uncommon,
     TargetType.Self), IArtes

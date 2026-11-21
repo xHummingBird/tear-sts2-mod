@@ -4,10 +4,12 @@ using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
 using MegaCrit.Sts2.Core.Localization.DynamicVars;
+using MegaCrit.Sts2.Core.Runs;
 using MegaCrit.Sts2.Core.ValueProps;
 using Tear.TearCode.Extensions;
 using Tear.TearCode.Mechanics;
 using Tear.TearCode.Powers;
+using Tear.TearCode.Relics;
 
 namespace Tear.TearCode.Cards.Uncommon;
 
@@ -37,10 +39,11 @@ public class Judgment() : TearCard(
 
         if (ownerCreature == null)
             return;
-
+        CenterCardCinematic.Start(RunManager.Instance.NetService.NetId);
         if (Owner.Character is Character.Tear tear)
         {
-            SfxCmd.Play("res://Tear/sounds/hymns/fifth_hymn.mp3", 0.7f);
+            if (Owner.GetRelic<SpecialFlagA>() != null)
+                SfxCmd.Play("res://Tear/sounds/hymns/fifth_hymn.mp3", 0.7f);
             
             tear.PlayAnimation(
                 ownerCreature,
@@ -92,6 +95,7 @@ public class Judgment() : TearCard(
             1m,
             ownerCreature,
             this);
+        CenterCardCinematic.End(RunManager.Instance.NetService.NetId);
     }
 
     protected override void OnUpgrade()

@@ -1,6 +1,6 @@
 {
-  "TEAR-OVERLIMIT_POWER.description": "",
-  "TEAR-OVERLIMIT_POWER.smartDescription": "In [gold]Over Limit[/gold] for {Amount} turn(s).",
+  "TEAR-OVERLIMIT_POWER.description": "At 100 [gold]Over Limit[/gold], enter [gold]Over Limit[/gold] for 2 turns.\nWhile in [gold]Over Limit[/gold], Fonic Hymns can be played multiple times per turn and Artes always gain their Fonon enhancement.",
+  "TEAR-OVERLIMIT_POWER.smartDescription": "In [gold]Over Limit[/gold] for {Amount} turn(s). You can now perform [gold]Mystic Arte[/gold].",
   "TEAR-OVERLIMIT_POWER.title": "Over Limit",
   
   "TEAR-FIRE_FONON_POWER.description": "Boosts [gold]Artes[/gold] that require [gold]Fire Fonon[/gold], consuming the [gold]Fonon[/gold]. Applying another [gold]Fonon[/gold] replaces this one.",

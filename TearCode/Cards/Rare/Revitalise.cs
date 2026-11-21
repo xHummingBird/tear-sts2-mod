@@ -42,7 +42,8 @@ public class Revitalise() : TearCard(
 
         if (Owner.Character is Character.Tear tear)
         {
-            SfxCmd.Play("res://Tear/sounds/hymns/fourth_hymn.mp3", 0.7f);
+            if (Owner.GetRelic<SpecialFlagA>() != null)
+                SfxCmd.Play("res://Tear/sounds/hymns/fourth_hymn.mp3", 0.7f);
             tear.PlayAnimation(ownerCreature, "cast_1");
             SfxCmd.Play("res://Tear/sounds/se/cast_1.mp3");
 
