@@ -54,13 +54,14 @@ public class NocturnalLight() : TearCard(0, CardType.Attack,
             {
                 tear.PlayVfxOnTarget(play.Target, "res://Tear/scenes/vfx.tscn", "inlay_nocturne");
                 SfxCmd.Play("res://Tear/sfx/from_tifa/final_heaven_swing.wav");
+                await Task.Delay(333);
                 await DamageCmd.Attack(DynamicVars.Damage.BaseValue)
                     .WithHitCount(2)
                     .FromCard(this, play)
                     .Targeting(play.Target)
                     .WithHitFx(null, "res://Tear/sfx/tear_hit.wav")
                     .WithNoAttackerAnim()
-                    .WithWaitBeforeHit(0.33f, 0.33f)
+                    .WithWaitBeforeHit(0.2f, 0.2f)
                     .WithHitVfxNode(target =>
                     {
                         currentHit++;

@@ -21,8 +21,8 @@ public class Judgment() : TearCard(
 {
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
-        new DamageVar(5m, ValueProp.Move),
-        new HitCountVar(5)
+        new DamageVar(6m, ValueProp.Move),
+        new HitCountVar(4)
     ];
 
     protected override IEnumerable<IHoverTip> ExtraHoverTips =>
@@ -70,7 +70,7 @@ public class Judgment() : TearCard(
             .FromCard(this, play)
             .TargetingRandomOpponents(CombatState)
             .WithNoAttackerAnim()
-            .WithWaitBeforeHit(0.67f, 0.67f)
+            .WithWaitBeforeHit(0.2f, 0.2f)
             .WithHitVfxNode(target =>
             {
                 SfxCmd.Play("res://Tear/sfx/from_killia/charged_thunder (2).wav");

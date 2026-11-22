@@ -5,7 +5,7 @@ Tear.json::JSON::-1::1795183605::0::1::::<><><>0<>0<><>::
 ::res://bin/::1795189080
 ::res://bin/ExportRelease/::1795189080
 ::res://bin/ExportRelease/net9.0/::1795189080
-::res://bin/ExportRelease/net9.0/publish/::1795285906
+::res://bin/ExportRelease/net9.0/publish/::1795326319
 Tear.deps.json::JSON::-1::1795189080::0::1::::<><><>0<>0<><>::
 ::res://Tear/::1795183606
 mod_image.png::CompressedTexture2D::1432297269912953032::1795183606::1795183606::1::::<><><>0<>0<>bf80fbf2507c1b01733b44dd08992f28<>res://.godot/imported/mod_image.png-de2b1c552aa026bd9c529eca8f7cdb4d.ctex::
@@ -14,7 +14,7 @@ Reggae Std B.otf::FontFile::4920598063703692025::1795183605::1795183605::1::::<>
 ::res://Tear/images/::1795183605
 ::res://Tear/images/card_portraits/::1795183605
 card.png::CompressedTexture2D::5456799325342824129::1795183605::1795183605::1::::<><><>0<>0<>0ffcd98111fbce606a63f3ae704514a5<>res://.godot/imported/card.png-3fffea9c237c057f6ad5bcb035f9b932.ctex::
-::res://Tear/images/card_portraits/big/::1795285890
+::res://Tear/images/card_portraits/big/::1795285913
 backstep.png::CompressedTexture2D::7136766693561513809::1795183605::1795183605::1::::<><><>0<>0<>b5fc3e5d03e0484e8c12e060c611e7ec<>res://.godot/imported/backstep.png-7403fa42a8a78c043e1a300a2849a11a.ctex::
 back_action.png::CompressedTexture2D::2365291167957269512::1795183605::1795183605::1::::<><><>0<>0<>953e469813ad0d4e4090051a59729473<>res://.godot/imported/back_action.png-04b050f95483fb77a705c8666d77abdb.ctex::
 banishing_sorrow.png::CompressedTexture2D::6890855997717068895::1795183605::1795183605::1::::<><><>0<>0<>0e0eb3244a7da2b1f471c25986415f33<>res://.godot/imported/banishing_sorrow.png-814bd5cbf7d76fe70317293e394f6e7a.ctex::
@@ -161,7 +161,7 @@ yulias_descendant_power.png::CompressedTexture2D::6912987876560924778::179518360
 ::res://Tear/images/relics/::1795183605
 relic.png::CompressedTexture2D::5231671134671436147::1795183605::1795183605::1::::<><><>0<>0<>8e528a800645c25e3cab48a27848e560<>res://.godot/imported/relic.png-ea2b8669d6ccb2fc45955f5d54ec0dff.ctex::
 relic_outline.png::CompressedTexture2D::3439740639875911415::1795183605::1795183605::1::::<><><>0<>0<>24b073aca76092f2c5c311b0968214cb<>res://.godot/imported/relic_outline.png-e73c06979b5bf51d0a980d389588c5bd.ctex::
-::res://Tear/images/relics/big/::1795283704
+::res://Tear/images/relics/big/::1795285913
 blue_crystal_rod.png::CompressedTexture2D::8796581130928721135::1795183605::1795183605::1::::<><><>0<>0<>5eb0a1132e375af7a365b191d6a6977a<>res://.godot/imported/blue_crystal_rod.png-fcd8e6b59ac2ed671b7a2e042bbdcf34.ctex::
 blue_crystal_rod_outline.png::CompressedTexture2D::6842017414539540278::1795183605::1795183605::1::::<><><>0<>0<>d6a5bcb620badb97893bbaf6274b4a66<>res://.godot/imported/blue_crystal_rod_outline.png-322306598503e4a7ebfc0bb069b8471f.ctex::
 fonic_crest.png::CompressedTexture2D::8479044739040598472::1795183605::1795183605::1::::<><><>0<>0<>dca831b55c798f812eb9fa2541c435ba<>res://.godot/imported/fonic_crest.png-55e285280daed138555b5a1a7824afae.ctex::
@@ -627,7 +627,7 @@ swing_3.mp3::AudioStreamMP3::5523336821860137402::1795183606::1795183606::1::::<
 MainFile.cs::CSharpScript::3450276212312505158::1795183606::0::1::::<><><>0<>0<><>::
 ::res://TearCode/Cards/::1795183606
 TearCard.cs::CSharpScript::1787320065221108418::1795183606::0::1::::<><><>0<>0<><>::
-::res://TearCode/Cards/Ancient/::1795282953
+::res://TearCode/Cards/Ancient/::1795285913
 DontPlayHymn.cs::CSharpScript::7227821864607908369::1795282953::0::1::::<><><>0<>0<><>::
 FortunesArc.cs::CSharpScript::3215981887763684533::1795194298::0::1::::<><><>0<>0<><>::
 InnocentShine.cs::CSharpScript::4398218709460589242::1795194294::0::1::::<><><>0<>0<><>::
@@ -635,10 +635,10 @@ MysticArte.cs::CSharpScript::6339204754611444523::1795183606::0::1::::<><><>0<>0
 MyxolidiaOfFonons.cs::CSharpScript::7950973557777819282::1795183606::0::1::::<><><>0<>0<><>::
 PlayHymn.cs::CSharpScript::8725481398724344086::1795282907::0::1::::<><><>0<>0<><>::
 Resurrection.cs::CSharpScript::6344979810452292410::1795183606::0::1::::<><><>0<>0<><>::
-::res://TearCode/Cards/Basic/::1795283280
+::res://TearCode/Cards/Basic/::1795326312
 DefendTear.cs::CSharpScript::8337337664415445404::1795183606::0::1::::<><><>0<>0<><>::
 Nightmare.cs::CSharpScript::5588109620868182006::1795283280::0::1::::<><><>0<>0<><>::
-NocturnalLight.cs::CSharpScript::6603632542649672748::1795183606::0::1::::<><><>0<>0<><>::
+NocturnalLight.cs::CSharpScript::6603632542649672748::1795326312::0::1::::<><><>0<>0<><>::
 StrikeTear.cs::CSharpScript::6569014725600991374::1795183606::0::1::::<><><>0<>0<><>::
 ::res://TearCode/Cards/Common/::1795183606
 Backstep.cs::CSharpScript::1744270643551222445::1795183606::0::1::::<><><>0<>0<><>::
@@ -686,7 +686,7 @@ SeventhFonist.cs::CSharpScript::4069405571452138999::1795183606::0::1::::<><><>0
 SeventhLight.cs::CSharpScript::6627536693033297609::1795183606::0::1::::<><><>0<>0<><>::
 SpeedCast.cs::CSharpScript::7178954120945230003::1795183606::0::1::::<><><>0<>0<><>::
 StrongOfHeart.cs::CSharpScript::5582865623188987332::1795183606::0::1::::<><><>0<>0<><>::
-::res://TearCode/Cards/Uncommon/::1795283580
+::res://TearCode/Cards/Uncommon/::1795326294
 CandleSupply.cs::CSharpScript::3135158980592480717::1795183606::0::1::::<><><>0<>0<><>::
 CombatExpert.cs::CSharpScript::8163650375874964717::1795183606::0::1::::<><><>0<>0<><>::
 EclairDeLarmes.cs::CSharpScript::3604980459361266619::1795183606::0::1::::<><><>0<>0<><>::
@@ -702,7 +702,7 @@ HeavySwing.cs::CSharpScript::6844464923189902598::1795183606::0::1::::<><><>0<>0
 HolySong.cs::CSharpScript::8070689724407067820::1795283580::0::1::::<><><>0<>0<><>::
 InvokeDark.cs::CSharpScript::6748904717832688997::1795183606::0::1::::<><><>0<>0<><>::
 InvokeLight.cs::CSharpScript::2660948583600233513::1795183606::0::1::::<><><>0<>0<><>::
-Judgment.cs::CSharpScript::1610035736389696891::1795283580::0::1::::<><><>0<>0<><>::
+Judgment.cs::CSharpScript::1610035736389696891::1795326294::0::1::::<><><>0<>0<><>::
 LongStep.cs::CSharpScript::3871424169368525977::1795183606::0::1::::<><><>0<>0<><>::
 LuckyMagic.cs::CSharpScript::5164617320011515475::1795183606::0::1::::<><><>0<>0<><>::
 NocturnalAqua.cs::CSharpScript::1115450039265538840::1795183606::0::1::::<><><>0<>0<><>::
@@ -769,7 +769,7 @@ WaterFononPower.cs::CSharpScript::8594260179556297486::1795183607::0::1::::<><><
 WindFononPower.cs::CSharpScript::7258643853890430025::1795183607::0::1::::<><><>0<>0<><>::
 YuliasBlessingPower.cs::CSharpScript::1857029557313589511::1795183607::0::1::::<><><>0<>0<><>::
 YuliasDescendantPower.cs::CSharpScript::9121157895428410989::1795183607::0::1::::<><><>0<>0<><>::
-::res://TearCode/Relics/::1795283672
+::res://TearCode/Relics/::1795285913
 BlueCrystalRod.cs::CSharpScript::5178730196386794488::1795183607::0::1::::<><><>0<>0<><>::
 FonicCrest.cs::CSharpScript::5263624150862786842::1795183607::0::1::::<><><>0<>0<><>::
 FonicRelicBase.cs::CSharpScript::1251833385494243592::1795283672::0::1::::<><><>0<>0<><>::
