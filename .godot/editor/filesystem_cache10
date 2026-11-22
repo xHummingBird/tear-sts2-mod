@@ -5,7 +5,7 @@ Tear.json::JSON::-1::1795183605::0::1::::<><><>0<>0<><>::
 ::res://bin/::1795189080
 ::res://bin/ExportRelease/::1795189080
 ::res://bin/ExportRelease/net9.0/::1795189080
-::res://bin/ExportRelease/net9.0/publish/::1795326319
+::res://bin/ExportRelease/net9.0/publish/::1795354784
 Tear.deps.json::JSON::-1::1795189080::0::1::::<><><>0<>0<><>::
 ::res://Tear/::1795183606
 mod_image.png::CompressedTexture2D::1432297269912953032::1795183606::1795183606::1::::<><><>0<>0<>bf80fbf2507c1b01733b44dd08992f28<>res://.godot/imported/mod_image.png-de2b1c552aa026bd9c529eca8f7cdb4d.ctex::
@@ -443,9 +443,9 @@ severed_fate_7.png::CompressedTexture2D::2533321222523264721::1795183606::179518
 severed_fate_8.png::CompressedTexture2D::7270624711908789319::1795183606::1795183606::1::::<><><>0<>0<>0cdff840cc4d9c5aa88e89f7ad274dfb<>res://.godot/imported/severed_fate_8.png-62621876018a6c650b57e2e19e49635c.ctex::
 severed_fate_9.png::CompressedTexture2D::3449601855212492548::1795183606::1795183606::1::::<><><>0<>0<>73175273bccc1b1ea04ca607458f8b00<>res://.godot/imported/severed_fate_9.png-cf8896a580ad96eb0c683a674ffcf281.ctex::
 ::res://Tear/localization/::1795183606
-::res://Tear/localization/eng/::1795283078
+::res://Tear/localization/eng/::1795353997
 ancients.json::JSON::-1::1795183606::0::1::::<><><>0<>0<><>::
-cards.json::JSON::-1::1795282953::0::1::::<><><>0<>0<><>::
+cards.json::JSON::-1::1795353997::0::1::::<><><>0<>0<><>::
 card_keywords.json::JSON::-1::1795183606::0::1::::<><><>0<>0<><>::
 characters.json::JSON::-1::1795183606::0::1::::<><><>0<>0<><>::
 powers.json::JSON::-1::1795281780::0::1::::<><><>0<>0<><>::

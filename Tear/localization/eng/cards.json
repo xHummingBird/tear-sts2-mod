@@ -76,7 +76,7 @@
   "TEAR-RESURRECTION.description": "[gold]Arte[/gold]\nHeal {Heal:diff()} HP. \nGain [gold]Resurrection[/gold]. \nGain {LightFonon}. \n{WaterFonon}{DarkFonon}: Costs 0 {energyPrefix:energyIcons(1)} and applies [gold]Resurrection[/gold] to ALL allies.",
 
   "TEAR-ENCORE.title": "Encore",
-  "TEAR-ENCORE.description": "Play a random [gold]Fonic Hymn[/gold] from your discard pile and [gold]Exhaust[/gold] it.",
+  "TEAR-ENCORE.description": "Play a random {IfUpgraded:show:[gold]Upgraded[/gold] |}[gold]Fonic Hymn[/gold] from your discard pile and [gold]Exhaust[/gold] it.",
 
   "TEAR-RECOMPOSE.title": "Recompose",
   "TEAR-RECOMPOSE.description": "Exhaust 1 card in your hand. \nAdd a random [gold]Fonic Hymn[/gold] to your hand. It gains [gold]Retain[/gold].",
