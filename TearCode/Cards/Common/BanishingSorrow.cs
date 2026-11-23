@@ -56,6 +56,18 @@ public class BanishingSorrow() : TearCard(2, CardType.Attack,
             ownerCreature.HasPower<FireFononPower>() ||
             ownerCreature.HasPower<LightFononPower>() ||
             ownerCreature.HasPower<OverlimitPower>();
+        var target = play.Target;
+
+        if (!hasFireFonon && target == null)
+        {
+            var enemies = CombatState.HittableEnemies.ToList();
+
+            if (enemies.Count > 0)
+                target = enemies[
+                    Owner.RunState.Rng.CombatTargets.NextInt(enemies.Count)
+                ];
+        }
+        
         CenterCardCinematic.Start(RunManager.Instance.NetService.NetId);
         if (ownerCreature != null && Owner?.Character is Character.Tear tear)
         {
@@ -83,12 +95,12 @@ public class BanishingSorrow() : TearCard(2, CardType.Attack,
                 await Task.Delay(167);
                 SfxCmd.Play("res://Tear/sounds/se/swing_3.mp3");
                 tear.PlayVfxOnTarget(play.Target, "res://Tear/scenes/hit.tscn", "hit");
-                await CommonActions.CardAttack(this, play.Target)
+                await CommonActions.CardAttack(this, target)
                     .WithHitFx(null, "res://Tear/sfx/tear_hit.wav")
                     .Execute(choiceContext);
             }
         }
-        else  await CommonActions.CardAttack(this, play.Target)
+        else  await CommonActions.CardAttack(this, target)
             .WithHitFx(null, "res://Tear/sfx/tear_hit.wav")
             .Execute(choiceContext);
         
@@ -99,7 +111,7 @@ public class BanishingSorrow() : TearCard(2, CardType.Attack,
             await PowerCmd.Remove<FireFononPower>(ownerCreature);
             await PowerCmd.Remove<LightFononPower>(ownerCreature);
         }
-        else await PowerCmd.Apply<VulnerablePower>(choiceContext, play.Target, DynamicVars.Vulnerable.BaseValue, ownerCreature, this);
+        else await PowerCmd.Apply<VulnerablePower>(choiceContext, target, DynamicVars.Vulnerable.BaseValue, ownerCreature, this);
         
         CenterCardCinematic.End(RunManager.Instance.NetService.NetId);
     }

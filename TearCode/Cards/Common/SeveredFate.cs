@@ -54,6 +54,14 @@ public class SeveredFate() : TearCard(1, CardType.Attack,
             Owner.HasPower<WindFononPower>() ||
             Owner.HasPower<LightFononPower>() ||
             Owner.HasPower<OverlimitPower>();
+        var target = play.Target;
+        if (!hasWindFonon && target == null)
+        {
+            if (enemies.Count > 0)
+                target = enemies[
+                    Owner.RunState.Rng.CombatTargets.NextInt(enemies.Count)
+                ];
+        }
         CenterCardCinematic.Start(RunManager.Instance.NetService.NetId);
         if (ownerCreature != null && Owner?.Character is Character.Tear tear)
         {
@@ -82,12 +90,12 @@ public class SeveredFate() : TearCard(1, CardType.Attack,
             }
             else
             {
-                tear.PlayVfxOnTarget(play.Target, "res://Tear/scenes/vfx.tscn", "severed_fate");
+                tear.PlayVfxOnTarget(target, "res://Tear/scenes/vfx.tscn", "severed_fate");
                 await Task.Delay(333);
-                tear.PlayVfxOnTarget(play.Target, "res://Tear/scenes/hit.tscn", "hit");
+                tear.PlayVfxOnTarget(target, "res://Tear/scenes/hit.tscn", "hit");
             }
         }
-        await CommonActions.CardAttack(this, play.Target)
+        await CommonActions.CardAttack(this, target)
             .WithHitFx(null, "res://Tear/sfx/tear_hit.wav")
             .Execute(choiceContext);
         if (hasWindFonon)

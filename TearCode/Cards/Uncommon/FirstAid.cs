@@ -105,6 +105,6 @@ public class FirstAid() : TearCard(
 
     protected override void OnUpgrade()
     {
-        EnergyCost.UpgradeBy(-1);
+        DynamicVars.Heal.UpgradeValueBy(1);
     }
 }
