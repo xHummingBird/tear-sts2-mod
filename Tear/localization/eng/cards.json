@@ -170,7 +170,7 @@
   "TEAR-FIFTH_HARMONY.description": "Whenever you draw a [gold]Fonic Hymn[/gold], draw 1 card.",
 
   "TEAR-PITCH_PERFECT.title": "Pitch Perfect",
-  "TEAR-PITCH_PERFECT.description": "The first {Cards:diff()} {Cards:plural:card|cards} you play each turn {Cards:plural:is|are} free.",
+  "TEAR-PITCH_PERFECT.description": "The first {IfUpgraded:{Cards:diff()} |}{Cards:plural:card|cards} you play each turn {Cards:plural:is|are} free.",
 
   "TEAR-GRAND_MAESTRO.title": "Grand Maestro",
   "TEAR-GRAND_MAESTRO.description": "Whenever you play a [gold]Fonic Hymn[/gold], deal {Damage:diff()} damage to ALL enemies.",
