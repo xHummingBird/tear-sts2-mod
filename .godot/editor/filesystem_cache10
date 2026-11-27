@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1795576572
+::res://::1795799957
 export_presets.cfg::TextFile::-1::1795183607::0::1::::<><><>0<>0<><>::
 Tear.json::JSON::-1::1795492594::0::1::::<><><>0<>0<><>::
 ::res://bin/::1795189080
@@ -444,13 +444,13 @@ severed_fate_7.png::CompressedTexture2D::2533321222523264721::1795183606::179518
 severed_fate_8.png::CompressedTexture2D::7270624711908789319::1795183606::1795183606::1::::<><><>0<>0<>0cdff840cc4d9c5aa88e89f7ad274dfb<>res://.godot/imported/severed_fate_8.png-62621876018a6c650b57e2e19e49635c.ctex::
 severed_fate_9.png::CompressedTexture2D::3449601855212492548::1795183606::1795183606::1::::<><><>0<>0<>73175273bccc1b1ea04ca607458f8b00<>res://.godot/imported/severed_fate_9.png-cf8896a580ad96eb0c683a674ffcf281.ctex::
 ::res://Tear/localization/::1795183606
-::res://Tear/localization/eng/::1795356226
+::res://Tear/localization/eng/::1795799259
 ancients.json::JSON::-1::1795183606::0::1::::<><><>0<>0<><>::
 cards.json::JSON::-1::1795356226::0::1::::<><><>0<>0<><>::
 card_keywords.json::JSON::-1::1795183606::0::1::::<><><>0<>0<><>::
 characters.json::JSON::-1::1795183606::0::1::::<><><>0<>0<><>::
 powers.json::JSON::-1::1795281780::0::1::::<><><>0<>0<><>::
-relics.json::JSON::-1::1795283078::0::1::::<><><>0<>0<><>::
+relics.json::JSON::-1::1795799259::0::1::::<><><>0<>0<><>::
 static_hover_tips.json::JSON::-1::1795183606::0::1::::<><><>0<>0<><>::
 ::res://Tear/music/::1795183606
 1-05 The arrow was shot.mp3::AudioStreamMP3::3970539808290084466::1795183606::1795183606::1::::<><><>0<>0<>efe1b603ff84bcf78e8008fc97783248<>res://.godot/imported/1-05 The arrow was shot.mp3-bb75866bbe21ff45ee5497d646b55e3a.mp3str::
@@ -641,11 +641,11 @@ DefendTear.cs::CSharpScript::8337337664415445404::1795183606::0::1::::<><><>0<>0
 Nightmare.cs::CSharpScript::5588109620868182006::1795283280::0::1::::<><><>0<>0<><>::
 NocturnalLight.cs::CSharpScript::6603632542649672748::1795326312::0::1::::<><><>0<>0<><>::
 StrikeTear.cs::CSharpScript::6569014725600991374::1795183606::0::1::::<><><>0<>0<><>::
-::res://TearCode/Cards/Common/::1795423495
+::res://TearCode/Cards/Common/::1795799407
 Backstep.cs::CSharpScript::1744270643551222445::1795183606::0::1::::<><><>0<>0<><>::
 BanishingSorrow.cs::CSharpScript::3785671476677615278::1795422909::0::1::::<><><>0<>0<><>::
 Cadence.cs::CSharpScript::135938257350252525::1795183606::0::1::::<><><>0<>0<><>::
-Charge.cs::CSharpScript::2598598104440021258::1795183606::0::1::::<><><>0<>0<><>::
+Charge.cs::CSharpScript::2598598104440021258::1795799407::0::1::::<><><>0<>0<><>::
 DaggerThrow.cs::CSharpScript::4364308016676410151::1795183606::0::1::::<><><>0<>0<><>::
 Dash.cs::CSharpScript::1384843711316354620::1795183606::0::1::::<><><>0<>0<><>::
 Doubt.cs::CSharpScript::2170686502448823567::1795183606::0::1::::<><><>0<>0<><>::

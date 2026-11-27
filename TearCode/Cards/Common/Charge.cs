@@ -1,4 +1,5 @@
-﻿using MegaCrit.Sts2.Core.Commands;
+﻿using BaseLib.Extensions;
+using MegaCrit.Sts2.Core.Commands;
 using MegaCrit.Sts2.Core.Entities.Cards;
 using MegaCrit.Sts2.Core.GameActions.Multiplayer;
 using MegaCrit.Sts2.Core.HoverTips;
@@ -19,6 +20,11 @@ public class Charge() : TearCard(
     [
         CardKeyword.Exhaust
     ];
+    
+    protected override bool ShouldGlowGoldInternal =>
+        Owner.HasPower<EarthFononPower>() ||
+        Owner.HasPower<DarkFononPower>() ||
+        Owner.HasPower<OverlimitPower>();
 
     protected override IEnumerable<DynamicVar> CanonicalVars =>
     [
